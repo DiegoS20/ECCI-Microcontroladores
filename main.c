@@ -69,15 +69,24 @@ void main(void)
         oper_2 = input&0X0F;
         oper = PORTC&0X0F;
         resultado = operar(oper, oper_1, oper_2);
-        visualizar('n', oper_1, 0, 1);
-        visualizar('s', oper, 4, 1);
-        visualizar('n', oper_2, 0, 2);
-        visualizar('s', 11, 4, 2);
-        __delay_ms(10);
-        int es_menos = 0;
-        if (resultado < 0) {
-            resultado = resultado * -1;
-            es_menos = 1;
+        char i = 0;
+        while () {
+            visualizar('n', oper_1, 0, 1);
+            visualizar('s', oper, 4, 1);
+            visualizar('n', oper_2, 0, 2);
+            visualizar('s', 11, 4, 2);
+            __delay_ms(10);
+            // Visualizado
+            char es_menos = 0;
+            char from = 0;
+            if (resultado < 0) {
+                resultado = resultado * -1;
+                es_menos = 1;
+            }
+            if (es_menos) {
+                visualizar('s', 1, 0, 1);
+                from = 4;
+            }
         }
     }
 }
@@ -99,22 +108,28 @@ void init_config(void) {
 }
 
 /**
- * Visualiza un número o símbolo
- * @param SoN Especifíca si quiere mostrar un Símbolo(s) o Número(n)
- * @param position Especifica el número o símbolo que quiere mostrar
+ * Visualiza un nï¿½mero o sï¿½mbolo
+ * @param SoN Especifï¿½ca si quiere mostrar un Sï¿½mbolo(s) o Nï¿½mero(n)
+ * @param position Especifica el nï¿½mero o sï¿½mbolo que quiere mostrar
  * @param from Desde que columna lo quiere mostrar (empezando desde 0)
  * @param enable Espeficia el enamble a activar
  */
-void visualizar(char SoN[2], char position, int from, int enable) {
-    // Activar o desactivar enables aquí
+void visualizar(char SoN[2], char position, char from, char enable) {
+    if (enable == 1) {
+        ENABLE1 = 1;
+        ENABLE2 = 0;
+    } else {
+        ENABLE1 = 0;
+        ENABLE2 = 1;
+    }
     for (char x = 0; x < 3; x++) {
-        LATD = tolower((int)SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
+        LATD = tolower((char)SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
         LATE = x + from;
         __delay_ms(5);
     }
 }
 
-int operar(char oper, char oper_1, char oper_2) {
+char operar(char oper, char oper_1, char oper_2) {
     switch (oper) {
         case 0:
             return suma(oper_1, oper_2);
@@ -144,6 +159,7 @@ int operar(char oper, char oper_1, char oper_2) {
             return xor(oper_1, oper_2);
             break;
         case 9:
+            return no_es_primo(oper_1);
             break;
         case 10:
             return oper_1 == 2;
@@ -153,11 +169,11 @@ int operar(char oper, char oper_1, char oper_2) {
     }
 }
 
-int suma(char oper_1, char oper_2) {
+char suma(char oper_1, char oper_2) {
     return oper_1 + oper_2;
 }
 
-int resta(char oper_1, char oper_2) {
+char resta(char oper_1, char oper_2) {
     char result = oper_1 - oper_2;
     /*if (oper_2 > oper_1) {
         result *= -1;
@@ -165,31 +181,38 @@ int resta(char oper_1, char oper_2) {
     return oper_1 - oper_2;
 }
 
-int multi(char oper_1, char oper_2) {
+char multi(char oper_1, char oper_2) {
     return oper_1 * oper_2;
 }
 
-int division(char oper_1, char oper_2) {
+char division(char oper_1, char oper_2) {
     char result = oper_1 / oper_2;
     return result;
 }
 
-int module(char oper_1, char oper_2) {
+char module(char oper_1, char oper_2) {
     return oper_1 % oper_2;
 }
 
-int and(char oper_1, char oper_2) {
+char and(char oper_1, char oper_2) {
     return oper_1 & oper_2;
 }
 
-int or(char oper_1, char oper_2) {
+char or(char oper_1, char oper_2) {
     return oper_1 | oper_2;
 }
 
-int nand(char oper_1, char oper_2) {
+char nand(char oper_1, char oper_2) {
     return ~(and(oper_1, oper_2));
 }
 
-int xor(char oper_1, char oper_2) {
+char xor(char oper_1, char oper_2) {
     return oper_1 ^ oper_2;
+}
+
+char no_es_primo(char num) {
+    if (!module(num, 2)) {
+        return 0;
+    }
+    return 1;
 }

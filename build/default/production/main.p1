@@ -12,8 +12,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22 ./function_statements.h
 [; ;./function_statements.h: 22: int operar(char oper, char oper_1, char oper_2);
 [v _operar `(i ~T0 @X0 0 ef3`uc`uc`uc ]
-"23
-[; ;./function_statements.h: 23: void visualizar(char SoN[2], char position, int from, int enable);
+"24
+[; ;./function_statements.h: 24: void visualizar(char SoN[2], char position, int from, int enable);
 [v _visualizar `(v ~T0 @X0 0 ef4`*uc`uc`i`i ]
 [v F2107 `(v ~T0 @X0 1 tf1`ul ]
 "187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
@@ -82,6 +82,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21
 [; ;./function_statements.h: 21: int xor(char oper_1, char oper_2);
 [v _xor `(i ~T0 @X0 0 ef2`uc`uc ]
+"23
+[; ;./function_statements.h: 23: int no_es_primo(int num);
+[v _no_es_primo `(i ~T0 @X0 0 ef1`i ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f452.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f452.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -478,10 +481,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18
 [; ;main.c: 18:     0X38, 0X28, 0XF8,
 [p x LVP = OFF ]
-[v F2683 `uc ~T0 @X0 -> 3 `i t ]
+[v F2685 `uc ~T0 @X0 -> 3 `i t ]
 "24
 [; ;main.c: 24:     0X20, 0X70, 0X20,
-[v _NUMERO `F2683 ~T0 @X0 -> 16 `i e ]
+[v _NUMERO `F2685 ~T0 @X0 -> 16 `i e ]
 [i _NUMERO
 :U ..
 :U ..
@@ -566,10 +569,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[v F2685 `uc ~T0 @X0 -> 3 `i t ]
+[v F2687 `uc ~T0 @X0 -> 3 `i t ]
 "43
 [; ;main.c: 43: void main(void)
-[v _SIMBOLO `F2685 ~T0 @X0 -> 11 `i e ]
+[v _SIMBOLO `F2687 ~T0 @X0 -> 11 `i e ]
 [i _SIMBOLO
 :U ..
 :U ..
@@ -894,26 +897,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 146:         case 9:
 [e :U 261 ]
 "147
-[; ;main.c: 147:             break;
-[e $U 250  ]
+[; ;main.c: 147:             return no_es_primo(oper_1);
+[e ) ( _no_es_primo (1 -> _oper_1 `i ]
+[e $UE 249  ]
 "148
-[; ;main.c: 148:         case 10:
-[e :U 262 ]
+[; ;main.c: 148:             break;
+[e $U 250  ]
 "149
-[; ;main.c: 149:             return oper_1 == 2;
+[; ;main.c: 149:         case 10:
+[e :U 262 ]
+"150
+[; ;main.c: 150:             return oper_1 == 2;
 [e ) -> == -> _oper_1 `i -> 2 `i `i ]
 [e $UE 249  ]
-"150
-[; ;main.c: 150:             break;
-[e $U 250  ]
 "151
-[; ;main.c: 151:         default:
-[e :U 263 ]
-"152
-[; ;main.c: 152:             break;
+[; ;main.c: 151:             break;
 [e $U 250  ]
+"152
+[; ;main.c: 152:         default:
+[e :U 263 ]
 "153
-[; ;main.c: 153:     }
+[; ;main.c: 153:             break;
+[e $U 250  ]
+"154
+[; ;main.c: 154:     }
 }
 [e $U 250  ]
 [e :U 251 ]
@@ -930,159 +937,186 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 10 `i 262
  263 ]
 [e :U 250 ]
-"154
-[; ;main.c: 154: }
+"155
+[; ;main.c: 155: }
 [e :UE 249 ]
 }
-"156
-[; ;main.c: 156: int suma(char oper_1, char oper_2) {
+"157
+[; ;main.c: 157: int suma(char oper_1, char oper_2) {
 [v _suma `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _suma ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"157
-[; ;main.c: 157:     return oper_1 + oper_2;
+"158
+[; ;main.c: 158:     return oper_1 + oper_2;
 [e ) + -> _oper_1 `i -> _oper_2 `i ]
 [e $UE 264  ]
-"158
-[; ;main.c: 158: }
+"159
+[; ;main.c: 159: }
 [e :UE 264 ]
 }
-"160
-[; ;main.c: 160: int resta(char oper_1, char oper_2) {
+"161
+[; ;main.c: 161: int resta(char oper_1, char oper_2) {
 [v _resta `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _resta ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"161
-[; ;main.c: 161:     char result = oper_1 - oper_2;
+"162
+[; ;main.c: 162:     char result = oper_1 - oper_2;
 [v _result `uc ~T0 @X0 1 a ]
 [e = _result -> - -> _oper_1 `i -> _oper_2 `i `uc ]
-"165
-[; ;main.c: 165:     return oper_1 - oper_2;
+"166
+[; ;main.c: 166:     return oper_1 - oper_2;
 [e ) - -> _oper_1 `i -> _oper_2 `i ]
 [e $UE 265  ]
-"166
-[; ;main.c: 166: }
+"167
+[; ;main.c: 167: }
 [e :UE 265 ]
 }
-"168
-[; ;main.c: 168: int multi(char oper_1, char oper_2) {
+"169
+[; ;main.c: 169: int multi(char oper_1, char oper_2) {
 [v _multi `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _multi ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"169
-[; ;main.c: 169:     return oper_1 * oper_2;
+"170
+[; ;main.c: 170:     return oper_1 * oper_2;
 [e ) * -> _oper_1 `i -> _oper_2 `i ]
 [e $UE 266  ]
-"170
-[; ;main.c: 170: }
+"171
+[; ;main.c: 171: }
 [e :UE 266 ]
 }
-"172
-[; ;main.c: 172: int division(char oper_1, char oper_2) {
+"173
+[; ;main.c: 173: int division(char oper_1, char oper_2) {
 [v _division `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _division ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"173
-[; ;main.c: 173:     char result = oper_1 / oper_2;
+"174
+[; ;main.c: 174:     char result = oper_1 / oper_2;
 [v _result `uc ~T0 @X0 1 a ]
 [e = _result -> / -> _oper_1 `i -> _oper_2 `i `uc ]
-"174
-[; ;main.c: 174:     return result;
+"175
+[; ;main.c: 175:     return result;
 [e ) -> _result `i ]
 [e $UE 267  ]
-"175
-[; ;main.c: 175: }
+"176
+[; ;main.c: 176: }
 [e :UE 267 ]
 }
-"177
-[; ;main.c: 177: int module(char oper_1, char oper_2) {
+"178
+[; ;main.c: 178: int module(char oper_1, char oper_2) {
 [v _module `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _module ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"178
-[; ;main.c: 178:     return oper_1 % oper_2;
+"179
+[; ;main.c: 179:     return oper_1 % oper_2;
 [e ) % -> _oper_1 `i -> _oper_2 `i ]
 [e $UE 268  ]
-"179
-[; ;main.c: 179: }
+"180
+[; ;main.c: 180: }
 [e :UE 268 ]
 }
-"181
-[; ;main.c: 181: int and(char oper_1, char oper_2) {
+"182
+[; ;main.c: 182: int and(char oper_1, char oper_2) {
 [v _and `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _and ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"182
-[; ;main.c: 182:     return oper_1 & oper_2;
+"183
+[; ;main.c: 183:     return oper_1 & oper_2;
 [e ) & -> _oper_1 `i -> _oper_2 `i ]
 [e $UE 269  ]
-"183
-[; ;main.c: 183: }
+"184
+[; ;main.c: 184: }
 [e :UE 269 ]
 }
-"185
-[; ;main.c: 185: int or(char oper_1, char oper_2) {
+"186
+[; ;main.c: 186: int or(char oper_1, char oper_2) {
 [v _or `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _or ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"186
-[; ;main.c: 186:     return oper_1 | oper_2;
+"187
+[; ;main.c: 187:     return oper_1 | oper_2;
 [e ) | -> _oper_1 `i -> _oper_2 `i ]
 [e $UE 270  ]
-"187
-[; ;main.c: 187: }
+"188
+[; ;main.c: 188: }
 [e :UE 270 ]
 }
-"189
-[; ;main.c: 189: int nand(char oper_1, char oper_2) {
+"190
+[; ;main.c: 190: int nand(char oper_1, char oper_2) {
 [v _nand `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _nand ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"190
-[; ;main.c: 190:     return ~(and(oper_1, oper_2));
+"191
+[; ;main.c: 191:     return ~(and(oper_1, oper_2));
 [e ) ~ ( _and (2 , _oper_1 _oper_2 ]
 [e $UE 271  ]
-"191
-[; ;main.c: 191: }
+"192
+[; ;main.c: 192: }
 [e :UE 271 ]
 }
-"193
-[; ;main.c: 193: int xor(char oper_1, char oper_2) {
+"194
+[; ;main.c: 194: int xor(char oper_1, char oper_2) {
 [v _xor `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _xor ]
 [v _oper_1 `uc ~T0 @X0 1 r1 ]
 [v _oper_2 `uc ~T0 @X0 1 r2 ]
 [f ]
-"194
-[; ;main.c: 194:     return oper_1 ^ oper_2;
+"195
+[; ;main.c: 195:     return oper_1 ^ oper_2;
 [e ) ^ -> _oper_1 `i -> _oper_2 `i ]
 [e $UE 272  ]
-"195
-[; ;main.c: 195: }
+"196
+[; ;main.c: 196: }
 [e :UE 272 ]
+}
+"198
+[; ;main.c: 198: int no_es_primo(int num) {
+[v _no_es_primo `(i ~T0 @X0 1 ef1`i ]
+{
+[e :U _no_es_primo ]
+[v _num `i ~T0 @X0 1 r1 ]
+[f ]
+"199
+[; ;main.c: 199:     if (!module(num, 2)) {
+[e $ ! ! != ( _module (2 , -> _num `uc -> -> 2 `i `uc -> 0 `i 274  ]
+{
+"200
+[; ;main.c: 200:         return 0;
+[e ) -> 0 `i ]
+[e $UE 273  ]
+"201
+[; ;main.c: 201:     }
+}
+[e :U 274 ]
+"202
+[; ;main.c: 202:     return 1;
+[e ) -> 1 `i ]
+[e $UE 273  ]
+"203
+[; ;main.c: 203: }
+[e :UE 273 ]
 }

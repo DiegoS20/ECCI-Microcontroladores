@@ -43,24 +43,26 @@
 [v _visualizar visualizar `(v  1 e 1 0 ]
 "117
 [v _operar operar `(i  1 e 2 0 ]
-"156
+"157
 [v _suma suma `(i  1 e 2 0 ]
-"160
+"161
 [v _resta resta `(i  1 e 2 0 ]
-"168
+"169
 [v _multi multi `(i  1 e 2 0 ]
-"172
+"173
 [v _division division `(i  1 e 2 0 ]
-"177
+"178
 [v _module module `(i  1 e 2 0 ]
-"181
+"182
 [v _and and `(i  1 e 2 0 ]
-"185
+"186
 [v _or or `(i  1 e 2 0 ]
-"189
+"190
 [v _nand nand `(i  1 e 2 0 ]
-"193
+"194
 [v _xor xor `(i  1 e 2 0 ]
+"198
+[v _no_es_primo no_es_primo `(i  1 e 2 0 ]
 "197 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f452.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
 "322
@@ -135,83 +137,62 @@
 {
 [v operar@oper oper `uc  1 a 1 wreg ]
 [v operar@oper oper `uc  1 a 1 wreg ]
-[v operar@oper_1 oper_1 `uc  1 p 1 8 ]
-[v operar@oper_2 oper_2 `uc  1 p 1 9 ]
-[v operar@oper oper `uc  1 a 1 12 ]
-"154
+[v operar@oper_1 oper_1 `uc  1 p 1 10 ]
+[v operar@oper_2 oper_2 `uc  1 p 1 11 ]
+[v operar@oper oper `uc  1 a 1 14 ]
+"155
 } 0
-"193
+"194
 [v _xor xor `(i  1 e 2 0 ]
 {
 [v xor@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v xor@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v xor@oper_2 oper_2 `uc  1 p 1 0 ]
 [v xor@oper_1 oper_1 `uc  1 a 1 3 ]
-"195
+"196
 } 0
-"156
+"157
 [v _suma suma `(i  1 e 2 0 ]
 {
 [v suma@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v suma@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v suma@oper_2 oper_2 `uc  1 p 1 0 ]
 [v suma@oper_1 oper_1 `uc  1 a 1 2 ]
-"158
+"159
 } 0
-"160
+"161
 [v _resta resta `(i  1 e 2 0 ]
 {
 [v resta@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v resta@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v resta@oper_2 oper_2 `uc  1 p 1 0 ]
-"165
-[v resta@oper_1 oper_1 `uc  1 a 1 3 ]
 "166
+[v resta@oper_1 oper_1 `uc  1 a 1 3 ]
+"167
 } 0
-"185
+"186
 [v _or or `(i  1 e 2 0 ]
 {
 [v or@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v or@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v or@oper_2 oper_2 `uc  1 p 1 0 ]
 [v or@oper_1 oper_1 `uc  1 a 1 3 ]
-"187
+"188
 } 0
-"189
-[v _nand nand `(i  1 e 2 0 ]
+"198
+[v _no_es_primo no_es_primo `(i  1 e 2 0 ]
 {
-[v nand@oper_1 oper_1 `uc  1 a 1 wreg ]
-[v nand@oper_1 oper_1 `uc  1 a 1 wreg ]
-[v nand@oper_2 oper_2 `uc  1 p 1 4 ]
-[v nand@oper_1 oper_1 `uc  1 a 1 6 ]
-"191
+[v no_es_primo@num num `i  1 p 2 8 ]
+"203
 } 0
-"181
-[v _and and `(i  1 e 2 0 ]
-{
-[v and@oper_1 oper_1 `uc  1 a 1 wreg ]
-[v and@oper_1 oper_1 `uc  1 a 1 wreg ]
-[v and@oper_2 oper_2 `uc  1 p 1 0 ]
-[v and@oper_1 oper_1 `uc  1 a 1 3 ]
-"183
-} 0
-"168
-[v _multi multi `(i  1 e 2 0 ]
-{
-[v multi@oper_1 oper_1 `uc  1 a 1 wreg ]
-[v multi@oper_1 oper_1 `uc  1 a 1 wreg ]
-[v multi@oper_2 oper_2 `uc  1 p 1 0 ]
-[v multi@oper_1 oper_1 `uc  1 a 1 2 ]
-"170
-} 0
-"177
+"178
 [v _module module `(i  1 e 2 0 ]
 {
 [v module@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v module@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v module@oper_2 oper_2 `uc  1 p 1 4 ]
 [v module@oper_1 oper_1 `uc  1 a 1 7 ]
-"179
+"180
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lbmod.c
 [v ___lbmod __lbmod `(uc  1 e 1 0 ]
@@ -228,17 +209,44 @@
 [v ___lbmod@dividend dividend `uc  1 a 1 1 ]
 "18
 } 0
-"172 C:\MPLAB_X\Laboratorio1.X\main.c
+"190 C:\MPLAB_X\Laboratorio1.X\main.c
+[v _nand nand `(i  1 e 2 0 ]
+{
+[v nand@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v nand@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v nand@oper_2 oper_2 `uc  1 p 1 4 ]
+[v nand@oper_1 oper_1 `uc  1 a 1 6 ]
+"192
+} 0
+"182
+[v _and and `(i  1 e 2 0 ]
+{
+[v and@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v and@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v and@oper_2 oper_2 `uc  1 p 1 0 ]
+[v and@oper_1 oper_1 `uc  1 a 1 3 ]
+"184
+} 0
+"169
+[v _multi multi `(i  1 e 2 0 ]
+{
+[v multi@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v multi@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v multi@oper_2 oper_2 `uc  1 p 1 0 ]
+[v multi@oper_1 oper_1 `uc  1 a 1 2 ]
+"171
+} 0
+"173
 [v _division division `(i  1 e 2 0 ]
 {
 [v division@oper_1 oper_1 `uc  1 a 1 wreg ]
-"173
+"174
 [v division@result result `uc  1 a 1 7 ]
-"172
+"173
 [v division@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v division@oper_2 oper_2 `uc  1 p 1 4 ]
 [v division@oper_1 oper_1 `uc  1 a 1 6 ]
-"175
+"176
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lbdiv.c
 [v ___lbdiv __lbdiv `(uc  1 e 1 0 ]

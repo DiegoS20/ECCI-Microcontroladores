@@ -4286,6 +4286,7 @@ int or(char oper_1, char oper_2);
 int nand(char oper_1, char oper_2);
 int xor(char oper_1, char oper_2);
 int operar(char oper, char oper_1, char oper_2);
+int no_es_primo(int num);
 void visualizar(char SoN[2], char position, int from, int enable);
 # 11 "main.c" 2
 
@@ -4458,6 +4459,7 @@ int operar(char oper, char oper_1, char oper_2) {
             return xor(oper_1, oper_2);
             break;
         case 9:
+            return no_es_primo(oper_1);
             break;
         case 10:
             return oper_1 == 2;
@@ -4506,4 +4508,11 @@ int nand(char oper_1, char oper_2) {
 
 int xor(char oper_1, char oper_2) {
     return oper_1 ^ oper_2;
+}
+
+int no_es_primo(int num) {
+    if (!module(num, 2)) {
+        return 0;
+    }
+    return 1;
 }
