@@ -15,6 +15,12 @@
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isupper.c
+[v _isupper isupper `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -23,27 +29,234 @@
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\tolower.c
+[v _tolower tolower `(i  1 e 2 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"12 C:\MPLAB_X\Laboratorio1.X\main.c
+"63 C:\MPLAB_X\Laboratorio1.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"19
+"85
 [v _init_config init_config `(v  1 e 1 0 ]
+"108
+[v _visualizar visualizar `(v  1 e 1 0 ]
+"117
+[v _operar operar `(i  1 e 2 0 ]
+"156
+[v _suma suma `(i  1 e 2 0 ]
+"160
+[v _resta resta `(i  1 e 2 0 ]
+"168
+[v _multi multi `(i  1 e 2 0 ]
+"172
+[v _division division `(i  1 e 2 0 ]
+"177
+[v _module module `(i  1 e 2 0 ]
+"181
+[v _and and `(i  1 e 2 0 ]
+"185
+[v _or or `(i  1 e 2 0 ]
+"189
+[v _nand nand `(i  1 e 2 0 ]
+"193
+[v _xor xor `(i  1 e 2 0 ]
 "197 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f452.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"322
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+"489
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"610
+[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
 "822
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
+"934
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+"1046
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+"1158
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
 "1408
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-"12 C:\MPLAB_X\Laboratorio1.X\main.c
+"1648
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"1888
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"2110
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"3591
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"24 C:\MPLAB_X\Laboratorio1.X\main.c
+[v _NUMERO NUMERO `[16][3]uc  1 e 48 0 ]
+"43
+[v _SIMBOLO SIMBOLO `[11][3]uc  1 e 33 0 ]
+"57
+[v _input input `uc  1 e 1 0 ]
+"58
+[v _oper_1 oper_1 `uc  1 e 1 0 ]
+"59
+[v _oper_2 oper_2 `uc  1 e 1 0 ]
+"60
+[v _oper oper `uc  1 e 1 0 ]
+"61
+[v _resultado resultado `uc  1 e 1 0 ]
+"63
 [v _main main `(v  1 e 1 0 ]
 {
-"17
+"83
 } 0
-"19
+"108
+[v _visualizar visualizar `(v  1 e 1 0 ]
+{
+"110
+[v visualizar@x x `uc  1 a 1 26 ]
+"108
+[v visualizar@SoN SoN `*.39uc  1 p 2 14 ]
+[v visualizar@position position `uc  1 p 1 16 ]
+[v visualizar@from from `i  1 p 2 17 ]
+[v visualizar@enable enable `i  1 p 2 19 ]
+"115
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\tolower.c
+[v _tolower tolower `(i  1 e 2 0 ]
+{
+[v tolower@c c `i  1 p 2 6 ]
+"8
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isupper.c
+[v _isupper isupper `(i  1 e 2 0 ]
+{
+[v isupper@c c `i  1 p 2 0 ]
+"8
+} 0
+"117 C:\MPLAB_X\Laboratorio1.X\main.c
+[v _operar operar `(i  1 e 2 0 ]
+{
+[v operar@oper oper `uc  1 a 1 wreg ]
+[v operar@oper oper `uc  1 a 1 wreg ]
+[v operar@oper_1 oper_1 `uc  1 p 1 8 ]
+[v operar@oper_2 oper_2 `uc  1 p 1 9 ]
+[v operar@oper oper `uc  1 a 1 12 ]
+"154
+} 0
+"193
+[v _xor xor `(i  1 e 2 0 ]
+{
+[v xor@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v xor@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v xor@oper_2 oper_2 `uc  1 p 1 0 ]
+[v xor@oper_1 oper_1 `uc  1 a 1 3 ]
+"195
+} 0
+"156
+[v _suma suma `(i  1 e 2 0 ]
+{
+[v suma@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v suma@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v suma@oper_2 oper_2 `uc  1 p 1 0 ]
+[v suma@oper_1 oper_1 `uc  1 a 1 2 ]
+"158
+} 0
+"160
+[v _resta resta `(i  1 e 2 0 ]
+{
+[v resta@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v resta@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v resta@oper_2 oper_2 `uc  1 p 1 0 ]
+"165
+[v resta@oper_1 oper_1 `uc  1 a 1 3 ]
+"166
+} 0
+"185
+[v _or or `(i  1 e 2 0 ]
+{
+[v or@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v or@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v or@oper_2 oper_2 `uc  1 p 1 0 ]
+[v or@oper_1 oper_1 `uc  1 a 1 3 ]
+"187
+} 0
+"189
+[v _nand nand `(i  1 e 2 0 ]
+{
+[v nand@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v nand@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v nand@oper_2 oper_2 `uc  1 p 1 4 ]
+[v nand@oper_1 oper_1 `uc  1 a 1 6 ]
+"191
+} 0
+"181
+[v _and and `(i  1 e 2 0 ]
+{
+[v and@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v and@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v and@oper_2 oper_2 `uc  1 p 1 0 ]
+[v and@oper_1 oper_1 `uc  1 a 1 3 ]
+"183
+} 0
+"168
+[v _multi multi `(i  1 e 2 0 ]
+{
+[v multi@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v multi@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v multi@oper_2 oper_2 `uc  1 p 1 0 ]
+[v multi@oper_1 oper_1 `uc  1 a 1 2 ]
+"170
+} 0
+"177
+[v _module module `(i  1 e 2 0 ]
+{
+[v module@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v module@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v module@oper_2 oper_2 `uc  1 p 1 4 ]
+[v module@oper_1 oper_1 `uc  1 a 1 7 ]
+"179
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+{
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+"6
+[v ___lbmod@rem rem `uc  1 a 1 3 ]
+"7
+[v ___lbmod@counter counter `uc  1 a 1 2 ]
+"4
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbmod@divisor divisor `uc  1 p 1 0 ]
+"9
+[v ___lbmod@dividend dividend `uc  1 a 1 1 ]
+"18
+} 0
+"172 C:\MPLAB_X\Laboratorio1.X\main.c
+[v _division division `(i  1 e 2 0 ]
+{
+[v division@oper_1 oper_1 `uc  1 a 1 wreg ]
+"173
+[v division@result result `uc  1 a 1 7 ]
+"172
+[v division@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v division@oper_2 oper_2 `uc  1 p 1 4 ]
+[v division@oper_1 oper_1 `uc  1 a 1 6 ]
+"175
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+{
+[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
+"6
+[v ___lbdiv@quotient quotient `uc  1 a 1 3 ]
+"7
+[v ___lbdiv@counter counter `uc  1 a 1 2 ]
+"4
+[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbdiv@divisor divisor `uc  1 p 1 0 ]
+"9
+[v ___lbdiv@dividend dividend `uc  1 a 1 1 ]
+"26
+} 0
+"85 C:\MPLAB_X\Laboratorio1.X\main.c
 [v _init_config init_config `(v  1 e 1 0 ]
 {
-"23
+"99
 } 0

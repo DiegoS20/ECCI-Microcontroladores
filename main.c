@@ -9,6 +9,7 @@
 #include <xc.h>
 #include <math.h>
 #include "function_statements.h"
+#include <ctype.h>
 
 #pragma config OSC = XT
 #pragma config PWRT = ON
@@ -39,7 +40,7 @@ char NUMERO[16][3] = {
     0XF8, 0XA0, 0XA0  // F
 };
 
-char SIMBOLO[10][3] = {
+char SIMBOLO[11][3] = {
     0X20, 0X70, 0X20, // +
     0X20, 0X20, 0X20, // -
     0X50, 0X20, 0X50, // x
@@ -49,13 +50,15 @@ char SIMBOLO[10][3] = {
     0X40, 0X20, 0X40, // v
     0X50, 0X60, 0X50, // NAND
     0X60, 0X50, 0X60, // XOR
-    0X80, 0XF8, 0X80  // T
+    0X80, 0XF8, 0X80, // T
+    0X50, 0X50, 0X50, // =
 };
 
-int input;
-int oper_1;
-int oper_2;
-int oper; // San Pedro (o_o) --> Pedro-San (?w?)
+char input;
+char oper_1;
+char oper_2;
+char oper;
+char resultado;
 
 void main(void)
 {
@@ -65,19 +68,50 @@ void main(void)
         oper_1 = input>>4;
         oper_2 = input&0X0F;
         oper = PORTC&0X0F;
-        LATD = operar(oper);
+        resultado = operar(oper, oper_1, oper_2);
+        visualizar('n', oper_1, 0, 1);
+        visualizar('s', oper, 4, 1);
+        visualizar('n', oper_2, 0, 2);
+        visualizar('s', 11, 4, 2);
+        __delay_ms(10);
+        int es_menos = 0;
+        if (resultado < 0) {
+            resultado = resultado * -1;
+            es_menos = 1;
+        }
     }
 }
 
 void init_config(void) {
     ADCON1 = 0X06; // Convirtiendo puerto A como puerto de entrada digital
-    TRISB = 0B00000000;
+    TRISB = 0B00000000; // Entradas (Operadores 1 y 2)
     LATB = 0;
     PORTB = 0;
+    TRISC = 0B00000000; // Entrada de operador
+    LATC = 0;
+    PORTC = 0;
+    TRISD = 0B11111111; // Salida a las matrices de leds
+    LATD = 0;
+    PORTD = 0;
+    TRISE = 0B11111111; // Salida a los decos
+    LATE = 0;
+    PORTE = 0;
 }
 
-void visualizar(void) {
-    
+/**
+ * Visualiza un número o símbolo
+ * @param SoN Especifíca si quiere mostrar un Símbolo(s) o Número(n)
+ * @param position Especifica el número o símbolo que quiere mostrar
+ * @param from Desde que columna lo quiere mostrar (empezando desde 0)
+ * @param enable Espeficia el enamble a activar
+ */
+void visualizar(char SoN[2], char position, int from, int enable) {
+    // Activar o desactivar enables aquí
+    for (char x = 0; x < 3; x++) {
+        LATD = tolower((int)SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
+        LATE = x + from;
+        __delay_ms(5);
+    }
 }
 
 int operar(char oper, char oper_1, char oper_2) {
@@ -92,7 +126,7 @@ int operar(char oper, char oper_1, char oper_2) {
             return multi(oper_1, oper_2);
             break;
         case 3:
-            return div(oper_1, oper_2);
+            return division(oper_1, oper_2);
             break;
         case 4:
             return module(oper_1, oper_2);
@@ -110,7 +144,6 @@ int operar(char oper, char oper_1, char oper_2) {
             return xor(oper_1, oper_2);
             break;
         case 9:
-            return noEsPrimo(oper_1);
             break;
         case 10:
             return oper_1 == 2;
@@ -136,7 +169,7 @@ int multi(char oper_1, char oper_2) {
     return oper_1 * oper_2;
 }
 
-int div(char oper_1, char oper_2) {
+int division(char oper_1, char oper_2) {
     char result = oper_1 / oper_2;
     return result;
 }
@@ -159,13 +192,4 @@ int nand(char oper_1, char oper_2) {
 
 int xor(char oper_1, char oper_2) {
     return oper_1 ^ oper_2;
-}
-
-int noEsPrimo(char oper) {
-    for(char i = 0; i < oper; i++) {
-        if (!module(oper, i)) { 
-            return 0;
-        }
-    }
-    return 1;
 }
