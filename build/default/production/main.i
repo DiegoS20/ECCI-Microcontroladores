@@ -3758,6 +3758,7 @@ char operar(char oper, char oper_1, char oper_2);
 char no_es_primo(char num);
 void visualizar(char SoN, char position, char from, char enable);
 void see_full_operation(char oper_1, char oper_2, char oper);
+void show_error_message(void);
 
 # 4 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\ctype.h"
 extern __bit isalpha(char);
@@ -3801,10 +3802,10 @@ char NUMERO[16][3] = {
 0XF8, 0X88, 0X88,
 0X38, 0X28, 0XF8,
 0XF8, 0XA8, 0XA8,
-0XF8, 0XA0, 0XA0
+0XF8, 0XA0, 0XA0,
 };
 
-char SIMBOLO[11][3] = {
+char SIMBOLO[12][3] = {
 0X20, 0X70, 0X20,
 0X20, 0X20, 0X20,
 0X50, 0X20, 0X50,
@@ -3816,6 +3817,7 @@ char SIMBOLO[11][3] = {
 0X60, 0X50, 0X60,
 0X80, 0XF8, 0X80,
 0X50, 0X50, 0X50,
+0XF8, 0XB0, 0XE8,
 };
 
 void main(void) {
@@ -3842,6 +3844,14 @@ x += 3;
 }
 
 visualizar('n', resultado, x, 1);
+break;
+case 3:
+if (oper_2 == 0) {
+show_error_message();
+} else {
+resultado = operar(oper, oper_1, oper_2);
+visualizar('n', resultado, 0, 1);
+}
 break;
 default:
 resultado = operar(oper, oper_1, oper_2);
@@ -3875,7 +3885,7 @@ LATE = 0;
 PORTE = 0;
 }
 
-# 121
+# 130
 void visualizar(char SoN, char position, char from, char enable) {
 for (char x = 0; x < 3; x++) {
 if (enable == 1) {
@@ -3896,6 +3906,14 @@ visualizar('n', oper_1, 0, 1);
 visualizar('s', oper, 4, 1);
 visualizar('n', oper_2, 0, 2);
 visualizar('s', 10, 4, 2);
+_delay((unsigned long)((5)*(4000000/4000.0)));
+}
+
+void show_error_message(void) {
+visualizar('n', 14, 0, 1);
+visualizar('s', 11, 4, 1);
+visualizar('n', 14, 0, 2);
+visualizar('s', 11, 4, 2);
 _delay((unsigned long)((5)*(4000000/4000.0)));
 }
 
@@ -3944,9 +3962,6 @@ return oper_1 + oper_2;
 }
 
 char resta(char oper_1, char oper_2) {
-char result = oper_1 - oper_2;
-
-# 193
 return oper_1 - oper_2;
 }
 

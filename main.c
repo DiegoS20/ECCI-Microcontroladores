@@ -37,10 +37,10 @@ char NUMERO[16][3] = {
     0XF8, 0X88, 0X88, // C
     0X38, 0X28, 0XF8, // D
     0XF8, 0XA8, 0XA8, // E
-    0XF8, 0XA0, 0XA0  // F
+    0XF8, 0XA0, 0XA0, // F
 };
 
-char SIMBOLO[11][3] = {
+char SIMBOLO[12][3] = {
     0X20, 0X70, 0X20, // +
     0X20, 0X20, 0X20, // -
     0X50, 0X20, 0X50, // x
@@ -52,6 +52,7 @@ char SIMBOLO[11][3] = {
     0X60, 0X50, 0X60, // XOR
     0X80, 0XF8, 0X80, // T
     0X50, 0X50, 0X50, // =
+    0XF8, 0XB0, 0XE8, // R
 };
 
 void main(void) {
@@ -78,6 +79,14 @@ void main(void) {
                     }
                     
                     visualizar('n', resultado, x, 1);
+                    break;
+                case 3:
+                    if (oper_2 == 0) {
+                        show_error_message();
+                    } else {
+                        resultado = operar(oper, oper_1, oper_2);
+                        visualizar('n', resultado, 0, 1);
+                    }
                     break;
                 default:
                     resultado = operar(oper, oper_1, oper_2);
@@ -141,6 +150,14 @@ void see_full_operation(char oper_1, char oper_2, char oper) {
     __delay_ms(5);
 }
 
+void show_error_message(void) {
+    visualizar('n', 14, 0, 1);
+    visualizar('s', 11, 4, 1);
+    visualizar('n', 14, 0, 2);
+    visualizar('s', 11, 4, 2);
+    __delay_ms(5);
+}
+
 char operar(char oper, char oper_1, char oper_2) {
     switch (oper) {
         case 0:
@@ -186,10 +203,6 @@ char suma(char oper_1, char oper_2) {
 }
 
 char resta(char oper_1, char oper_2) {
-    char result = oper_1 - oper_2;
-    /*if (oper_2 > oper_1) {
-        result *= -1;
-    }*/
     return oper_1 - oper_2;
 }
 
