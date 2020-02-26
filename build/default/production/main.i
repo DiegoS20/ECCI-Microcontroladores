@@ -3818,27 +3818,35 @@ char SIMBOLO[11][3] = {
 0X50, 0X50, 0X50,
 };
 
-char input;
+void main(void) {
 char oper_1;
 char oper_2;
 char oper;
 char resultado;
 
-void main(void)
-{
 init_config();
 while(1) {
 oper_1 = PORTB>>4;
 oper_2 = PORTB&0X0F;
 oper = PORTC&0X0F;
-resultado = operar(oper, oper_1, oper_2);
+
 
 for (char i = 0; i < 200; i++) {
-see_full_operation(oper_1, oper_2, oper);
+switch (oper) {
+case 1:
+resultado = oper_1 < oper_2 ? operar(oper, oper_2, oper_1) : operar(oper, oper_1, oper_2);
+char x = 0;
+if (oper_1 < oper_2) {
+visualizar('s', 1, x, 1);
+x += 3;
 }
 
-for (char i = 0; i < 200; i++) {
+visualizar('n', resultado, x, 1);
+break;
+default:
+resultado = operar(oper, oper_1, oper_2);
 visualizar('n', resultado, 0, 1);
+}
 }
 }
 }
@@ -3867,11 +3875,9 @@ LATE = 0;
 PORTE = 0;
 }
 
-# 113
+# 121
 void visualizar(char SoN, char position, char from, char enable) {
 for (char x = 0; x < 3; x++) {
-LATD = tolower(SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
-LATE = x + from;
 if (enable == 1) {
 LA3 = 1;
 LA5 = 0;
@@ -3879,6 +3885,8 @@ LA5 = 0;
 LA3 = 0;
 LA5 = 1;
 }
+LATD = tolower(SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
+LATE = x + from;
 _delay((unsigned long)((5)*(4000000/4000.0)));
 }
 }
@@ -3938,7 +3946,7 @@ return oper_1 + oper_2;
 char resta(char oper_1, char oper_2) {
 char result = oper_1 - oper_2;
 
-# 185
+# 193
 return oper_1 - oper_2;
 }
 
