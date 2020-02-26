@@ -3846,6 +3846,7 @@ x += 3;
 visualizar('n', resultado, x, 1);
 break;
 case 3:
+case 4:
 if (oper_2 == 0) {
 show_error_message();
 } else {
@@ -3885,7 +3886,7 @@ LATE = 0;
 PORTE = 0;
 }
 
-# 130
+# 131
 void visualizar(char SoN, char position, char from, char enable) {
 for (char x = 0; x < 3; x++) {
 if (enable == 1) {

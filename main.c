@@ -81,6 +81,7 @@ void main(void) {
                     visualizar('n', resultado, x, 1);
                     break;
                 case 3:
+                case 4:
                     if (oper_2 == 0) {
                         show_error_message();
                     } else {
