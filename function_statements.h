@@ -21,7 +21,8 @@ char nand(char oper_1, char oper_2);
 char xor(char oper_1, char oper_2);
 char operar(char oper, char oper_1, char oper_2);
 char no_es_primo(char num);
-void visualizar(char SoN[2], char position, char from, char enable);
+void visualizar(char SoN, char position, char from, char enable);
+void see_full_operation(char oper_1, char oper_2, char oper);
 
 #endif	/* FUNCTION_STATEMENTS_H */
 

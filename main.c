@@ -23,7 +23,7 @@
 
 char NUMERO[16][3] = {
     0XF8, 0X88, 0XF8, // 0
-    0X40, 0XF8, 0X00, // 1
+    0X40, 0XF8, 0XF8, // 1
     0XB8, 0XA8, 0XE8, // 2
     0XA8, 0XA8, 0XF8, // 3
     0XE0, 0X20, 0XF8, // 4
@@ -64,45 +64,41 @@ void main(void)
 {
     init_config();
     while(1) {
-        input = PORTB;
-        oper_1 = input>>4;
-        oper_2 = input&0X0F;
+        oper_1 = PORTB>>4;
+        oper_2 = PORTB&0X0F;
         oper = PORTC&0X0F;
         resultado = operar(oper, oper_1, oper_2);
-        char i = 0;
-        while () {
-            visualizar('n', oper_1, 0, 1);
-            visualizar('s', oper, 4, 1);
-            visualizar('n', oper_2, 0, 2);
-            visualizar('s', 11, 4, 2);
-            __delay_ms(10);
-            // Visualizado
-            char es_menos = 0;
-            char from = 0;
-            if (resultado < 0) {
-                resultado = resultado * -1;
-                es_menos = 1;
-            }
-            if (es_menos) {
-                visualizar('s', 1, 0, 1);
-                from = 4;
-            }
+        // Mostrando las operaciones
+        for (char i = 0; i < 200; i++) {
+            see_full_operation(oper_1, oper_2, oper);
+        }
+        // Mostrando el resultado
+        for (char i = 0; i < 200; i++) {
+            visualizar('n', resultado, 0, 1);
         }
     }
 }
 
 void init_config(void) {
     ADCON1 = 0X06; // Convirtiendo puerto A como puerto de entrada digital
-    TRISB = 0B00000000; // Entradas (Operadores 1 y 2)
+    // Configurando puerto A
+    TRISA = 0B00000000; // Salidas para los enables
+    LATA = 0;
+    PORTA = 0;
+    // Configurando puerto B
+    TRISB = 0B11111111; // Entrada de los operadores
     LATB = 0;
-    PORTB = 0;
-    TRISC = 0B00000000; // Entrada de operador
+    PORTB = 0B11111111;
+    // Configurando puerto C
+    TRISC = 0B11111111; // Entrada del operador
     LATC = 0;
     PORTC = 0;
-    TRISD = 0B11111111; // Salida a las matrices de leds
+    // Configurando puerto D
+    TRISD = 0B00000000; // Salida para las matrices de leds
     LATD = 0;
     PORTD = 0;
-    TRISE = 0B11111111; // Salida a los decos
+    // Configurando puerto E
+    TRISE = 0B00000000; // Salidas para los decos
     LATE = 0;
     PORTE = 0;
 }
@@ -114,19 +110,27 @@ void init_config(void) {
  * @param from Desde que columna lo quiere mostrar (empezando desde 0)
  * @param enable Espeficia el enamble a activar
  */
-void visualizar(char SoN[2], char position, char from, char enable) {
-    if (enable == 1) {
-        ENABLE1 = 1;
-        ENABLE2 = 0;
-    } else {
-        ENABLE1 = 0;
-        ENABLE2 = 1;
-    }
+void visualizar(char SoN, char position, char from, char enable) {
     for (char x = 0; x < 3; x++) {
-        LATD = tolower((char)SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
+        LATD = tolower(SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
         LATE = x + from;
+        if (enable == 1) {
+            ENABLE1 = 1;
+            ENABLE2 = 0;
+        } else {
+            ENABLE1 = 0;
+            ENABLE2 = 1;
+        }
         __delay_ms(5);
     }
+}
+
+void see_full_operation(char oper_1, char oper_2, char oper) {
+    visualizar('n', oper_1, 0, 1);
+    visualizar('s', oper, 4, 1);
+    visualizar('n', oper_2, 0, 2);
+    visualizar('s', 10, 4, 2);
+    __delay_ms(5);
 }
 
 char operar(char oper, char oper_1, char oper_2) {

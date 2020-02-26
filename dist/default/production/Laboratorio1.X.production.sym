@@ -1,32 +1,33 @@
 ___lbdiv@counter 54 0 COMRAM 1
-_or 39F8 0 CODE 0
+_or 3AB8 0 CODE 0
+_LA3 7C4B 0 ABS 0
+_LA5 7C4D 0 ABS 0
 __S0 30000E 0 ABS 0
-__S1 73 0 ABS 0
+__S1 68 0 ABS 0
 __S2 0 0 ABS 0
 __Hintentry 0 0 ABS 0
 __Lintentry 0 0 ABS 0
-_visualizar$149 6A 0 COMRAM 1
-_and 39E4 0 CODE 0
-?_or 52 0 COMRAM 1
-_xor 3A20 0 CODE 0
+_and 3AAC 0 CODE 0
+_xor 3ADC 0 CODE 0
+_LATA F89 0 ABS 0
 module@oper_2 56 0 COMRAM 1
 _LATB F8A 0 ABS 0
 _LATC F8B 0 ABS 0
 _LATD F8C 0 ABS 0
 _LATE F8D 0 ABS 0
 __size_of___lbdiv 0 0 ABS 0
-operar@oper_2 5D 0 COMRAM 1
-__end_of_resta 3A20 0 CODE 0
-?_and 52 0 COMRAM 1
-_nand 3A4E 0 CODE 0
-_suma 39BE 0 CODE 0
-_main 3D9C 0 CODE 0
+operar@oper_2 5A 0 COMRAM 1
+__end_of_resta 3AD0 0 CODE 0
+_nand 3B08 0 CODE 0
+_suma 3AD0 0 CODE 0
+_main 3D72 0 CODE 0
 ___sp 0 0 STACK 2
-_oper 6F 0 COMRAM 1
-?_xor 52 0 COMRAM 1
+_oper 64 0 COMRAM 1
 start 2 0 CODE 0
+_TRISA F92 0 ABS 0
 _TRISB F93 0 ABS 0
 _TRISC F94 0 ABS 0
+_PORTA F80 0 ABS 0
 _TRISD F95 0 ABS 0
 _PORTB F81 0 ABS 0
 __Hirdata 0 0 CODE 0
@@ -39,35 +40,32 @@ __LRAM 1 0 ABS 0
 _PORTE F84 0 ABS 0
 __Hconfig 30000E 0 CONFIG 0
 __Lconfig 300000 0 CONFIG 0
+main@i 61 0 COMRAM 1
 __Hbigram 0 0 ABS 0
 __Lbigram 0 0 ABS 0
 __Hrparam 0 0 COMRAM 1
 __Lrparam 0 0 COMRAM 1
-?_nand 56 0 COMRAM 1
-?_suma 52 0 COMRAM 1
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
-_resta 3A0C 0 CODE 0
+_resta 3AC4 0 CODE 0
 __Hcomram 0 0 ABS 0
 __Lcomram 0 0 ABS 0
 __size_of_resta 0 0 ABS 0
 __Hsfr 0 0 ABS 0
 __Lsfr 0 0 ABS 0
-_multi 39D0 0 CODE 0
+_multi 3AE8 0 CODE 0
 __Hbss 0 0 RAM 1
 __Lbss 0 0 RAM 1
 ___param_bank 0 0 ABS 0
 __Hnvrram 0 0 COMRAM 1
 __Lnvrram 0 0 COMRAM 1
-_input 72 0 COMRAM 1
+_input 67 0 COMRAM 1
 _ADCON1 FC1 0 ABS 0
 __Heeprom_data 0 0 EEDATA 0
 __Leeprom_data 0 0 EEDATA 0
-_division 3A34 0 CODE 0
-?_isupper 52 0 COMRAM 1
+_division 3B1C 0 CODE 0
 __Hintsave_regs 0 0 BIGRAM 1
 __Lintsave_regs 0 0 BIGRAM 1
-?_tolower 58 0 COMRAM 1
 __Hbigbss 0 0 BIGRAM 1
 __Lbigbss 0 0 BIGRAM 1
 __Hintret 0 0 ABS 0
@@ -86,52 +84,50 @@ __Hintcode 2 0 CODE 0
 __Lintcode 2 0 CODE 0
 __Hfardata 0 0 FARRAM 0
 __Lfardata 0 0 FARRAM 0
-_oper_1 71 0 COMRAM 1
-_oper_2 70 0 COMRAM 1
+_oper_1 66 0 COMRAM 1
+_oper_2 65 0 COMRAM 1
 __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
 __size_of_tolower 0 0 ABS 0
 _NUMERO 1 0 COMRAM 1
+main@i_153 62 0 COMRAM 1
 division@oper_2 56 0 COMRAM 1
 __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
 __HnvCOMRAM 0 0 ABS 0
 __LnvCOMRAM 0 0 ABS 0
-__pnvCOMRAM 6E 0 COMRAM 1
-visualizar@enable 65 0 COMRAM 1
-nand@oper_1 58 0 COMRAM 1
-suma@oper_1 54 0 COMRAM 1
-nand@oper_2 56 0 COMRAM 1
+__pnvCOMRAM 63 0 COMRAM 1
+visualizar@enable 55 0 COMRAM 1
+nand@oper_1 55 0 COMRAM 1
+suma@oper_1 53 0 COMRAM 1
+nand@oper_2 54 0 COMRAM 1
 suma@oper_2 52 0 COMRAM 1
-visualizar@SoN 60 0 COMRAM 1
+visualizar@SoN 59 0 COMRAM 1
 __Hdata 0 0 ABS 0
 __Ldata 0 0 ABS 0
 __size_of___lbmod 0 0 ABS 0
-?_resta 52 0 COMRAM 1
 stackhi 5FF 0 ABS 0
-_module 3A68 0 CODE 0
+_module 3AF6 0 CODE 0
 __Htemp 0 0 COMRAM 1
-?_multi 52 0 COMRAM 1
 __Ltemp 0 0 COMRAM 1
-_operar 3E66 0 CODE 0
+_operar 3ED4 0 CODE 0
 stacklo 80 0 ABS 0
 __Hrbit 0 0 COMRAM 1
 __Lrbit 0 0 COMRAM 1
 __Hinit 6 0 CODE 0
 __Linit 2 0 CODE 0
-_resultado 6E 0 COMRAM 1
+_resultado 63 0 COMRAM 1
 __Hintcodelo 2 0 CODE 0
 __size_of_xor 0 0 ABS 0
 __Lintcodelo 2 0 CODE 0
 __Hrbss 0 0 COMRAM 1
-__end_of_main 3E66 0 CODE 0
+__end_of_main 3DFC 0 CODE 0
 __Lrbss 0 0 COMRAM 1
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
-__end_of_module 3A82 0 CODE 0
-end_of_initialization 3AA2 0 CODE 0
+__end_of_module 3B08 0 CODE 0
+end_of_initialization 3B54 0 CODE 0
 __size_of_nand 0 0 ABS 0
-?_division 56 0 COMRAM 1
 __Hibigdata 0 0 CODE 0
 __Libigdata 0 0 CODE 0
 __Hifardata 0 0 CODE 0
@@ -152,51 +148,56 @@ __Lbank5 0 0 ABS 0
 __Hpowerup 2 0 CODE 0
 __Lpowerup 2 0 CODE 0
 __size_of_or 0 0 ABS 0
-_no_es_primo 3AE4 0 CODE 0
-__end_of_multi 39E4 0 CODE 0
+_no_es_primo 3B5E 0 CODE 0
+__end_of_multi 3AF6 0 CODE 0
 __size_of_operar 0 0 ABS 0
 __Htext0 0 0 ABS 0
 __Ltext0 0 0 ABS 0
 __Htext1 0 0 ABS 0
 __Ltext1 0 0 ABS 0
-__ptext0 3D9C 0 CODE 0
+__ptext0 3D72 0 CODE 0
+__cntErrataNOP_C:\Users\user\AppData\Local\Temp\s4f0.o 1 0 ABS 0
 __Htext2 0 0 ABS 0
 __Ltext2 0 0 ABS 0
-__ptext1 3CE0 0 CODE 0
+__ptext1 3C9C 0 CODE 0
 __Htext3 0 0 ABS 0
 __Ltext3 0 0 ABS 0
-__ptext2 3BF8 0 CODE 0
+__ptext2 3DFC 0 CODE 0
 __Htext4 0 0 ABS 0
 __Ltext4 0 0 ABS 0
-__ptext3 3B64 0 CODE 0
+__ptext3 3B90 0 CODE 0
 __Htext5 0 0 ABS 0
 __Ltext5 0 0 ABS 0
-__ptext4 3E66 0 CODE 0
+__ptext4 3ED4 0 CODE 0
 __Htext6 0 0 ABS 0
-__cntErrataNOP_C:\Users\user\AppData\Local\Temp\sfdk.o 1 0 ABS 0
 __Ltext6 0 0 ABS 0
-__ptext5 3A20 0 CODE 0
+__ptext5 3ADC 0 CODE 0
 __Htext7 0 0 ABS 0
 __Ltext7 0 0 ABS 0
-__ptext6 39BE 0 CODE 0
+__ptext6 3AD0 0 CODE 0
+__HbssCOMRAM 0 0 ABS 0
+__LbssCOMRAM 0 0 ABS 0
 __Htext8 0 0 ABS 0
 __Ltext8 0 0 ABS 0
-__ptext7 3A0C 0 CODE 0
+__ptext7 3AC4 0 CODE 0
+__pbssCOMRAM 67 0 COMRAM 1
 __Htext9 0 0 ABS 0
 __Ltext9 0 0 ABS 0
-__ptext8 39F8 0 CODE 0
-__ptext9 3AE4 0 CODE 0
+__ptext8 3AB8 0 CODE 0
+__ptext9 3B5E 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-resta@oper_1 55 0 COMRAM 1
-multi@oper_1 54 0 COMRAM 1
-__end_of__initialization 3AA2 0 CODE 0
+see_full_operation@oper_1 60 0 COMRAM 1
+see_full_operation@oper_2 5D 0 COMRAM 1
+resta@oper_1 54 0 COMRAM 1
+multi@oper_1 53 0 COMRAM 1
+__end_of__initialization 3B54 0 CODE 0
 ___rparam_used 1 0 ABS 0
-visualizar@from 63 0 COMRAM 1
+visualizar@from 54 0 COMRAM 1
 resta@oper_2 52 0 COMRAM 1
 multi@oper_2 52 0 COMRAM 1
-__end_of_tolower 3C6A 0 CODE 0
-no_es_primo@num 5A 0 COMRAM 1
+__end_of_tolower 3BC6 0 CODE 0
+no_es_primo@num 58 0 COMRAM 1
 __Hidata 0 0 CODE 0
 __Lidata 0 0 CODE 0
 __Hrdata 0 0 COMRAM 1
@@ -205,9 +206,8 @@ __Hidloc 200008 0 IDLOC 0
 __Lidloc 200000 0 IDLOC 0
 __size_of_and 0 0 ABS 0
 __Hstack 0 0 STACK 2
-___lbmod 3B22 0 CODE 0
+___lbmod 3C08 0 CODE 0
 __Lstack 0 0 STACK 2
-?_module 56 0 COMRAM 1
 __Hparam 0 0 COMRAM 1
 __Lparam 0 0 COMRAM 1
 __Hspace_0 30000E 0 ABS 0
@@ -215,309 +215,320 @@ __HcstackCOMRAM 0 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __LcstackCOMRAM 0 0 ABS 0
 __pcstackCOMRAM 52 0 COMRAM 1
-__Hspace_1 73 0 ABS 0
+__Hspace_1 68 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hsmallconst 0 0 SMALLCONST 0
 __Lsmallconst 0 0 SMALLCONST 0
-?_operar 5C 0 COMRAM 1
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
 __Hnvbit 0 0 COMRAM 1
 __Lnvbit 0 0 COMRAM 1
-___lbdiv 3C6A 0 CODE 0
-_isupper 3B64 0 CODE 0
+___lbdiv 3CFC 0 CODE 0
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
-_tolower 3BF8 0 CODE 0
-__pcinit 3A82 0 CODE 0
+_tolower 3B90 0 CODE 0
+__pcinit 3B32 0 CODE 0
 __ramtop 600 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
 __size_of_main 0 0 ABS 0
 __Hconst 0 0 CONST 0
 __Lconst 0 0 CONST 0
 __size_of_module 0 0 ABS 0
-and@oper_1 55 0 COMRAM 1
-xor@oper_1 55 0 COMRAM 1
+and@oper_1 53 0 COMRAM 1
+xor@oper_1 53 0 COMRAM 1
+_visualizar$161 5A 0 COMRAM 1
 and@oper_2 52 0 COMRAM 1
 xor@oper_2 52 0 COMRAM 1
-__end_of_xor 3A34 0 CODE 0
-_tolower$633 5E 0 COMRAM 1
-__end_of_nand 3A68 0 CODE 0
-operar@oper 60 0 COMRAM 1
+__end_of_xor 3AE8 0 CODE 0
+__end_of_nand 3B1C 0 CODE 0
+operar@oper 5B 0 COMRAM 1
 __CFG_PWRT$ON 0 0 ABS 0
-__size_of_isupper 0 0 ABS 0
-__end_of_visualizar 3D9C 0 CODE 0
+__end_of_visualizar 3ED4 0 CODE 0
 __CFG_OSC$XT 0 0 ABS 0
 __Htext10 0 0 ABS 0
 __Ltext10 0 0 ABS 0
-__ptext10 3A68 0 CODE 0
+__ptext10 3AF6 0 CODE 0
 __Htext11 0 0 ABS 0
 __Ltext11 0 0 ABS 0
 __size_of_suma 0 0 ABS 0
-__ptext11 3B22 0 CODE 0
-__end_of___lbdiv 3CE0 0 CODE 0
+__ptext11 3C08 0 CODE 0
+__end_of___lbdiv 3D72 0 CODE 0
 __Htext12 0 0 ABS 0
 __Ltext12 0 0 ABS 0
-__ptext12 3A4E 0 CODE 0
+__ptext12 3B08 0 CODE 0
 __Htext13 0 0 ABS 0
 __Ltext13 0 0 ABS 0
-__end_of_or 3A0C 0 CODE 0
+__end_of_or 3AC4 0 CODE 0
 __end_of_operar 4000 0 CODE 0
-__ptext13 39E4 0 CODE 0
+__ptext13 3AAC 0 CODE 0
 __Htext14 0 0 ABS 0
 __Ltext14 0 0 ABS 0
-_visualizar 3CE0 0 CODE 0
-__ptext14 39D0 0 CODE 0
+_visualizar 3DFC 0 CODE 0
+__ptext14 3AE8 0 CODE 0
 __Htext15 0 0 ABS 0
 __Ltext15 0 0 ABS 0
-__ptext15 3A34 0 CODE 0
+__ptext15 3B1C 0 CODE 0
 ___inthi_sp 0 0 STACK 2
 __Htext16 0 0 ABS 0
 __Ltext16 0 0 ABS 0
-__ptext16 3C6A 0 CODE 0
+__ptext16 3CFC 0 CODE 0
 ___lbmod@divisor 52 0 COMRAM 1
 __Htext17 0 0 ABS 0
 __Ltext17 0 0 ABS 0
-__ptext17 3AAC 0 CODE 0
+__ptext17 3BC6 0 CODE 0
 ___intlo_sp 0 0 STACK 2
 ___lbdiv@divisor 52 0 COMRAM 1
-__end_of_isupper 3BA6 0 CODE 0
-__end_of_division 3A4E 0 CODE 0
+__end_of_division 3B32 0 CODE 0
 __HidataCOMRAM 0 0 ABS 0
 __LidataCOMRAM 0 0 ABS 0
-__end_of_and 39F8 0 CODE 0
-__pidataCOMRAM 3BA7 0 CODE 0
+__end_of_and 3AB8 0 CODE 0
+__pidataCOMRAM 3C4B 0 CODE 0
+__end_of_see_full_operation 3CFC 0 CODE 0
 __smallconst 0 0 SMALLCONST 0
 __Hreset_vec 2 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 __size_of_no_es_primo 0 0 ABS 0
-or@oper_1 55 0 COMRAM 1
+or@oper_1 53 0 COMRAM 1
 or@oper_2 52 0 COMRAM 1
 __size_of_division 0 0 ABS 0
-division@result 59 0 COMRAM 1
-visualizar@position 62 0 COMRAM 1
+division@result 58 0 COMRAM 1
+visualizar@position 53 0 COMRAM 1
 __accesstop 80 0 ABS 0
 __Hintcode_body 0 0 ABS 0
 __Lintcode_body 0 0 ABS 0
-intlevel0 39BC 0 CODE 0
-intlevel1 39BC 0 CODE 0
-__end_of_init_config 3AE2 0 CODE 0
-intlevel2 39BC 0 CODE 0
-__end_of_suma 39D0 0 CODE 0
-intlevel3 39BC 0 CODE 0
-?_no_es_primo 5A 0 COMRAM 1
+intlevel0 3AAA 0 CODE 0
+intlevel1 3AAA 0 CODE 0
+__end_of_init_config 3C06 0 CODE 0
+intlevel2 3AAA 0 CODE 0
+__end_of_suma 3ADC 0 CODE 0
+intlevel3 3AAA 0 CODE 0
+_see_full_operation 3C9C 0 CODE 0
 __size_of_multi 0 0 ABS 0
-division@oper_1 58 0 COMRAM 1
+division@oper_1 57 0 COMRAM 1
 __HdataCOMRAM 0 0 ABS 0
 __LdataCOMRAM 0 0 ABS 0
 __pdataCOMRAM 1 0 COMRAM 1
-visualizar@x 6C 0 COMRAM 1
+visualizar@x 5C 0 COMRAM 1
 ___lbdiv@quotient 55 0 COMRAM 1
-start_initialization 3A82 0 CODE 0
+start_initialization 3B32 0 CODE 0
 __size_of_visualizar 0 0 ABS 0
-__end_of___lbmod 3B64 0 CODE 0
-_init_config 3AAC 0 CODE 0
-__initialization 3A82 0 CODE 0
-__end_of_no_es_primo 3B22 0 CODE 0
+__end_of___lbmod 3C4A 0 CODE 0
+_init_config 3BC6 0 CODE 0
+__initialization 3B32 0 CODE 0
+__end_of_no_es_primo 3B90 0 CODE 0
+see_full_operation@oper 5E 0 COMRAM 1
 ___lbmod@dividend 53 0 COMRAM 1
-module@oper_1 59 0 COMRAM 1
+module@oper_1 57 0 COMRAM 1
 __size_of_init_config 0 0 ABS 0
-operar@oper_1 5C 0 COMRAM 1
+operar@oper_1 59 0 COMRAM 1
 ___lbmod@counter 54 0 COMRAM 1
 __CFG_BOR$OFF 0 0 ABS 0
 __activetblptr 2 0 ABS 0
 __CFG_WDT$OFF 0 0 ABS 0
+__size_of_see_full_operation 0 0 ABS 0
 ___lbmod@rem 55 0 COMRAM 1
 __CFG_LVP$OFF 0 0 ABS 0
-__cntErrataNOP_dist/default/production\Laboratorio1.X.production.o 4C 0 ABS 0
+__cntErrataNOP_dist/default/production\Laboratorio1.X.production.o 4E 0 ABS 0
 ___lbdiv@dividend 53 0 COMRAM 1
-isupper@c 52 0 COMRAM 1
-tolower@c 58 0 COMRAM 1
+tolower@c 52 0 COMRAM 1
 %segments
 reset_vec 0 5 CODE 0 0
 config 300000 30000D CONFIG 300000 0
 idloc 200000 200007 IDLOC 200000 0
-dataCOMRAM 1 72 COMRAM 1 1
-text4 3E66 3FFF CODE 3E66 0
-text0 3D9C 3E65 CODE 3D9C 0
-text1 3CE0 3D9B CODE 3CE0 0
-text16 3C6A 3CDF CODE 3C6A 0
-text2 3BF8 3C69 CODE 3BF8 0
-idataCOMRAM 3BA7 3BF7 CODE 3BA7 0
-text3 3B64 3BA5 CODE 3B64 0
-text11 3B22 3B63 CODE 3B22 0
-text9 3AE4 3B21 CODE 3AE4 0
-text17 3AAC 3AE3 CODE 3AAC 0
-cinit 3A82 3AAB CODE 3A82 0
-text10 3A68 3A81 CODE 3A68 0
-text12 3A4E 3A67 CODE 3A4E 0
-text15 3A34 3A4D CODE 3A34 0
-text5 3A20 3A33 CODE 3A20 0
-text7 3A0C 3A1F CODE 3A0C 0
-text8 39F8 3A0B CODE 39F8 0
-text13 39E4 39F7 CODE 39E4 0
-text14 39D0 39E3 CODE 39D0 0
-text6 39BE 39CF CODE 39BE 0
-text 39BC 39BD CODE 39BC 0
+dataCOMRAM 1 67 COMRAM 1 1
+text4 3ED4 3FFF CODE 3ED4 0
+text2 3DFC 3ED3 CODE 3DFC 0
+text0 3D72 3DFB CODE 3D72 0
+text16 3CFC 3D71 CODE 3CFC 0
+text1 3C9C 3CFB CODE 3C9C 0
+idataCOMRAM 3C4B 3C9B CODE 3C4B 0
+text11 3C08 3C49 CODE 3C08 0
+text17 3BC6 3C07 CODE 3BC6 0
+text3 3B90 3BC5 CODE 3B90 0
+text9 3B5E 3B8F CODE 3B5E 0
+cinit 3B32 3B5D CODE 3B32 0
+text15 3B1C 3B31 CODE 3B1C 0
+text12 3B08 3B1B CODE 3B08 0
+text10 3AF6 3B07 CODE 3AF6 0
+text14 3AE8 3AF5 CODE 3AE8 0
+text5 3ADC 3AE7 CODE 3ADC 0
+text6 3AD0 3ADB CODE 3AD0 0
+text7 3AC4 3ACF CODE 3AC4 0
+text8 3AB8 3AC3 CODE 3AB8 0
+text13 3AAC 3AB7 CODE 3AAC 0
+text 3AAA 3AAB CODE 3AAA 0
 %locals
 dist/default/production\Laboratorio1.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f452.h
-C:\Users\user\AppData\Local\Temp\sfdk.s
-539 3A82 0 CODE 0
-541 3A82 0 CODE 0
-544 3A82 0 CODE 0
-565 3A82 0 CODE 0
-566 3A84 0 CODE 0
-567 3A86 0 CODE 0
-568 3A88 0 CODE 0
-569 3A8A 0 CODE 0
-570 3A8C 0 CODE 0
-571 3A8E 0 CODE 0
-572 3A92 0 CODE 0
-573 3A96 0 CODE 0
-574 3A96 0 CODE 0
-575 3A98 0 CODE 0
-576 3A9C 0 CODE 0
-577 3A9E 0 CODE 0
-578 3AA0 0 CODE 0
-584 3AA2 0 CODE 0
-587 3AA2 0 CODE 0
-588 3AA4 0 CODE 0
-589 3AA6 0 CODE 0
-590 3AA8 0 CODE 0
+C:\Users\user\AppData\Local\Temp\s4f0.s
+546 3B32 0 CODE 0
+548 3B32 0 CODE 0
+551 3B32 0 CODE 0
+579 3B32 0 CODE 0
+580 3B34 0 CODE 0
+581 3B36 0 CODE 0
+582 3B38 0 CODE 0
+583 3B3A 0 CODE 0
+584 3B3C 0 CODE 0
+585 3B3E 0 CODE 0
+586 3B42 0 CODE 0
+587 3B46 0 CODE 0
+588 3B46 0 CODE 0
+589 3B48 0 CODE 0
+590 3B4C 0 CODE 0
+591 3B4E 0 CODE 0
+592 3B50 0 CODE 0
+596 3B52 0 CODE 0
+602 3B54 0 CODE 0
+605 3B54 0 CODE 0
+606 3B56 0 CODE 0
+607 3B58 0 CODE 0
+608 3B5A 0 CODE 0
 main.c
-63 3D9C 0 CODE 0
-65 3D9C 0 CODE 0
-67 3DA2 0 CODE 0
-68 3DA8 0 CODE 0
-69 3DAE 0 CODE 0
-70 3DB4 0 CODE 0
-71 3DBA 0 CODE 0
-72 3DCC 0 CODE 0
-73 3DEC 0 CODE 0
-74 3E0C 0 CODE 0
-75 3E2C 0 CODE 0
-76 3E4C 0 CODE 0
-77 3E5E 0 CODE 0
-78 3E5E 0 CODE 0
+63 3D72 0 CODE 0
+65 3D72 0 CODE 0
+67 3D78 0 CODE 0
+68 3D80 0 CODE 0
+69 3D86 0 CODE 0
+70 3D8C 0 CODE 0
+72 3D9C 0 CODE 0
+73 3DA0 0 CODE 0
+72 3DB0 0 CODE 0
+76 3DC6 0 CODE 0
+77 3DCA 0 CODE 0
+76 3DDE 0 CODE 0
 main.c
-108 3CE0 0 CODE 0
-110 3CE2 0 CODE 0
-111 3CE6 0 CODE 0
-112 3D6C 0 CODE 0
-113 3D72 0 CODE 0
-114 3D82 0 CODE 0
-115 3D98 0 CODE 0
-C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\tolower.c
-4 3BF8 0 CODE 0
-6 3BFA 0 CODE 0
-7 3C5C 0 CODE 0
-8 3C64 0 CODE 0
-C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\isupper.c
-5 3B64 0 CODE 0
-7 3B64 0 CODE 0
-8 3BA2 0 CODE 0
+128 3C9C 0 CODE 0
+129 3CA0 0 CODE 0
+130 3CB2 0 CODE 0
+131 3CC4 0 CODE 0
+132 3CD6 0 CODE 0
+133 3CE8 0 CODE 0
+134 3CF8 0 CODE 0
 main.c
-117 3E66 0 CODE 0
-118 3E6A 0 CODE 0
-120 3E6E 0 CODE 0
-123 3E86 0 CODE 0
-126 3E9E 0 CODE 0
-129 3EB6 0 CODE 0
-132 3ECE 0 CODE 0
-135 3EE6 0 CODE 0
-138 3EFE 0 CODE 0
-141 3F16 0 CODE 0
-144 3F2E 0 CODE 0
-147 3F46 0 CODE 0
-150 3F5E 0 CODE 0
-154 3F84 0 CODE 0
-155 3FFA 0 CODE 0
+113 3DFC 0 CODE 0
+114 3E00 0 CODE 0
+115 3E04 0 CODE 0
+116 3E80 0 CODE 0
+117 3E86 0 CODE 0
+118 3E9A 0 CODE 0
+119 3E9C 0 CODE 0
+120 3E9E 0 CODE 0
+121 3EA4 0 CODE 0
+122 3EA6 0 CODE 0
+124 3EA8 0 CODE 0
+114 3EBA 0 CODE 0
+126 3ED0 0 CODE 0
+C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\tolower.c
+5 3B90 0 CODE 0
+10 3B94 0 CODE 0
+11 3BBC 0 CODE 0
+12 3BBE 0 CODE 0
+13 3BC2 0 CODE 0
 main.c
-194 3A20 0 CODE 0
-195 3A24 0 CODE 0
-196 3A30 0 CODE 0
+136 3ED4 0 CODE 0
+137 3ED8 0 CODE 0
+139 3EDC 0 CODE 0
+142 3EEC 0 CODE 0
+145 3EFC 0 CODE 0
+148 3F0C 0 CODE 0
+151 3F1C 0 CODE 0
+154 3F2C 0 CODE 0
+157 3F3C 0 CODE 0
+160 3F4C 0 CODE 0
+163 3F5C 0 CODE 0
+166 3F6C 0 CODE 0
+169 3F78 0 CODE 0
+137 3F9A 0 CODE 0
+174 3FFA 0 CODE 0
 main.c
-157 39BE 0 CODE 0
-158 39C2 0 CODE 0
-159 39CC 0 CODE 0
+213 3ADC 0 CODE 0
+214 3AE0 0 CODE 0
+215 3AE4 0 CODE 0
 main.c
-161 3A0C 0 CODE 0
-162 3A10 0 CODE 0
-166 3A10 0 CODE 0
-167 3A1C 0 CODE 0
+176 3AD0 0 CODE 0
+177 3AD4 0 CODE 0
+178 3AD8 0 CODE 0
 main.c
-186 39F8 0 CODE 0
-187 39FC 0 CODE 0
-188 3A08 0 CODE 0
+180 3AC4 0 CODE 0
+181 3AC8 0 CODE 0
+185 3AC8 0 CODE 0
+186 3ACC 0 CODE 0
 main.c
-198 3AE4 0 CODE 0
-199 3AE6 0 CODE 0
-200 3B06 0 CODE 0
-202 3B12 0 CODE 0
-203 3B1C 0 CODE 0
+205 3AB8 0 CODE 0
+206 3ABC 0 CODE 0
+207 3AC0 0 CODE 0
 main.c
-178 3A68 0 CODE 0
-179 3A6C 0 CODE 0
-180 3A7E 0 CODE 0
-C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lbmod.c
-4 3B22 0 CODE 0
-9 3B26 0 CODE 0
-10 3B2A 0 CODE 0
-12 3B2E 0 CODE 0
-13 3B38 0 CODE 0
-14 3B3C 0 CODE 0
-15 3B52 0 CODE 0
-16 3B56 0 CODE 0
-17 3B5E 0 CODE 0
-18 3B60 0 CODE 0
+217 3B5E 0 CODE 0
+218 3B62 0 CODE 0
+219 3B80 0 CODE 0
+221 3B86 0 CODE 0
+222 3B8A 0 CODE 0
 main.c
-190 3A4E 0 CODE 0
-191 3A52 0 CODE 0
-192 3A64 0 CODE 0
+197 3AF6 0 CODE 0
+198 3AFA 0 CODE 0
+199 3B04 0 CODE 0
+C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lbmod.c
+4 3C08 0 CODE 0
+9 3C0C 0 CODE 0
+10 3C10 0 CODE 0
+12 3C14 0 CODE 0
+13 3C1E 0 CODE 0
+14 3C22 0 CODE 0
+15 3C38 0 CODE 0
+16 3C3C 0 CODE 0
+17 3C44 0 CODE 0
+18 3C46 0 CODE 0
 main.c
-182 39E4 0 CODE 0
-183 39E8 0 CODE 0
-184 39F4 0 CODE 0
+209 3B08 0 CODE 0
+210 3B0C 0 CODE 0
+211 3B18 0 CODE 0
 main.c
-169 39D0 0 CODE 0
-170 39D4 0 CODE 0
-171 39E0 0 CODE 0
+201 3AAC 0 CODE 0
+202 3AB0 0 CODE 0
+203 3AB4 0 CODE 0
 main.c
-173 3A34 0 CODE 0
-174 3A38 0 CODE 0
-175 3A44 0 CODE 0
-176 3A4A 0 CODE 0
-C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lbdiv.c
-4 3C6A 0 CODE 0
-9 3C6E 0 CODE 0
-10 3C72 0 CODE 0
-11 3C86 0 CODE 0
-12 3C8A 0 CODE 0
-13 3C8E 0 CODE 0
-14 3C94 0 CODE 0
-12 3C96 0 CODE 0
-17 3CAA 0 CODE 0
-18 3CB0 0 CODE 0
-19 3CC6 0 CODE 0
-20 3CCA 0 CODE 0
-22 3CCC 0 CODE 0
-23 3CD2 0 CODE 0
-25 3CD8 0 CODE 0
-26 3CDC 0 CODE 0
+188 3AE8 0 CODE 0
+189 3AEC 0 CODE 0
+190 3AF2 0 CODE 0
 main.c
-85 3AAC 0 CODE 0
-86 3AAE 0 CODE 0
-87 3AB2 0 CODE 0
-88 3AB6 0 CODE 0
-89 3ABA 0 CODE 0
-90 3ABE 0 CODE 0
-91 3AC2 0 CODE 0
-92 3AC6 0 CODE 0
-93 3ACA 0 CODE 0
-94 3ACC 0 CODE 0
-95 3AD0 0 CODE 0
-96 3AD4 0 CODE 0
-97 3AD6 0 CODE 0
-98 3ADA 0 CODE 0
-99 3ADE 0 CODE 0
+192 3B1C 0 CODE 0
+193 3B20 0 CODE 0
+194 3B2C 0 CODE 0
+195 3B2E 0 CODE 0
+C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lbdiv.c
+4 3CFC 0 CODE 0
+9 3D00 0 CODE 0
+10 3D04 0 CODE 0
+11 3D18 0 CODE 0
+12 3D1C 0 CODE 0
+13 3D20 0 CODE 0
+14 3D26 0 CODE 0
+12 3D28 0 CODE 0
+17 3D3C 0 CODE 0
+18 3D42 0 CODE 0
+19 3D58 0 CODE 0
+20 3D5C 0 CODE 0
+22 3D5E 0 CODE 0
+23 3D64 0 CODE 0
+25 3D6A 0 CODE 0
+26 3D6E 0 CODE 0
+main.c
+82 3BC6 0 CODE 0
+83 3BC8 0 CODE 0
+85 3BCC 0 CODE 0
+86 3BD0 0 CODE 0
+87 3BD4 0 CODE 0
+89 3BD8 0 CODE 0
+90 3BDA 0 CODE 0
+91 3BDE 0 CODE 0
+93 3BE0 0 CODE 0
+94 3BE2 0 CODE 0
+95 3BE6 0 CODE 0
+97 3BEA 0 CODE 0
+98 3BEE 0 CODE 0
+99 3BF2 0 CODE 0
+101 3BF6 0 CODE 0
+102 3BFA 0 CODE 0
+103 3BFE 0 CODE 0
+104 3C02 0 CODE 0
