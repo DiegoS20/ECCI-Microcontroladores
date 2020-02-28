@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Laboratorio1.X.production.sym \
   --cmf=dist/default/production\Laboratorio1.X.production.cmf -z -Q18F452 \
-  -oC:\Users\user\AppData\Local\Temp\sgtg.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\user\AppData\Local\Temp\sebk.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Laboratorio1.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=080h-05FFh -pstack=STACK -ACODE=00h-03FFFhx2 \
   -ACONST=00h-07FFFh -ASMALLCONST=0600h-06FFhx122 \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\user\AppData\Local\Temp\sgtg.o \
+  C:\Users\user\AppData\Local\Temp\sebk.o \
   dist/default/production\Laboratorio1.X.production.o 
 
 Object code version is 3.11
@@ -35,63 +35,63 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\user\AppData\Local\Temp\sgtg.o
-                text                               389C     389C        2     1C4E       0
+C:\Users\user\AppData\Local\Temp\sebk.o
+                text                               3800     3800        2     1C00       0
                 init                                  2        2        4        0       0
                 reset_vec                             0        0        2        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/default/production\Laboratorio1.X.production.o
-                text17                             3984     3984       42     1CC2       0
-                text16                             3B10     3B10       76     1D88       0
-                text15                             390E     390E       16     1C87       0
-                text14                             38DA     38DA        E     1C6D       0
-                text13                             389E     389E        C     1C4F       0
-                text12                             38FA     38FA       14     1C7D       0
-                text11                             39C6     39C6       42     1CE3       0
-                text10                             38E8     38E8       12     1C74       0
-                text9                              3A5C     3A5C       56     1D2E       0
-                text8                              38AA     38AA        C     1C55       0
-                text7                              38B6     38B6        C     1C5B       0
-                text6                              38C2     38C2        C     1C61       0
-                text5                              38CE     38CE        C     1C67       0
-                text4                              3C5E     3C5E      14E     1E2F       0
-                text3                              394E     394E       36     1CA7       0
-                text2                              3B86     3B86       D8     1DC3       0
-                text1                              3AB2     3AB2       5E     1D59       0
-                text0                              3DAC     3DAC      254     1ED6       0
-                cstackCOMRAM                         55       55       1A        1       1
+                text17                             38E8     38E8       42     1C74       0
+                text16                             3A74     3A74       76     1D3A       0
+                text15                             3872     3872       16     1C39       0
+                text14                             383E     383E        E     1C1F       0
+                text13                             3802     3802        C     1C01       0
+                text12                             385E     385E       14     1C2F       0
+                text11                             392A     392A       42     1C95       0
+                text10                             384C     384C       12     1C26       0
+                text9                              39C0     39C0       56     1CE0       0
+                text8                              380E     380E        C     1C07       0
+                text7                              381A     381A        C     1C0D       0
+                text6                              3826     3826        C     1C13       0
+                text5                              3832     3832        C     1C19       0
+                text4                              3BF6     3BF6      14E     1DFB       0
+                text3                              38B2     38B2       36     1C59       0
+                text2                              3AEA     3AEA      10C     1D75       0
+                text1                              3A16     3A16       5E     1D0B       0
+                text0                              3D44     3D44      2BC     1EA2       0
+                cstackCOMRAM                         55       55       1B        1       1
                 dataCOMRAM                            1        1       54        1       1
-                cinit                              3924     3924       2A     1C92       0
-                idataCOMRAM                        3A08     3A08       54     3A08       0
+                cinit                              3888     3888       2A     1C44       0
+                idataCOMRAM                        396C     396C       54     396C       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
-                text                               389C     389C        2         0
+                text                               3800     3800        2         0
                 init                                  2        2        4         0
                 reset_vec                             0        0        2         0
-                text17                             3984     3984       42         0
-                text16                             3B10     3B10       76         0
-                text15                             390E     390E       16         0
-                text14                             38DA     38DA        E         0
-                text13                             389E     389E        C         0
-                text12                             38FA     38FA       14         0
-                text11                             39C6     39C6       42         0
-                text10                             38E8     38E8       12         0
-                text9                              3A5C     3A5C       56         0
-                text8                              38AA     38AA        C         0
-                text7                              38B6     38B6        C         0
-                text6                              38C2     38C2        C         0
-                text5                              38CE     38CE        C         0
-                text4                              3C5E     3C5E      14E         0
-                text3                              394E     394E       36         0
-                text2                              3B86     3B86       D8         0
-                text1                              3AB2     3AB2       5E         0
-                text0                              3DAC     3DAC      254         0
-                cinit                              3924     3924       2A         0
-                idataCOMRAM                        3A08     3A08       54         0
+                text17                             38E8     38E8       42         0
+                text16                             3A74     3A74       76         0
+                text15                             3872     3872       16         0
+                text14                             383E     383E        E         0
+                text13                             3802     3802        C         0
+                text12                             385E     385E       14         0
+                text11                             392A     392A       42         0
+                text10                             384C     384C       12         0
+                text9                              39C0     39C0       56         0
+                text8                              380E     380E        C         0
+                text7                              381A     381A        C         0
+                text6                              3826     3826        C         0
+                text5                              3832     3832        C         0
+                text4                              3BF6     3BF6      14E         0
+                text3                              38B2     38B2       36         0
+                text2                              3AEA     3AEA      10C         0
+                text1                              3A16     3A16       5E         0
+                text0                              3D44     3D44      2BC         0
+                cinit                              3888     3888       2A         0
+                idataCOMRAM                        396C     396C       54         0
 
         CLASS   CONST          
 
@@ -100,7 +100,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   MEDIUMCONST    
 
         CLASS   COMRAM         
-                cstackCOMRAM                         55       55       1A         1
+                cstackCOMRAM                         55       55       1B         1
                 dataCOMRAM                            1        1       54         1
 
         CLASS   ABS1           
@@ -138,28 +138,28 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000006  000006         0       0  CODE    
-                dataCOMRAM                     000001  00006E  00006F         1       1  COMRAM  
-                text                           00389C  000002  00389E      1C4E       0  CODE    
-                text13                         00389E  00000C  0038AA      1C4F       0  CODE    
-                text8                          0038AA  00000C  0038B6      1C55       0  CODE    
-                text7                          0038B6  00000C  0038C2      1C5B       0  CODE    
-                text6                          0038C2  00000C  0038CE      1C61       0  CODE    
-                text5                          0038CE  00000C  0038DA      1C67       0  CODE    
-                text14                         0038DA  00000E  0038E8      1C6D       0  CODE    
-                text10                         0038E8  000012  0038FA      1C74       0  CODE    
-                text12                         0038FA  000014  00390E      1C7D       0  CODE    
-                text15                         00390E  000016  003924      1C87       0  CODE    
-                cinit                          003924  00002A  00394E      1C92       0  CODE    
-                text3                          00394E  000036  003984      1CA7       0  CODE    
-                text17                         003984  000042  0039C6      1CC2       0  CODE    
-                text11                         0039C6  000042  003A08      1CE3       0  CODE    
-                idataCOMRAM                    003A08  000054  003A5C      3A08       0  CODE    
-                text9                          003A5C  000056  003AB2      1D2E       0  CODE    
-                text1                          003AB2  00005E  003B10      1D59       0  CODE    
-                text16                         003B10  000076  003B86      1D88       0  CODE    
-                text2                          003B86  0000D8  003C5E      1DC3       0  CODE    
-                text4                          003C5E  00014E  003DAC      1E2F       0  CODE    
-                text0                          003DAC  000254  004000      1ED6       0  CODE    
+                dataCOMRAM                     000001  00006F  000070         1       1  COMRAM  
+                text                           003800  000002  003802      1C00       0  CODE    
+                text13                         003802  00000C  00380E      1C01       0  CODE    
+                text8                          00380E  00000C  00381A      1C07       0  CODE    
+                text7                          00381A  00000C  003826      1C0D       0  CODE    
+                text6                          003826  00000C  003832      1C13       0  CODE    
+                text5                          003832  00000C  00383E      1C19       0  CODE    
+                text14                         00383E  00000E  00384C      1C1F       0  CODE    
+                text10                         00384C  000012  00385E      1C26       0  CODE    
+                text12                         00385E  000014  003872      1C2F       0  CODE    
+                text15                         003872  000016  003888      1C39       0  CODE    
+                cinit                          003888  00002A  0038B2      1C44       0  CODE    
+                text3                          0038B2  000036  0038E8      1C59       0  CODE    
+                text17                         0038E8  000042  00392A      1C74       0  CODE    
+                text11                         00392A  000042  00396C      1C95       0  CODE    
+                idataCOMRAM                    00396C  000054  0039C0      396C       0  CODE    
+                text9                          0039C0  000056  003A16      1CE0       0  CODE    
+                text1                          003A16  00005E  003A74      1D0B       0  CODE    
+                text16                         003A74  000076  003AEA      1D3A       0  CODE    
+                text2                          003AEA  00010C  003BF6      1D75       0  CODE    
+                text4                          003BF6  00014E  003D44      1DFB       0  CODE    
+                text0                          003D44  0002BC  004000      1EA2       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -173,18 +173,18 @@ UNUSED ADDRESS RANGES
         BANK3            000300-0003FF              100
         BANK4            000400-0004FF              100
         BANK5            000500-0005FF              100
-        BIGRAM           00006F-0005FF              591
-        CODE             000006-00389B             3896
+        BIGRAM           000070-0005FF              590
+        CODE             000006-0037FF             37FA
                          004000-007FFF             4000
-        COMRAM           00006F-00007F               11
-        CONST            000006-00389B             3896
+        COMRAM           000070-00007F               10
+        CONST            000006-0037FF             37FA
                          004000-007FFF             4000
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000600-00389B             329C
+        MEDIUMCONST      000600-0037FF             3200
                          004000-007FFF             4000
         RAM              000080-0005FF              100
         SFR              000F80-000FFF               80
-        SMALLCONST       000600-00389B              100
+        SMALLCONST       000600-0037FF              100
                          004000-007FFF              100
         STACK            000080-0005FF              580
 
@@ -267,7 +267,7 @@ __Hrparam                                                          rparam       
 __Hsfr                                                             sfr          000000
 __Hsmallconst                                                      smallconst   000000
 __Hspace_0                                                         (abs)        30000E
-__Hspace_1                                                         (abs)        00006F
+__Hspace_1                                                         (abs)        000070
 __Hspace_2                                                         (abs)        000000
 __Hstack                                                           stack        000000
 __Hstruct                                                          struct       000000
@@ -368,16 +368,16 @@ __Ltext7                                                           text7        
 __Ltext8                                                           text8        000000
 __Ltext9                                                           text9        000000
 __S0                                                               (abs)        30000E
-__S1                                                               (abs)        00006F
+__S1                                                               (abs)        000070
 __S2                                                               (abs)        000000
 ___inthi_sp                                                        stack        000000
 ___intlo_sp                                                        stack        000000
-___lbdiv                                                           text16       003B10
+___lbdiv                                                           text16       003A74
 ___lbdiv@counter                                                   cstackCOMRAM 000057
 ___lbdiv@dividend                                                  cstackCOMRAM 000056
 ___lbdiv@divisor                                                   cstackCOMRAM 000055
 ___lbdiv@quotient                                                  cstackCOMRAM 000058
-___lbmod                                                           text11       0039C6
+___lbmod                                                           text11       00392A
 ___lbmod@counter                                                   cstackCOMRAM 000057
 ___lbmod@dividend                                                  cstackCOMRAM 000056
 ___lbmod@divisor                                                   cstackCOMRAM 000055
@@ -387,51 +387,51 @@ ___rparam_used                                                     (abs)        
 ___sp                                                              stack        000000
 __accesstop                                                        (abs)        000080
 __activetblptr                                                     (abs)        000002
-__cntErrataNOP_C:\Users\user\AppData\Local\Temp\sgtg.o             (abs)        000001
-__cntErrataNOP_dist/default/production\Laboratorio1.X.production.o (abs)        000065
-__end_of___lbdiv                                                   text16       003B86
-__end_of___lbmod                                                   text11       003A08
-__end_of__initialization                                           cinit        003944
-__end_of_and                                                       text13       0038AA
-__end_of_division                                                  text15       003924
-__end_of_init_config                                               text17       0039C4
+__cntErrataNOP_C:\Users\user\AppData\Local\Temp\sebk.o             (abs)        000001
+__cntErrataNOP_dist/default/production\Laboratorio1.X.production.o (abs)        00006A
+__end_of___lbdiv                                                   text16       003AEA
+__end_of___lbmod                                                   text11       00396C
+__end_of__initialization                                           cinit        0038A8
+__end_of_and                                                       text13       00380E
+__end_of_division                                                  text15       003888
+__end_of_init_config                                               text17       003928
 __end_of_main                                                      text0        004000
-__end_of_module                                                    text10       0038FA
-__end_of_multi                                                     text14       0038E8
-__end_of_nand                                                      text12       00390E
-__end_of_no_es_primo                                               text9        003AB2
-__end_of_operar                                                    text4        003DAC
-__end_of_or                                                        text8        0038B6
-__end_of_resta                                                     text7        0038C2
-__end_of_show_error_message                                        text1        003B10
-__end_of_suma                                                      text6        0038CE
-__end_of_tolower                                                   text3        003984
-__end_of_visualizar                                                text2        003C5E
-__end_of_xor                                                       text5        0038DA
-__initialization                                                   cinit        003924
+__end_of_module                                                    text10       00385E
+__end_of_multi                                                     text14       00384C
+__end_of_nand                                                      text12       003872
+__end_of_no_es_primo                                               text9        003A16
+__end_of_operar                                                    text4        003D44
+__end_of_or                                                        text8        00381A
+__end_of_resta                                                     text7        003826
+__end_of_show_error_message                                        text1        003A74
+__end_of_suma                                                      text6        003832
+__end_of_tolower                                                   text3        0038E8
+__end_of_visualizar                                                text2        003BF6
+__end_of_xor                                                       text5        00383E
+__initialization                                                   cinit        003888
 __mediumconst                                                      mediumconst  000000
-__pcinit                                                           cinit        003924
+__pcinit                                                           cinit        003888
 __pcstackCOMRAM                                                    cstackCOMRAM 000055
 __pdataCOMRAM                                                      dataCOMRAM   000001
-__pidataCOMRAM                                                     idataCOMRAM  003A08
-__ptext0                                                           text0        003DAC
-__ptext1                                                           text1        003AB2
-__ptext10                                                          text10       0038E8
-__ptext11                                                          text11       0039C6
-__ptext12                                                          text12       0038FA
-__ptext13                                                          text13       00389E
-__ptext14                                                          text14       0038DA
-__ptext15                                                          text15       00390E
-__ptext16                                                          text16       003B10
-__ptext17                                                          text17       003984
-__ptext2                                                           text2        003B86
-__ptext3                                                           text3        00394E
-__ptext4                                                           text4        003C5E
-__ptext5                                                           text5        0038CE
-__ptext6                                                           text6        0038C2
-__ptext7                                                           text7        0038B6
-__ptext8                                                           text8        0038AA
-__ptext9                                                           text9        003A5C
+__pidataCOMRAM                                                     idataCOMRAM  00396C
+__ptext0                                                           text0        003D44
+__ptext1                                                           text1        003A16
+__ptext10                                                          text10       00384C
+__ptext11                                                          text11       00392A
+__ptext12                                                          text12       00385E
+__ptext13                                                          text13       003802
+__ptext14                                                          text14       00383E
+__ptext15                                                          text15       003872
+__ptext16                                                          text16       003A74
+__ptext17                                                          text17       0038E8
+__ptext2                                                           text2        003AEA
+__ptext3                                                           text3        0038B2
+__ptext4                                                           text4        003BF6
+__ptext5                                                           text5        003832
+__ptext6                                                           text6        003826
+__ptext7                                                           text7        00381A
+__ptext8                                                           text8        00380E
+__ptext9                                                           text9        0039C0
 __ramtop                                                           ramtop       000600
 __size_of___lbdiv                                                  (abs)        000000
 __size_of___lbmod                                                  (abs)        000000
@@ -452,42 +452,43 @@ __size_of_tolower                                                  (abs)        
 __size_of_visualizar                                               (abs)        000000
 __size_of_xor                                                      (abs)        000000
 __smallconst                                                       smallconst   000000
-_and                                                               text13       00389E
-_division                                                          text15       00390E
-_init_config                                                       text17       003984
-_main                                                              text0        003DAC
+_and                                                               text13       003802
+_division                                                          text15       003872
+_init_config                                                       text17       0038E8
+_main                                                              text0        003D44
 _main$149                                                          cstackCOMRAM 000062
 _main$153                                                          cstackCOMRAM 000064
-_module                                                            text10       0038E8
-_multi                                                             text14       0038DA
-_nand                                                              text12       0038FA
-_no_es_primo                                                       text9        003A5C
-_operar                                                            text4        003C5E
-_or                                                                text8        0038AA
-_resta                                                             text7        0038B6
-_show_error_message                                                text1        003AB2
-_suma                                                              text6        0038C2
-_tolower                                                           text3        00394E
-_visualizar                                                        text2        003B86
-_visualizar$161                                                    cstackCOMRAM 00005D
-_xor                                                               text5        0038CE
+_module                                                            text10       00384C
+_multi                                                             text14       00383E
+_nand                                                              text12       00385E
+_no_es_primo                                                       text9        0039C0
+_operar                                                            text4        003BF6
+_or                                                                text8        00380E
+_resta                                                             text7        00381A
+_show_error_message                                                text1        003A16
+_suma                                                              text6        003826
+_tolower                                                           text3        0038B2
+_visualizar                                                        text2        003AEA
+_visualizar$162                                                    cstackCOMRAM 00005D
+_xor                                                               text5        003832
 and@oper_1                                                         cstackCOMRAM 000056
 and@oper_2                                                         cstackCOMRAM 000055
 division@oper_1                                                    cstackCOMRAM 00005A
 division@oper_2                                                    cstackCOMRAM 000059
 division@result                                                    cstackCOMRAM 00005B
-end_of_initialization                                              cinit        003944
-intlevel0                                                          text         00389C
-intlevel1                                                          text         00389C
-intlevel2                                                          text         00389C
-intlevel3                                                          text         00389C
+end_of_initialization                                              cinit        0038A8
+intlevel0                                                          text         003800
+intlevel1                                                          text         003800
+intlevel2                                                          text         003800
+intlevel3                                                          text         003800
 main@_SoN                                                          cstackCOMRAM 000066
 main@_resultado                                                    cstackCOMRAM 000067
 main@i                                                             cstackCOMRAM 000069
-main@oper                                                          cstackCOMRAM 00006B
-main@oper_1                                                        cstackCOMRAM 00006D
-main@oper_2                                                        cstackCOMRAM 00006E
-main@resultado                                                     cstackCOMRAM 00006C
+main@i_154                                                         cstackCOMRAM 00006B
+main@oper                                                          cstackCOMRAM 00006C
+main@oper_1                                                        cstackCOMRAM 00006E
+main@oper_2                                                        cstackCOMRAM 00006F
+main@resultado                                                     cstackCOMRAM 00006D
 main@x                                                             cstackCOMRAM 00006A
 module@oper_1                                                      cstackCOMRAM 00005A
 module@oper_2                                                      cstackCOMRAM 000059
@@ -507,7 +508,7 @@ resta@oper_2                                                       cstackCOMRAM 
 stackhi                                                            (abs)        0005FF
 stacklo                                                            (abs)        000080
 start                                                              init         000002
-start_initialization                                               cinit        003924
+start_initialization                                               cinit        003888
 suma@oper_1                                                        cstackCOMRAM 000056
 suma@oper_2                                                        cstackCOMRAM 000055
 tolower@c                                                          cstackCOMRAM 000055
@@ -528,14 +529,15 @@ FUNCTION INFORMATION:
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
+  i               1   22[COMRAM] unsigned char 
   _resultado      2   18[COMRAM] int 
   x               1   21[COMRAM] unsigned char 
   _SoN            1   17[COMRAM] unsigned char 
   i               1   20[COMRAM] unsigned char 
-  oper_2          1   25[COMRAM] unsigned char 
-  oper_1          1   24[COMRAM] unsigned char 
-  resultado       1   23[COMRAM] unsigned char 
-  oper            1   22[COMRAM] unsigned char 
+  oper_2          1   26[COMRAM] unsigned char 
+  oper_1          1   25[COMRAM] unsigned char 
+  resultado       1   24[COMRAM] unsigned char 
+  oper            1   23[COMRAM] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -546,10 +548,10 @@ FUNCTION INFORMATION:
 		Unchanged: 
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
       Params:         0       0       0       0       0       0       0
-      Locals:        13       0       0       0       0       0       0
+      Locals:        14       0       0       0       0       0       0
       Temps:          1       0       0       0       0       0       0
-      Totals:        14       0       0       0       0       0       0
-Total ram usage:       14 bytes
+      Totals:        15       0       0       0       0       0       0
+Total ram usage:       15 bytes
  Hardware stack levels required when called:    4
  This function calls:
 		_init_config
@@ -563,7 +565,7 @@ Total ram usage:       14 bytes
 
  *************** function _show_error_message *****************
  Defined at:
-		line 169 in file "main.c"
+		line 180 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -593,7 +595,7 @@ Total ram usage:        1 bytes
 
  *************** function _visualizar *****************
  Defined at:
-		line 146 in file "main.c"
+		line 154 in file "main.c"
  Parameters:    Size  Location     Type
   SoN             1    wreg     unsigned char 
   position        1    1[COMRAM] unsigned char 
@@ -658,7 +660,7 @@ Total ram usage:        1 bytes
 
  *************** function _operar *****************
  Defined at:
-		line 177 in file "main.c"
+		line 188 in file "main.c"
  Parameters:    Size  Location     Type
   oper            1    wreg     unsigned char 
   oper_1          1    8[COMRAM] unsigned char 
@@ -699,7 +701,7 @@ Total ram usage:        3 bytes
 
  *************** function _xor *****************
  Defined at:
-		line 253 in file "main.c"
+		line 264 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    0[COMRAM] unsigned char 
@@ -729,7 +731,7 @@ Total ram usage:        2 bytes
 
  *************** function _suma *****************
  Defined at:
-		line 220 in file "main.c"
+		line 231 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    0[COMRAM] unsigned char 
@@ -759,7 +761,7 @@ Total ram usage:        2 bytes
 
  *************** function _resta *****************
  Defined at:
-		line 224 in file "main.c"
+		line 235 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    0[COMRAM] unsigned char 
@@ -789,7 +791,7 @@ Total ram usage:        2 bytes
 
  *************** function _or *****************
  Defined at:
-		line 245 in file "main.c"
+		line 256 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    0[COMRAM] unsigned char 
@@ -819,7 +821,7 @@ Total ram usage:        2 bytes
 
  *************** function _no_es_primo *****************
  Defined at:
-		line 257 in file "main.c"
+		line 268 in file "main.c"
  Parameters:    Size  Location     Type
   num             1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -850,7 +852,7 @@ Total ram usage:        2 bytes
 
  *************** function _module *****************
  Defined at:
-		line 237 in file "main.c"
+		line 248 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    4[COMRAM] unsigned char 
@@ -914,7 +916,7 @@ Total ram usage:        4 bytes
 
  *************** function _nand *****************
  Defined at:
-		line 249 in file "main.c"
+		line 260 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    2[COMRAM] unsigned char 
@@ -945,7 +947,7 @@ Total ram usage:        2 bytes
 
  *************** function _and *****************
  Defined at:
-		line 241 in file "main.c"
+		line 252 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    0[COMRAM] unsigned char 
@@ -976,7 +978,7 @@ Total ram usage:        2 bytes
 
  *************** function _multi *****************
  Defined at:
-		line 228 in file "main.c"
+		line 239 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    0[COMRAM] unsigned char 
@@ -1006,7 +1008,7 @@ Total ram usage:        2 bytes
 
  *************** function _division *****************
  Defined at:
-		line 232 in file "main.c"
+		line 243 in file "main.c"
  Parameters:    Size  Location     Type
   oper_1          1    wreg     unsigned char 
   oper_2          1    4[COMRAM] unsigned char 
@@ -1070,7 +1072,7 @@ Total ram usage:        4 bytes
 
  *************** function _init_config *****************
  Defined at:
-		line 115 in file "main.c"
+		line 123 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1102,41 +1104,41 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lbmod.c
-		___lbmod       		CODE           	39C6	0000	67
+		___lbmod       		CODE           	392A	0000	67
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lbmod.c estimated size: 67
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\tolower.c
-		_tolower       		CODE           	394E	0000	55
+		_tolower       		CODE           	38B2	0000	55
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\tolower.c estimated size: 55
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lbdiv.c
-		___lbdiv       		CODE           	3B10	0000	119
+		___lbdiv       		CODE           	3A74	0000	119
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lbdiv.c estimated size: 119
 
 shared
-		__initialization		CODE           	3924	0000	33
+		__initialization		CODE           	3888	0000	33
 
 shared estimated size: 33
 
 main.c
-		_resta         		CODE           	38B6	0000	13
-		_main          		CODE           	3DAC	0000	597
-		_module        		CODE           	38E8	0000	19
-		_multi         		CODE           	38DA	0000	15
-		_show_error_message		CODE           	3AB2	0000	95
-		_xor           		CODE           	38CE	0000	13
-		_nand          		CODE           	38FA	0000	21
-		_visualizar    		CODE           	3B86	0000	217
-		_or            		CODE           	38AA	0000	13
-		_operar        		CODE           	3C5E	0000	335
-		_division      		CODE           	390E	0000	23
-		_and           		CODE           	389E	0000	13
-		_init_config   		CODE           	3984	0000	65
-		_suma          		CODE           	38C2	0000	13
-		_no_es_primo   		CODE           	3A5C	0000	87
+		_resta         		CODE           	381A	0000	13
+		_main          		CODE           	3D44	0000	701
+		_module        		CODE           	384C	0000	19
+		_multi         		CODE           	383E	0000	15
+		_show_error_message		CODE           	3A16	0000	95
+		_xor           		CODE           	3832	0000	13
+		_nand          		CODE           	385E	0000	21
+		_visualizar    		CODE           	3AEA	0000	269
+		_or            		CODE           	380E	0000	13
+		_operar        		CODE           	3BF6	0000	335
+		_division      		CODE           	3872	0000	23
+		_and           		CODE           	3802	0000	13
+		_init_config   		CODE           	38E8	0000	65
+		_suma          		CODE           	3826	0000	13
+		_no_es_primo   		CODE           	39C0	0000	87
 
-main.c estimated size: 1539
+main.c estimated size: 1695
 

@@ -70,6 +70,11 @@ void main(void) {
         // Mostrando el resultado
         for (char i = 0; i < 200; i++) {
             switch (oper) {
+                case 0:
+                case 2:
+                    resultado = operar(oper, oper_1, oper_2);
+                    visualizar('n', resultado, 0, 1);
+                    break;
                 case 1:
                     resultado = oper_1 < oper_2 ? operar(oper, oper_2, oper_1) : operar(oper, oper_1, oper_2);
                     char x = 0;
@@ -105,8 +110,11 @@ void main(void) {
                     visualizar(_SoN, _resultado, 0, 1);
                     break;
                 default:
-                    resultado = operar(oper, oper_1, oper_2);
-                    visualizar('n', resultado, 0, 1);
+                    for (char i = 0; i < 2; i++) {
+                        visualizar('s', 1, 0, i + 1);
+                        visualizar('s', 1, 3, i + 1);
+                        visualizar('s', 1, 6, i + 1);
+                    }
             }
         }
     }
@@ -145,6 +153,9 @@ void init_config(void) {
  */
 void visualizar(char SoN, char position, char from, char enable) {
     for (char x = 0; x < 3; x++) {
+        if ((from + x) > 6) {
+            return;
+        }
         if (enable == 1) {
             ENABLE1 = 1;
             ENABLE2 = 0;
