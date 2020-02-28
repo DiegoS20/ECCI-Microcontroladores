@@ -89,6 +89,21 @@ void main(void) {
                         visualizar('n', resultado, 0, 1);
                     }
                     break;
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                    resultado = operar(oper, oper_1, oper_2);
+                    int _resultado = resultado&0X0F;
+                    visualizar('n', _resultado, 0, 1);
+                    break;
+                case 9:
+                case 10:
+                    resultado = operar(oper, oper_1, oper_2);
+                    int _resultado = resultado ? 9 : 15;
+                    char _SoN = resultado ? 's' : 'n';
+                    visualizar(_SoN, _resultado, 0, 1);
+                    break;
                 default:
                     resultado = operar(oper, oper_1, oper_2);
                     visualizar('n', resultado, 0, 1);
@@ -192,7 +207,10 @@ char operar(char oper, char oper_1, char oper_2) {
             return no_es_primo(oper_1);
             break;
         case 10:
-            return oper_1 == 2;
+            if (oper_1 == 2 && !module(oper_2, 2)) {
+                return 1;
+            }
+            return 0;
             break;
         default:
             break;
@@ -237,8 +255,10 @@ char xor(char oper_1, char oper_2) {
 }
 
 char no_es_primo(char num) {
-    if (!module(num, 2)) {
-        return 0;
+    for (char i = 2; i < num; i++) {
+        if (!module(num, i)) {
+            return 1;
+        }
     }
-    return 1;
+    return 0;
 }
