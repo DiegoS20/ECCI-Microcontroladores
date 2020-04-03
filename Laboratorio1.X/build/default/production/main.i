@@ -3832,6 +3832,9 @@ oper_1 = PORTB>>4;
 oper_2 = PORTB&0X0F;
 oper = PORTC&0X0F;
 
+for (char i = 0; i < 200; i++) {
+see_full_operation(oper_1, oper_2, oper);
+}
 
 for (char i = 0; i < 200; i++) {
 switch (oper) {
@@ -3909,7 +3912,7 @@ LATE = 0;
 PORTE = 0;
 }
 
-# 154
+# 157
 void visualizar(char SoN, char position, char from, char enable) {
 for (char x = 0; x < 3; x++) {
 if ((from + x) > 6) {
@@ -3922,7 +3925,7 @@ LA5 = 0;
 LA3 = 0;
 LA5 = 1;
 }
-LATD = tolower(SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
+LATD = tolower(SoN) == 's' ? ~SIMBOLO[position][x] : ~NUMERO[position][x];
 LATE = x + from;
 _delay((unsigned long)((5)*(4000000/4000.0)));
 }

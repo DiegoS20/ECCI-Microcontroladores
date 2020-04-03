@@ -37,7 +37,7 @@ char NUMERO[16][3] = {
     0XF8, 0X88, 0X88, // C
     0X38, 0X28, 0XF8, // D
     0XF8, 0XA8, 0XA8, // E
-    0XF8, 0XA0, 0XA0, // F
+    0XF8, 0XA0, 0XA0 // F
 };
 
 char SIMBOLO[12][3] = {
@@ -52,21 +52,26 @@ char SIMBOLO[12][3] = {
     0X60, 0X50, 0X60, // XOR
     0X80, 0XF8, 0X80, // T
     0X50, 0X50, 0X50, // =
-    0XF8, 0XB0, 0XE8, // R
+    0XF8, 0XB0, 0XE8 // R
 };
 
-void main(void) {
+void main(void)
+{
     char oper_1;
     char oper_2;
     char oper;
     char resultado;
     
     init_config();
-    while(1) {
+    while(1)
+    {
         oper_1 = PORTB>>4;
         oper_2 = PORTB&0X0F;
         oper = PORTC&0X0F;
         // Mostrando las operaciones
+        for (char i = 0; i < 200; i++) {
+            see_full_operation(oper_1, oper_2, oper);
+        }
         // Mostrando el resultado
         for (char i = 0; i < 200; i++) {
             switch (oper) {
@@ -120,7 +125,8 @@ void main(void) {
     }
 }
 
-void init_config(void) {
+void init_config(void) 
+{
     ADCON1 = 0X06; // Convirtiendo puerto A como puerto de entrada digital
     // Configurando puerto A
     TRISA = 0B00000000; // Salidas para los enables
@@ -151,7 +157,8 @@ void init_config(void) {
  * @param from Desde que columna lo quiere mostrar (empezando desde 0)
  * @param enable Espeficia el enamble a activar
  */
-void visualizar(char SoN, char position, char from, char enable) {
+void visualizar(char SoN, char position, char from, char enable)
+{
     for (char x = 0; x < 3; x++) {
         if ((from + x) > 6) {
             return;
@@ -163,7 +170,7 @@ void visualizar(char SoN, char position, char from, char enable) {
             ENABLE1 = 0;
             ENABLE2 = 1;
         }
-        LATD = tolower(SoN) == 's' ? SIMBOLO[position][x] : NUMERO[position][x];
+        LATD = tolower(SoN) == 's' ? ~SIMBOLO[position][x] : ~NUMERO[position][x];
         LATE = x + from;
         __delay_ms(5);
     }

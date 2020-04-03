@@ -35,33 +35,35 @@
 [v ___omul __omul `(ul  1 e 4 0 ]
 "58 C:\MPLAB_X\Laboratorio1.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"123
+"126
 [v _init_config init_config `(v  1 e 1 0 ]
-"154
+"157
 [v _visualizar visualizar `(v  1 e 1 0 ]
-"180
+"175
+[v _see_full_operation see_full_operation `(v  1 e 1 0 ]
+"183
 [v _show_error_message show_error_message `(v  1 e 1 0 ]
-"188
+"191
 [v _operar operar `(uc  1 e 1 0 ]
-"231
+"234
 [v _suma suma `(uc  1 e 1 0 ]
-"235
+"238
 [v _resta resta `(uc  1 e 1 0 ]
-"239
+"242
 [v _multi multi `(uc  1 e 1 0 ]
-"243
+"246
 [v _division division `(uc  1 e 1 0 ]
-"248
+"251
 [v _module module `(uc  1 e 1 0 ]
-"252
+"255
 [v _and and `(uc  1 e 1 0 ]
-"256
+"259
 [v _or or `(uc  1 e 1 0 ]
-"260
+"263
 [v _nand nand `(uc  1 e 1 0 ]
-"264
+"267
 [v _xor xor `(uc  1 e 1 0 ]
-"268
+"271
 [v _no_es_primo no_es_primo `(uc  1 e 1 0 ]
 "52 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f452.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
@@ -106,44 +108,56 @@
 "58
 [v _main main `(v  1 e 1 0 ]
 {
-"113
-[v main@i_154 i `uc  1 a 1 22 ]
-"102
-[v main@_resultado _resultado `i  1 a 2 18 ]
-"80
-[v main@x x `uc  1 a 1 21 ]
-"109
-[v main@_SoN _SoN `uc  1 a 1 17 ]
-"71
-[v main@i i `uc  1 a 1 20 ]
+"116
+[v main@i_162 i `uc  1 a 1 27 ]
+"105
+[v main@_resultado _resultado `i  1 a 2 22 ]
+"83
+[v main@x x `uc  1 a 1 26 ]
+"112
+[v main@_SoN _SoN `uc  1 a 1 21 ]
+"74
+[v main@i_156 i `uc  1 a 1 25 ]
+"70
+[v main@i i `uc  1 a 1 24 ]
 "60
-[v main@oper_2 oper_2 `uc  1 a 1 26 ]
+[v main@oper_2 oper_2 `uc  1 a 1 31 ]
 "59
-[v main@oper_1 oper_1 `uc  1 a 1 25 ]
-"62
-[v main@resultado resultado `uc  1 a 1 24 ]
+[v main@oper_1 oper_1 `uc  1 a 1 30 ]
 "61
-[v main@oper oper `uc  1 a 1 23 ]
-"121
+[v main@oper oper `uc  1 a 1 29 ]
+"62
+[v main@resultado resultado `uc  1 a 1 28 ]
+"124
 } 0
-"180
+"183
 [v _show_error_message show_error_message `(v  1 e 1 0 ]
 {
-"186
+"189
 } 0
-"154
+"175
+[v _see_full_operation see_full_operation `(v  1 e 1 0 ]
+{
+[v see_full_operation@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v see_full_operation@oper_1 oper_1 `uc  1 a 1 wreg ]
+[v see_full_operation@oper_2 oper_2 `uc  1 p 1 12 ]
+[v see_full_operation@oper oper `uc  1 p 1 13 ]
+[v see_full_operation@oper_1 oper_1 `uc  1 a 1 15 ]
+"181
+} 0
+"157
 [v _visualizar visualizar `(v  1 e 1 0 ]
 {
 [v visualizar@SoN SoN `uc  1 a 1 wreg ]
-"155
-[v visualizar@x x `uc  1 a 1 10 ]
-"154
+"158
+[v visualizar@x x `uc  1 a 1 11 ]
+"157
 [v visualizar@SoN SoN `uc  1 a 1 wreg ]
 [v visualizar@position position `uc  1 p 1 1 ]
 [v visualizar@from from `uc  1 p 1 2 ]
 [v visualizar@enable enable `uc  1 p 1 3 ]
-[v visualizar@SoN SoN `uc  1 a 1 7 ]
-"170
+[v visualizar@SoN SoN `uc  1 a 1 8 ]
+"173
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\tolower.c
 [v _tolower tolower `(uc  1 e 1 0 ]
@@ -154,7 +168,7 @@
 [v tolower@c c `uc  1 a 1 0 ]
 "13
 } 0
-"188 C:\MPLAB_X\Laboratorio1.X\main.c
+"191 C:\MPLAB_X\Laboratorio1.X\main.c
 [v _operar operar `(uc  1 e 1 0 ]
 {
 [v operar@oper oper `uc  1 a 1 wreg ]
@@ -162,63 +176,63 @@
 [v operar@oper_1 oper_1 `uc  1 p 1 8 ]
 [v operar@oper_2 oper_2 `uc  1 p 1 9 ]
 [v operar@oper oper `uc  1 a 1 10 ]
-"229
+"232
 } 0
-"264
+"267
 [v _xor xor `(uc  1 e 1 0 ]
 {
 [v xor@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v xor@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v xor@oper_2 oper_2 `uc  1 p 1 0 ]
 [v xor@oper_1 oper_1 `uc  1 a 1 1 ]
-"266
+"269
 } 0
-"231
+"234
 [v _suma suma `(uc  1 e 1 0 ]
 {
 [v suma@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v suma@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v suma@oper_2 oper_2 `uc  1 p 1 0 ]
 [v suma@oper_1 oper_1 `uc  1 a 1 1 ]
-"233
+"236
 } 0
-"235
+"238
 [v _resta resta `(uc  1 e 1 0 ]
 {
 [v resta@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v resta@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v resta@oper_2 oper_2 `uc  1 p 1 0 ]
 [v resta@oper_1 oper_1 `uc  1 a 1 1 ]
-"237
+"240
 } 0
-"256
+"259
 [v _or or `(uc  1 e 1 0 ]
 {
 [v or@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v or@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v or@oper_2 oper_2 `uc  1 p 1 0 ]
 [v or@oper_1 oper_1 `uc  1 a 1 1 ]
-"258
+"261
 } 0
-"268
+"271
 [v _no_es_primo no_es_primo `(uc  1 e 1 0 ]
 {
 [v no_es_primo@num num `uc  1 a 1 wreg ]
-"269
+"272
 [v no_es_primo@i i `uc  1 a 1 7 ]
-"268
+"271
 [v no_es_primo@num num `uc  1 a 1 wreg ]
 [v no_es_primo@num num `uc  1 a 1 6 ]
-"275
+"278
 } 0
-"248
+"251
 [v _module module `(uc  1 e 1 0 ]
 {
 [v module@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v module@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v module@oper_2 oper_2 `uc  1 p 1 4 ]
 [v module@oper_1 oper_1 `uc  1 a 1 5 ]
-"250
+"253
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lbmod.c
 [v ___lbmod __lbmod `(uc  1 e 1 0 ]
@@ -235,44 +249,44 @@
 [v ___lbmod@dividend dividend `uc  1 a 1 1 ]
 "18
 } 0
-"260 C:\MPLAB_X\Laboratorio1.X\main.c
+"263 C:\MPLAB_X\Laboratorio1.X\main.c
 [v _nand nand `(uc  1 e 1 0 ]
 {
 [v nand@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v nand@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v nand@oper_2 oper_2 `uc  1 p 1 2 ]
 [v nand@oper_1 oper_1 `uc  1 a 1 3 ]
-"262
+"265
 } 0
-"252
+"255
 [v _and and `(uc  1 e 1 0 ]
 {
 [v and@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v and@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v and@oper_2 oper_2 `uc  1 p 1 0 ]
 [v and@oper_1 oper_1 `uc  1 a 1 1 ]
-"254
+"257
 } 0
-"239
+"242
 [v _multi multi `(uc  1 e 1 0 ]
 {
 [v multi@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v multi@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v multi@oper_2 oper_2 `uc  1 p 1 0 ]
 [v multi@oper_1 oper_1 `uc  1 a 1 1 ]
-"241
+"244
 } 0
-"243
+"246
 [v _division division `(uc  1 e 1 0 ]
 {
 [v division@oper_1 oper_1 `uc  1 a 1 wreg ]
-"244
+"247
 [v division@result result `uc  1 a 1 6 ]
-"243
+"246
 [v division@oper_1 oper_1 `uc  1 a 1 wreg ]
 [v division@oper_2 oper_2 `uc  1 p 1 4 ]
 [v division@oper_1 oper_1 `uc  1 a 1 5 ]
-"246
+"249
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lbdiv.c
 [v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
@@ -289,8 +303,8 @@
 [v ___lbdiv@dividend dividend `uc  1 a 1 1 ]
 "26
 } 0
-"123 C:\MPLAB_X\Laboratorio1.X\main.c
+"126 C:\MPLAB_X\Laboratorio1.X\main.c
 [v _init_config init_config `(v  1 e 1 0 ]
 {
-"145
+"148
 } 0
