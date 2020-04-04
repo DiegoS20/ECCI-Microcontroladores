@@ -20,14 +20,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
 "3807
 [v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
-"28 main.c
+"32 main.c
 [v _get_voltage `(f ~T0 @X0 0 ef1`ui ]
 "194 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"29 main.c
+"33 main.c
 [v _get_temp `(f ~T0 @X0 0 ef1`ui ]
+"29
+[v _light_the_bulb `(v ~T0 @X0 0 ef ]
+"30
+[v _start_engine `(v ~T0 @X0 0 ef ]
+"31
+[v _light_the_bulb_and_start_engine `(v ~T0 @X0 0 ef ]
+"28
+[v _turn_of_everything `(v ~T0 @X0 0 ef ]
 "1210 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f452.h
 [v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"1408
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
 "1648
 [v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
 "1888
@@ -2467,64 +2477,68 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 25: void R_I(char dato);
 [; ;main.c: 26: void R_D(char dato);
 [; ;main.c: 27: void print_message_onLCD(char message[20]);
-[; ;main.c: 28: float get_voltage(unsigned int ac_in);
-[; ;main.c: 29: float get_temp(unsigned int ac_in);
+[; ;main.c: 28: void turn_of_everything(void);
+[; ;main.c: 29: void light_the_bulb(void);
+[; ;main.c: 30: void start_engine(void);
+[; ;main.c: 31: void light_the_bulb_and_start_engine(void);
+[; ;main.c: 32: float get_voltage(unsigned int ac_in);
+[; ;main.c: 33: float get_temp(unsigned int ac_in);
 [v $root$_main `(v ~T0 @X0 0 e ]
-"31
+"35
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 31: void main(void) {
+[; ;main.c: 35: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 32: initial_config();
-"32
+[; ;main.c: 36: initial_config();
+"36
 [e ( _initial_config ..  ]
-[; ;main.c: 33: init_LCD();
-"33
-[e ( _init_LCD ..  ]
-[; ;main.c: 34: R_I(128);
-"34
-[e ( _R_I (1 -> -> 128 `i `uc ]
-[; ;main.c: 35: print_message_onLCD("CONVERSOR ADC");
-"35
-[e ( _print_message_onLCD (1 -> :s 1C `*uc ]
-[; ;main.c: 37: R_I(192);
+[; ;main.c: 37: init_LCD();
 "37
-[e ( _R_I (1 -> -> 192 `i `uc ]
-[; ;main.c: 38: print_message_onLCD("Diego - 84010");
+[e ( _init_LCD ..  ]
+[; ;main.c: 38: R_I(128);
 "38
-[e ( _print_message_onLCD (1 -> :s 2C `*uc ]
-[; ;main.c: 39: _delay((unsigned long)((3000)*(4000000/4000.0)));
+[e ( _R_I (1 -> -> 128 `i `uc ]
+[; ;main.c: 39: print_message_onLCD("CONVERSOR ADC");
 "39
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 41: R_I(0X01);
+[e ( _print_message_onLCD (1 -> :s 1C `*uc ]
+[; ;main.c: 41: R_I(192);
 "41
-[e ( _R_I (1 -> -> 1 `i `uc ]
+[e ( _R_I (1 -> -> 192 `i `uc ]
+[; ;main.c: 42: print_message_onLCD("Diego - 84010");
+"42
+[e ( _print_message_onLCD (1 -> :s 2C `*uc ]
+[; ;main.c: 43: _delay((unsigned long)((3000)*(4000000/4000.0)));
 "43
-[v _canal `uc ~T0 @X0 1 a ]
-[; ;main.c: 43: char canal = 0;
-[e = _canal -> -> 0 `i `uc ]
-"44
-[v _volt `f ~T0 @X0 1 a ]
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 45: R_I(0X01);
 "45
+[e ( _R_I (1 -> -> 1 `i `uc ]
+"47
+[v _canal `uc ~T0 @X0 1 a ]
+[; ;main.c: 47: char canal = 0;
+[e = _canal -> -> 0 `i `uc ]
+"48
+[v _volt `f ~T0 @X0 1 a ]
+"49
 [v _temp `f ~T0 @X0 1 a ]
-[; ;main.c: 44: float volt;
-[; ;main.c: 45: float temp;
-[; ;main.c: 46: while(1) {
-"46
+[; ;main.c: 48: float volt;
+[; ;main.c: 49: float temp;
+[; ;main.c: 50: while(1) {
+"50
 [e :U 236 ]
 {
-[; ;main.c: 47: ADCON0 = canal ? 0B01001001 : 0B01000001;
-"47
-[e = _ADCON0 -> ? != -> _canal `i -> -> -> 0 `i `uc `i : -> 73 `i -> 65 `i `uc ]
-[; ;main.c: 48: _delay((unsigned long)((20)*(4000000/4000000.0)));
-"48
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 49: GO_DONE = 1;
-"49
-[e = _GO_DONE -> -> 1 `i `b ]
-[; ;main.c: 51: while(GO_DONE) {}
+[; ;main.c: 51: ADCON0 = canal ? 0B01001001 : 0B01000001;
 "51
+[e = _ADCON0 -> ? != -> _canal `i -> -> -> 0 `i `uc `i : -> 73 `i -> 65 `i `uc ]
+[; ;main.c: 52: _delay((unsigned long)((20)*(4000000/4000000.0)));
+"52
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 53: GO_DONE = 1;
+"53
+[e = _GO_DONE -> -> 1 `i `b ]
+[; ;main.c: 55: while(GO_DONE) {}
+"55
 [e $U 238  ]
 [e :U 239 ]
 {
@@ -2532,275 +2546,261 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 238 ]
 [e $ _GO_DONE 239  ]
 [e :U 240 ]
-"53
+"57
 [v _in `ui ~T0 @X0 1 a ]
-[; ;main.c: 53: unsigned int in = (ADRESH<<8) | ADRESL;
+[; ;main.c: 57: unsigned int in = (ADRESH<<8) | ADRESL;
 [e = _in -> | << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
-[; ;main.c: 54: _delay((unsigned long)((50)*(4000000/4000.0)));
-"54
+[; ;main.c: 58: _delay((unsigned long)((50)*(4000000/4000.0)));
+"58
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[v F2146 `uc ~T0 @X0 -> 20 `i s ]
-[i F2146
+[v F2154 `uc ~T0 @X0 -> 20 `i s ]
+[i F2154
 :U ..
 -> 0 `c
 ..
 ]
-"55
+"59
 [v _message `uc ~T0 @X0 -> 20 `i a ]
-[; ;main.c: 55: char message[20] = "";
-[e = _message F2146 ]
-[; ;main.c: 56: if (!canal) {
-"56
+[; ;main.c: 59: char message[20] = "";
+[e = _message F2154 ]
+[; ;main.c: 60: if (!canal) {
+"60
 [e $ ! ! != -> _canal `i -> -> -> 0 `i `uc `i 241  ]
 {
-[; ;main.c: 57: volt = get_voltage(in);
-"57
+[; ;main.c: 61: volt = get_voltage(in);
+"61
 [e = _volt ( _get_voltage (1 _in ]
-[; ;main.c: 58: R_I(128);
-"58
+[; ;main.c: 62: R_I(128);
+"62
 [e ( _R_I (1 -> -> 128 `i `uc ]
-[; ;main.c: 59: sprintf(message, "Voltaje: %0.2fV   ", volt);
-"59
+[; ;main.c: 63: sprintf(message, "Voltaje: %0.2fV   ", volt);
+"63
 [e ( _sprintf (1 , (. , &U _message :s 3C -> _volt `d ]
-"60
+"64
 }
-[; ;main.c: 60: } else {
+[; ;main.c: 64: } else {
 [e $U 242  ]
 [e :U 241 ]
 {
-[; ;main.c: 61: temp = get_temp(in);
-"61
+[; ;main.c: 65: temp = get_temp(in);
+"65
 [e = _temp ( _get_temp (1 _in ]
-[; ;main.c: 62: R_I(192);
-"62
+[; ;main.c: 66: R_I(192);
+"66
 [e ( _R_I (1 -> -> 192 `i `uc ]
-[; ;main.c: 63: sprintf(message, "Temp: %.0fC       ", temp);
-"63
+[; ;main.c: 67: sprintf(message, "Temp: %.0fC       ", temp);
+"67
 [e ( _sprintf (1 , (. , &U _message :s 4C -> _temp `d ]
-"64
+"68
 }
 [e :U 242 ]
-[; ;main.c: 64: }
-[; ;main.c: 66: if (volt > 3.8) {
-"66
+[; ;main.c: 68: }
+[; ;main.c: 70: if (volt > 3.8) {
+"70
 [e $ ! > -> _volt `d .3.8 243  ]
 {
-[; ;main.c: 67: R_I(128);
-"67
-[e ( _R_I (1 -> -> 128 `i `uc ]
-[; ;main.c: 68: print_message_onLCD("    PELIGRO   ");
-"68
-[e ( _print_message_onLCD (1 -> :s 5C `*uc ]
-[; ;main.c: 69: R_I(192);
-"69
-[e ( _R_I (1 -> -> 192 `i `uc ]
-[; ;main.c: 70: print_message_onLCD("  ALTO VOLTAJE  ");
-"70
-[e ( _print_message_onLCD (1 -> :s 6C `*uc ]
+[; ;main.c: 71: R_I(128);
 "71
+[e ( _R_I (1 -> -> 128 `i `uc ]
+[; ;main.c: 72: print_message_onLCD("    PELIGRO   ");
+"72
+[e ( _print_message_onLCD (1 -> :s 5C `*uc ]
+[; ;main.c: 73: R_I(192);
+"73
+[e ( _R_I (1 -> -> 192 `i `uc ]
+[; ;main.c: 74: print_message_onLCD("  ALTO VOLTAJE  ");
+"74
+[e ( _print_message_onLCD (1 -> :s 6C `*uc ]
+[; ;main.c: 75: light_the_bulb();
+"75
+[e ( _light_the_bulb ..  ]
+"76
 }
-[; ;main.c: 71: } else if (volt <= 0.29 && temp >= 61) {
+[; ;main.c: 76: } else if (volt <= 0.29 && temp >= 61) {
 [e $U 244  ]
 [e :U 243 ]
 [e $ ! && <= -> _volt `d .0.29 >= _temp -> -> 61 `i `f 245  ]
 {
-[; ;main.c: 72: R_I(128);
-"72
+[; ;main.c: 77: R_I(128);
+"77
 [e ( _R_I (1 -> -> 128 `i `uc ]
-[; ;main.c: 73: print_message_onLCD("     RIESGO     ");
-"73
+[; ;main.c: 78: print_message_onLCD("     RIESGO     ");
+"78
 [e ( _print_message_onLCD (1 -> :s 7C `*uc ]
-[; ;main.c: 74: R_I(192);
-"74
+[; ;main.c: 79: R_I(192);
+"79
 [e ( _R_I (1 -> -> 192 `i `uc ]
-[; ;main.c: 75: print_message_onLCD(" DE DESTRUCCION ");
-"75
+[; ;main.c: 80: print_message_onLCD(" DE DESTRUCCION ");
+"80
 [e ( _print_message_onLCD (1 -> :s 8C `*uc ]
-"76
+[; ;main.c: 81: start_engine();
+"81
+[e ( _start_engine ..  ]
+"82
 }
-[; ;main.c: 76: } else if (temp < 5) {
+[; ;main.c: 82: } else if (temp < 5) {
 [e $U 246  ]
 [e :U 245 ]
 [e $ ! < _temp -> -> 5 `i `f 247  ]
 {
-[; ;main.c: 77: R_I(128);
-"77
+[; ;main.c: 83: R_I(128);
+"83
 [e ( _R_I (1 -> -> 128 `i `uc ]
-[; ;main.c: 78: print_message_onLCD("     LLEGO     ");
-"78
+[; ;main.c: 84: print_message_onLCD("     LLEGO     ");
+"84
 [e ( _print_message_onLCD (1 -> :s 9C `*uc ]
-[; ;main.c: 79: R_I(192);
-"79
+[; ;main.c: 85: R_I(192);
+"85
 [e ( _R_I (1 -> -> 192 `i `uc ]
-[; ;main.c: 80: print_message_onLCD("     EL FIN     ");
-"80
+[; ;main.c: 86: print_message_onLCD("     EL FIN     ");
+"86
 [e ( _print_message_onLCD (1 -> :s 10C `*uc ]
-"81
+[; ;main.c: 87: light_the_bulb_and_start_engine();
+"87
+[e ( _light_the_bulb_and_start_engine ..  ]
+"88
 }
-[; ;main.c: 81: } else {
+[; ;main.c: 88: } else {
 [e $U 248  ]
 [e :U 247 ]
 {
-[; ;main.c: 82: print_message_onLCD(message);
-"82
+[; ;main.c: 89: print_message_onLCD(message);
+"89
 [e ( _print_message_onLCD (1 &U _message ]
-"83
+[; ;main.c: 90: turn_of_everything();
+"90
+[e ( _turn_of_everything ..  ]
+"91
 }
 [e :U 248 ]
 [e :U 246 ]
 [e :U 244 ]
-[; ;main.c: 83: }
-[; ;main.c: 86: _delay((unsigned long)((10)*(4000000/4000.0)));
-"86
+[; ;main.c: 91: }
+[; ;main.c: 94: _delay((unsigned long)((10)*(4000000/4000.0)));
+"94
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 87: canal = canal ? 0 : 1;
-"87
+[; ;main.c: 95: canal = canal ? 0 : 1;
+"95
 [e = _canal -> ? != -> _canal `i -> -> -> 0 `i `uc `i : -> 0 `i -> 1 `i `uc ]
-"88
+"96
 }
 [e :U 235 ]
-"46
+"50
 [e $U 236  ]
 [e :U 237 ]
-[; ;main.c: 88: }
-[; ;main.c: 89: return;
-"89
+[; ;main.c: 96: }
+[; ;main.c: 97: return;
+"97
 [e $UE 234  ]
-[; ;main.c: 90: }
-"90
+[; ;main.c: 98: }
+"98
 [e :UE 234 ]
 }
-"92
+"100
 [v _initial_config `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 92: void initial_config(void) {
+[; ;main.c: 100: void initial_config(void) {
 [e :U _initial_config ]
 [f ]
-[; ;main.c: 93: TRISA = 0X03;
-"93
-[e = _TRISA -> -> 3 `i `uc ]
-[; ;main.c: 95: TRISC = 0X00;
-"95
-[e = _TRISC -> -> 0 `i `uc ]
-[; ;main.c: 96: TRISD = 0X00;
-"96
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 100: ADCON0 = 0B01000001;
-"100
-[e = _ADCON0 -> -> 65 `i `uc ]
-[; ;main.c: 101: ADCON1 = 0B10000100;
+[; ;main.c: 101: TRISA = 0X03;
 "101
-[e = _ADCON1 -> -> 132 `i `uc ]
-[; ;main.c: 104: LATA = 0;
+[e = _TRISA -> -> 3 `i `uc ]
+[; ;main.c: 103: TRISB = 0X00;
+"103
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 104: TRISC = 0X00;
 "104
-[e = _LATA -> -> 0 `i `uc ]
-[; ;main.c: 105: LATB = 0;
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;main.c: 105: TRISD = 0X00;
 "105
-[e = _LATB -> -> 0 `i `uc ]
-[; ;main.c: 106: LATC = 0;
-"106
-[e = _LATC -> -> 0 `i `uc ]
-[; ;main.c: 107: LATD = 0;
-"107
-[e = _LATD -> -> 0 `i `uc ]
-[; ;main.c: 108: LATE = 0;
-"108
-[e = _LATE -> -> 0 `i `uc ]
-[; ;main.c: 109: PORTA = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 109: ADCON0 = 0B01000001;
 "109
-[e = _PORTA -> -> 0 `i `uc ]
-[; ;main.c: 110: PORTB = 0;
+[e = _ADCON0 -> -> 65 `i `uc ]
+[; ;main.c: 110: ADCON1 = 0B10000100;
 "110
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;main.c: 111: PORTC = 0;
-"111
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;main.c: 112: PORTD = 0;
-"112
-[e = _PORTD -> -> 0 `i `uc ]
-[; ;main.c: 113: PORTE = 0;
+[e = _ADCON1 -> -> 132 `i `uc ]
+[; ;main.c: 113: LATA = 0;
 "113
-[e = _PORTE -> -> 0 `i `uc ]
-[; ;main.c: 114: }
+[e = _LATA -> -> 0 `i `uc ]
+[; ;main.c: 114: LATB = 0;
 "114
+[e = _LATB -> -> 0 `i `uc ]
+[; ;main.c: 115: LATC = 0;
+"115
+[e = _LATC -> -> 0 `i `uc ]
+[; ;main.c: 116: LATD = 0;
+"116
+[e = _LATD -> -> 0 `i `uc ]
+[; ;main.c: 117: LATE = 0;
+"117
+[e = _LATE -> -> 0 `i `uc ]
+[; ;main.c: 118: PORTA = 0;
+"118
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;main.c: 119: PORTB = 0;
+"119
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 120: PORTC = 0;
+"120
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;main.c: 121: PORTD = 0;
+"121
+[e = _PORTD -> -> 0 `i `uc ]
+[; ;main.c: 122: PORTE = 0;
+"122
+[e = _PORTE -> -> 0 `i `uc ]
+[; ;main.c: 123: }
+"123
 [e :UE 249 ]
 }
-"116
+"125
 [v _init_LCD `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 116: void init_LCD(void) {
+[; ;main.c: 125: void init_LCD(void) {
 [e :U _init_LCD ]
 [f ]
-[; ;main.c: 117: _delay((unsigned long)((20)*(4000000/4000.0)));
-"117
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 119: R_I(0X30);
-"119
-[e ( _R_I (1 -> -> 48 `i `uc ]
-[; ;main.c: 120: _delay((unsigned long)((5)*(4000000/4000.0)));
-"120
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 121: R_I(0X30);
-"121
-[e ( _R_I (1 -> -> 48 `i `uc ]
-[; ;main.c: 122: R_I(0X3C);
-"122
-[e ( _R_I (1 -> -> 60 `i `uc ]
-[; ;main.c: 123: R_I(0X0C);
-"123
-[e ( _R_I (1 -> -> 12 `i `uc ]
-[; ;main.c: 124: R_I(0X01);
-"124
-[e ( _R_I (1 -> -> 1 `i `uc ]
-[; ;main.c: 125: _delay((unsigned long)((20)*(4000000/4000.0)));
-"125
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 126: }
+[; ;main.c: 126: _delay((unsigned long)((20)*(4000000/4000.0)));
 "126
-[e :UE 250 ]
-}
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 128: R_I(0X30);
 "128
-[v _R_I `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;main.c: 128: void R_I(char dato) {
-[e :U _R_I ]
-[v _dato `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;main.c: 129: LC3 = 0;
+[e ( _R_I (1 -> -> 48 `i `uc ]
+[; ;main.c: 129: _delay((unsigned long)((5)*(4000000/4000.0)));
 "129
-[e = _LC3 -> -> 0 `i `b ]
-[; ;main.c: 130: LC4 = 0;
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 130: R_I(0X30);
 "130
-[e = _LC4 -> -> 0 `i `b ]
-[; ;main.c: 131: LATD = dato;
+[e ( _R_I (1 -> -> 48 `i `uc ]
+[; ;main.c: 131: R_I(0X3C);
 "131
-[e = _LATD _dato ]
-[; ;main.c: 132: LC3 = 1;
+[e ( _R_I (1 -> -> 60 `i `uc ]
+[; ;main.c: 132: R_I(0X0C);
 "132
-[e = _LC3 -> -> 1 `i `b ]
-[; ;main.c: 133: _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( _R_I (1 -> -> 12 `i `uc ]
+[; ;main.c: 133: R_I(0X01);
 "133
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 134: LC3 = 0;
+[e ( _R_I (1 -> -> 1 `i `uc ]
+[; ;main.c: 134: _delay((unsigned long)((20)*(4000000/4000.0)));
 "134
-[e = _LC3 -> -> 0 `i `b ]
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;main.c: 135: }
 "135
-[e :UE 251 ]
+[e :UE 250 ]
 }
 "137
-[v _R_D `(v ~T0 @X0 1 ef1`uc ]
+[v _R_I `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 137: void R_D(char dato) {
-[e :U _R_D ]
+[; ;main.c: 137: void R_I(char dato) {
+[e :U _R_I ]
 [v _dato `uc ~T0 @X0 1 r1 ]
 [f ]
 [; ;main.c: 138: LC3 = 0;
 "138
 [e = _LC3 -> -> 0 `i `b ]
-[; ;main.c: 139: LC4 = 1;
+[; ;main.c: 139: LC4 = 0;
 "139
-[e = _LC4 -> -> 1 `i `b ]
+[e = _LC4 -> -> 0 `i `b ]
 [; ;main.c: 140: LATD = dato;
 "140
 [e = _LATD _dato ]
@@ -2815,84 +2815,165 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _LC3 -> -> 0 `i `b ]
 [; ;main.c: 144: }
 "144
-[e :UE 252 ]
+[e :UE 251 ]
 }
 "146
+[v _R_D `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;main.c: 146: void R_D(char dato) {
+[e :U _R_D ]
+[v _dato `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;main.c: 147: LC3 = 0;
+"147
+[e = _LC3 -> -> 0 `i `b ]
+[; ;main.c: 148: LC4 = 1;
+"148
+[e = _LC4 -> -> 1 `i `b ]
+[; ;main.c: 149: LATD = dato;
+"149
+[e = _LATD _dato ]
+[; ;main.c: 150: LC3 = 1;
+"150
+[e = _LC3 -> -> 1 `i `b ]
+[; ;main.c: 151: _delay((unsigned long)((100)*(4000000/4000000.0)));
+"151
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 152: LC3 = 0;
+"152
+[e = _LC3 -> -> 0 `i `b ]
+[; ;main.c: 153: }
+"153
+[e :UE 252 ]
+}
+"155
 [v _print_message_onLCD `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;main.c: 146: void print_message_onLCD(char message[20]) {
+[; ;main.c: 155: void print_message_onLCD(char message[20]) {
 [e :U _print_message_onLCD ]
 [v _message `*uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 147: for (char i = 0; i < strlen(message); i++) {
-"147
+[; ;main.c: 156: for (char i = 0; i < strlen(message); i++) {
+"156
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 257  ]
 [e :U 254 ]
 {
-[; ;main.c: 148: R_D(message[i]);
-"148
+[; ;main.c: 157: R_D(message[i]);
+"157
 [e ( _R_D (1 *U + _message * -> _i `ux -> -> # *U _message `ui `ux ]
-"149
+"158
 }
-"147
+"156
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 257 ]
 [e $ < -> _i `ui ( _strlen (1 -> _message `*Cuc 254  ]
 [e :U 255 ]
-"149
+"158
 }
-[; ;main.c: 149: }
-[; ;main.c: 150: }
-"150
+[; ;main.c: 158: }
+[; ;main.c: 159: }
+"159
 [e :UE 253 ]
 }
-"152
+"161
 [v _get_voltage `(f ~T0 @X0 1 ef1`ui ]
 {
-[; ;main.c: 152: float get_voltage(unsigned int ac_in) {
+[; ;main.c: 161: float get_voltage(unsigned int ac_in) {
 [e :U _get_voltage ]
 [v _ac_in `ui ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 153: return (ac_in * 5.0 / 1023);
-"153
+[; ;main.c: 162: return (ac_in * 5.0 / 1023);
+"162
 [e ) -> / * -> _ac_in `d .5.0 -> -> 1023 `i `d `f ]
 [e $UE 258  ]
-[; ;main.c: 154: }
-"154
+[; ;main.c: 163: }
+"163
 [e :UE 258 ]
 }
-"155
+"164
 [v _get_temp `(f ~T0 @X0 1 ef1`ui ]
 {
-[; ;main.c: 155: float get_temp(unsigned int ac_in) {
+[; ;main.c: 164: float get_temp(unsigned int ac_in) {
 [e :U _get_temp ]
 [v _ac_in `ui ~T0 @X0 1 r1 ]
 [f ]
-"156
+"165
 [v _r `f ~T0 @X0 1 a ]
-[; ;main.c: 156: float r = ac_in * 500.0 / 1023;
+[; ;main.c: 165: float r = ac_in * 500.0 / 1023;
 [e = _r -> / * -> _ac_in `d .500.0 -> -> 1023 `i `d `f ]
-[; ;main.c: 157: if (ac_in <= 10) {
-"157
+[; ;main.c: 166: if (ac_in <= 10) {
+"166
 [e $ ! <= _ac_in -> -> 10 `i `ui 260  ]
 {
-[; ;main.c: 158: r += 0.3;
-"158
+[; ;main.c: 167: r += 0.3;
+"167
 [e =+ _r -> .0.3 `f ]
-"159
+"168
 }
 [e :U 260 ]
-[; ;main.c: 159: }
-[; ;main.c: 160: return (r - 0.0099999);
-"160
+[; ;main.c: 168: }
+[; ;main.c: 169: return (r - 0.0099999);
+"169
 [e ) -> - -> _r `d .0.0099999 `f ]
 [e $UE 259  ]
-[; ;main.c: 161: }
-"161
+[; ;main.c: 170: }
+"170
 [e :UE 259 ]
+}
+"172
+[v _turn_of_everything `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 172: void turn_of_everything(void) {
+[e :U _turn_of_everything ]
+[f ]
+[; ;main.c: 173: LATB = 0;
+"173
+[e = _LATB -> -> 0 `i `uc ]
+[; ;main.c: 174: }
+"174
+[e :UE 261 ]
+}
+"176
+[v _light_the_bulb `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 176: void light_the_bulb(void) {
+[e :U _light_the_bulb ]
+[f ]
+[; ;main.c: 177: LATB = 1;
+"177
+[e = _LATB -> -> 1 `i `uc ]
+[; ;main.c: 178: }
+"178
+[e :UE 262 ]
+}
+"180
+[v _start_engine `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 180: void start_engine(void) {
+[e :U _start_engine ]
+[f ]
+[; ;main.c: 181: LATB = 2;
+"181
+[e = _LATB -> -> 2 `i `uc ]
+[; ;main.c: 182: }
+"182
+[e :UE 263 ]
+}
+"184
+[v _light_the_bulb_and_start_engine `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 184: void light_the_bulb_and_start_engine(void){
+[e :U _light_the_bulb_and_start_engine ]
+[f ]
+[; ;main.c: 185: LATB = 3;
+"185
+[e = _LATB -> -> 3 `i `uc ]
+[; ;main.c: 186: }
+"186
+[e :UE 264 ]
 }
 [p f _sprintf 8462340 ]
 [a 1C 67 79 78 86 69 82 83 79 82 32 65 68 67 0 ]

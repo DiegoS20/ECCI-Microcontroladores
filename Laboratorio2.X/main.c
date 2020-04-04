@@ -25,6 +25,10 @@ void init_LCD(void);
 void R_I(char dato); // Rutina de instrucción
 void R_D(char dato); // Rutina de datos
 void print_message_onLCD(char message[20]);
+void turn_of_everything(void);
+void light_the_bulb(void);
+void start_engine(void);
+void light_the_bulb_and_start_engine(void);
 float get_voltage(unsigned int ac_in);
 float get_temp(unsigned int ac_in);
 
@@ -68,18 +72,22 @@ void main(void) {
             print_message_onLCD("    PELIGRO   ");
             R_I(192);
             print_message_onLCD("  ALTO VOLTAJE  ");
+            light_the_bulb();
         } else if (volt <= 0.29 && temp >= 61) {
             R_I(128);
             print_message_onLCD("     RIESGO     ");
             R_I(192);
             print_message_onLCD(" DE DESTRUCCION ");
+            start_engine();
         } else if (temp < 5) {
             R_I(128);
             print_message_onLCD("     LLEGO     ");
             R_I(192);
             print_message_onLCD("     EL FIN     ");
+            light_the_bulb_and_start_engine();
         } else {
             print_message_onLCD(message);
+            turn_of_everything();
         }
         
         // print_message_onLCD(message);
@@ -92,6 +100,7 @@ void main(void) {
 void initial_config(void) {
     TRISA = 0X03; // Los pines 0 y 1, canales para conversión, se inyectan las señales de los potenciometros
     // TRISB = 0X00; // Muestra los 8 bits de menor peso de la salida del conversor del canal 0, se conectan los leds para visualizar usando las resistencias de 330Ohm por led
+    TRISB = 0X00; // Bombillo y Motor
     TRISC = 0X00;
     TRISD = 0X00; // Bus de datos para los pines de la LCD
     // TRISE = 0X00;
@@ -158,4 +167,20 @@ float get_temp(unsigned int ac_in) {
         r += 0.3;
     }
     return (r - 0.0099999);
+}
+
+void turn_of_everything(void) {
+    LATB = 0;
+}
+
+void light_the_bulb(void) {
+    LATB = 1;
+}
+
+void start_engine(void) {
+    LATB = 2;
+}
+
+void light_the_bulb_and_start_engine(void){
+    LATB = 3;
 }
