@@ -3888,7 +3888,6 @@ print_message_onLCD(message);
 turn_of_everything();
 }
 
-
 _delay((unsigned long)((10)*(4000000/4000.0)));
 canal = canal ? 0 : 1;
 }
@@ -3912,12 +3911,10 @@ LATA = 0;
 LATB = 0;
 LATC = 0;
 LATD = 0;
-LATE = 0;
 PORTA = 0;
 PORTB = 0;
 PORTC = 0;
 PORTD = 0;
-PORTE = 0;
 }
 
 void init_LCD(void) {

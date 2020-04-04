@@ -90,7 +90,6 @@ void main(void) {
             turn_of_everything();
         }
         
-        // print_message_onLCD(message);
         __delay_ms(10);
         canal = canal ? 0 : 1;
     }
@@ -114,12 +113,10 @@ void initial_config(void) {
     LATB = 0;
     LATC = 0;
     LATD = 0;
-    LATE = 0;
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
     PORTD = 0;
-    PORTE = 0;
 }
 
 void init_LCD(void) {
