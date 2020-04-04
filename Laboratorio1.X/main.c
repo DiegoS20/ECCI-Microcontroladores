@@ -128,22 +128,27 @@ void main(void)
 void init_config(void) 
 {
     ADCON1 = 0X06; // Convirtiendo puerto A como puerto de entrada digital
+    
     // Configurando puerto A
     TRISA = 0B00000000; // Salidas para los enables
     LATA = 0;
     PORTA = 0;
+    
     // Configurando puerto B
     TRISB = 0B11111111; // Entrada de los operadores
     LATB = 0;
     PORTB = 0B11111111;
+    
     // Configurando puerto C
     TRISC = 0B11111111; // Entrada del operador
     LATC = 0;
     PORTC = 0;
+    
     // Configurando puerto D
     TRISD = 0B00000000; // Salida para las matrices de leds
     LATD = 0;
     PORTD = 0;
+    
     // Configurando puerto E
     TRISE = 0B00000000; // Salidas para los decos
     LATE = 0;

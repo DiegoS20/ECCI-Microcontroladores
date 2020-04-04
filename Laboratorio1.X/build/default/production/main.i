@@ -1,17 +1,17 @@
 
 # 1 "main.c"
 
-# 18 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\xc.h"
+# 18 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
-# 13 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\xc8debug.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 52 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f452.h"
+# 52 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f452.h"
 extern volatile unsigned char PORTA __at(0xF80);
 
 asm("PORTA equ 0F80h");
@@ -3687,7 +3687,7 @@ extern volatile __bit nW __at(0x7E3A);
 
 extern volatile __bit nWRITE __at(0x7E3A);
 
-# 18 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h"
+# 18 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18.h"
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 
@@ -3696,17 +3696,17 @@ __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer suppor
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
-# 158
+# 154
 __attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
 __attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
 __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 
-# 178
+# 174
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
 
-# 186
+# 182
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 #pragma intrinsic(_delaywdt)
@@ -3714,7 +3714,7 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 30 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\math.h"
+# 30 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\math.h"
 extern double fabs(double);
 extern double floor(double);
 extern double ceil(double);
@@ -3760,7 +3760,7 @@ void visualizar(char SoN, char position, char from, char enable);
 void see_full_operation(char oper_1, char oper_2, char oper);
 void show_error_message(void);
 
-# 4 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\ctype.h"
+# 4 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\ctype.h"
 extern __bit isalpha(char);
 extern __bit isupper(char);
 extern __bit islower(char);
@@ -3802,7 +3802,7 @@ char NUMERO[16][3] = {
 0XF8, 0X88, 0X88,
 0X38, 0X28, 0XF8,
 0XF8, 0XA8, 0XA8,
-0XF8, 0XA0, 0XA0,
+0XF8, 0XA0, 0XA0
 };
 
 char SIMBOLO[12][3] = {
@@ -3817,17 +3817,19 @@ char SIMBOLO[12][3] = {
 0X60, 0X50, 0X60,
 0X80, 0XF8, 0X80,
 0X50, 0X50, 0X50,
-0XF8, 0XB0, 0XE8,
+0XF8, 0XB0, 0XE8
 };
 
-void main(void) {
+void main(void)
+{
 char oper_1;
 char oper_2;
 char oper;
 char resultado;
 
 init_config();
-while(1) {
+while(1)
+{
 oper_1 = PORTB>>4;
 oper_2 = PORTB&0X0F;
 oper = PORTC&0X0F;
@@ -3888,32 +3890,39 @@ visualizar('s', 1, 6, i + 1);
 }
 }
 
-void init_config(void) {
+void init_config(void)
+{
 ADCON1 = 0X06;
+
 
 TRISA = 0B00000000;
 LATA = 0;
 PORTA = 0;
 
+
 TRISB = 0B11111111;
 LATB = 0;
 PORTB = 0B11111111;
+
 
 TRISC = 0B11111111;
 LATC = 0;
 PORTC = 0;
 
+
 TRISD = 0B00000000;
 LATD = 0;
 PORTD = 0;
+
 
 TRISE = 0B00000000;
 LATE = 0;
 PORTE = 0;
 }
 
-# 157
-void visualizar(char SoN, char position, char from, char enable) {
+# 165
+void visualizar(char SoN, char position, char from, char enable)
+{
 for (char x = 0; x < 3; x++) {
 if ((from + x) > 6) {
 return;
