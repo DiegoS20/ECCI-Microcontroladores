@@ -214,7 +214,6 @@ __Lpowerup 2 0 CODE 0
 __div_to_l_@f2 5 0 COMRAM 1
 __Htext0 0 0 ABS 0
 __Ltext0 0 0 ABS 0
-__cntErrataNOP_C:\Users\user\AppData\Local\Temp\sg60.o 1 0 ABS 0
 __Htext1 0 0 ABS 0
 __Ltext1 0 0 ABS 0
 __ptext0 22C2 0 CODE 0
@@ -236,6 +235,7 @@ __ptext4 318C 0 CODE 0
 __Htext6 0 0 ABS 0
 __Ltext6 0 0 ABS 0
 __ptext5 1A68 0 CODE 0
+__cntErrataNOP_C:\Users\user\AppData\Local\Temp\sfos.o 1 0 ABS 0
 __Htext7 0 0 ABS 0
 __Ltext7 0 0 ABS 0
 __ptext6 1C12 0 CODE 0
@@ -563,7 +563,7 @@ text 1642 1643 CODE 1642 0
 %locals
 dist/default/production\Laboratorio2.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f452.h
-C:\Users\user\AppData\Local\Temp\sg60.
+C:\Users\user\AppData\Local\Temp\sfos.
 747 166C 0 CODE 0
 749 166C 0 CODE 0
 752 166C 0 CODE 0
