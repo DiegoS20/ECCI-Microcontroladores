@@ -3823,7 +3823,7 @@ void init_LCD(void);
 void R_I(char dato);
 void R_D(char dato);
 void print_message_onLCD(char message[20]);
-void turn_of_everything(void);
+void turn_off_everything(void);
 void light_the_bulb(void);
 void start_engine(void);
 void light_the_bulb_and_start_engine(void);
@@ -3885,7 +3885,7 @@ print_message_onLCD("     EL FIN     ");
 light_the_bulb_and_start_engine();
 } else {
 print_message_onLCD(message);
-turn_of_everything();
+turn_off_everything();
 }
 
 _delay((unsigned long)((10)*(4000000/4000.0)));
@@ -3964,7 +3964,7 @@ r += 0.3;
 return (r - 0.0099999);
 }
 
-void turn_of_everything(void) {
+void turn_off_everything(void) {
 LATB = 0;
 }
 

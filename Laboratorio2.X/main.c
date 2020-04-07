@@ -25,7 +25,7 @@ void init_LCD(void);
 void R_I(char dato); // Rutina de instrucción
 void R_D(char dato); // Rutina de datos
 void print_message_onLCD(char message[20]);
-void turn_of_everything(void);
+void turn_off_everything(void);
 void light_the_bulb(void);
 void start_engine(void);
 void light_the_bulb_and_start_engine(void);
@@ -87,7 +87,7 @@ void main(void) {
             light_the_bulb_and_start_engine();
         } else {
             print_message_onLCD(message);
-            turn_of_everything();
+            turn_off_everything();
         }
         
         __delay_ms(10);
@@ -166,7 +166,7 @@ float get_temp(unsigned int ac_in) {
     return (r - 0.0099999);
 }
 
-void turn_of_everything(void) {
+void turn_off_everything(void) {
     LATB = 0;
 }
 

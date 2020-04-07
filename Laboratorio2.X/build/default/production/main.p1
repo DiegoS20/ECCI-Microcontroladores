@@ -33,7 +33,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "31
 [v _light_the_bulb_and_start_engine `(v ~T0 @X0 0 ef ]
 "28
-[v _turn_of_everything `(v ~T0 @X0 0 ef ]
+[v _turn_off_everything `(v ~T0 @X0 0 ef ]
 "1210 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f452.h
 [v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
 "1408
@@ -2473,7 +2473,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 25: void R_I(char dato);
 [; ;main.c: 26: void R_D(char dato);
 [; ;main.c: 27: void print_message_onLCD(char message[20]);
-[; ;main.c: 28: void turn_of_everything(void);
+[; ;main.c: 28: void turn_off_everything(void);
 [; ;main.c: 29: void light_the_bulb(void);
 [; ;main.c: 30: void start_engine(void);
 [; ;main.c: 31: void light_the_bulb_and_start_engine(void);
@@ -2663,9 +2663,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 89: print_message_onLCD(message);
 "89
 [e ( _print_message_onLCD (1 &U _message ]
-[; ;main.c: 90: turn_of_everything();
+[; ;main.c: 90: turn_off_everything();
 "90
-[e ( _turn_of_everything ..  ]
+[e ( _turn_off_everything ..  ]
 "91
 }
 [e :U 248 ]
@@ -2914,10 +2914,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 259 ]
 }
 "169
-[v _turn_of_everything `(v ~T0 @X0 1 ef ]
+[v _turn_off_everything `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 169: void turn_of_everything(void) {
-[e :U _turn_of_everything ]
+[; ;main.c: 169: void turn_off_everything(void) {
+[e :U _turn_off_everything ]
 [f ]
 [; ;main.c: 170: LATB = 0;
 "170

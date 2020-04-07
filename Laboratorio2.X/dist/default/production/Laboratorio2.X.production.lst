@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Sat Apr 04 10:48:18 2020
+                                                                                               Mon Apr 06 22:07:19 2020
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	18F452
@@ -916,7 +916,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    902 ;;		_print_message_onLCD
    903 ;;		_sprintf
    904 ;;		_start_engine
-   905 ;;		_turn_of_everything
+   905 ;;		_turn_off_everything
    906 ;; This function is called by:
    907 ;;		Startup code after reset
    908 ;; This function uses a non-reentrant model
@@ -1286,8 +1286,8 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   1272  0027D6  6E06               	movwf	print_message_onLCD@message+1,c
   1273  0027D8  EC8B  F00C         	call	_print_message_onLCD	;wreg free
   1274                           
-  1275                           ;main.c: 90: turn_of_everything();
-  1276  0027DC  EC30  F00B         	call	_turn_of_everything	;wreg free
+  1275                           ;main.c: 90: turn_off_everything();
+  1276  0027DC  EC30  F00B         	call	_turn_off_everything	;wreg free
   1277  0027E0                     l3899:
   1278  0027E0  FFFF               	dw	65535	; assembler added errata NOP
   1279                           
@@ -1317,7 +1317,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   1303  002806                     __end_of_main:
   1304                           	opt callstack 0
   1305                           
-  1306 ;; *************** function _turn_of_everything *****************
+  1306 ;; *************** function _turn_off_everything *****************
   1307 ;; Defined at:
   1308 ;;		line 169 in file "main.c"
   1309 ;; Parameters:    Size  Location     Type
@@ -1349,7 +1349,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   1335                           	psect	text1
   1336  001660                     __ptext1:
   1337                           	opt callstack 0
-  1338  001660                     _turn_of_everything:
+  1338  001660                     _turn_off_everything:
   1339                           	opt callstack 0
   1340  001660  FFFF               	dw	65535	; assembler added errata NOP
   1341                           
@@ -1361,7 +1361,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   1347  001664  6E8A               	movwf	3978,c	;volatile
   1348  001666  0012               	return		;funcret
   1349  001668  FFFF               	dw	65535	; errata NOP
-  1350  00166A                     __end_of_turn_of_everything:
+  1350  00166A                     __end_of_turn_off_everything:
   1351                           	opt callstack 0
   1352                           
   1353 ;; *************** function _start_engine *****************
@@ -7967,9 +7967,9 @@ Call Graph Tables:
                 _print_message_onLCD
                             _sprintf
                        _start_engine
-                 _turn_of_everything
+                _turn_off_everything
  ---------------------------------------------------------------------------------
- (1) _turn_of_everything                                   0     0      0       0
+ (1) _turn_off_everything                                  0     0      0       0
  ---------------------------------------------------------------------------------
  (1) _start_engine                                         0     0      0       0
  ---------------------------------------------------------------------------------
@@ -8277,7 +8277,7 @@ Call Graph Tables:
          ___lwmod (ARG)
          ___xxtofl (ARG)
    _start_engine
-   _turn_of_everything
+   _turn_off_everything
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
@@ -8307,7 +8307,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Sat Apr 04 10:48:18 2020
+Symbol Table                                                                                   Mon Apr 06 22:07:19 2020
 
                                                      ___fldiv@aexp 0040  
                                                      ___fldiv@bexp 003F  
@@ -8682,6 +8682,7 @@ Symbol Table                                                                    
                                                            _ADRESH 000FC4  
                                                            _ADRESL 000FC3  
                                                  ___awdiv@dividend 0007  
+                                              _turn_off_everything 1660  
                                                  __end_of___xxtofl 22B8  
                                                  __end_of__powers_ 7EFD  
                                                  __end_of_get_temp 1F3A  
@@ -8692,6 +8693,7 @@ Symbol Table                                                                    
                                                         ??___fldiv 0030  
                                                         ??___awdiv 000B  
                                                         ??___flneg 0005  
+                                             ?_turn_off_everything 0001  
                                                         ??___awmod 0005  
                                                         ??___flmul 0017  
                                                         ??___flsub 004D  
@@ -8728,8 +8730,8 @@ Symbol Table                                                                    
                                                     ___rparam_used 000001  
                                                        ___fltol@f1 0031  
                                                    __pcstackCOMRAM 0001  
+                                            ??_turn_off_everything 0001  
                                                     __end_of_scale 359C  
-                                       __end_of_turn_of_everything 166A  
                                                        __div_to_l_ 1F3A  
                                                   __div_to_l_@exp1 000E  
                                                   __div_to_l_@cntr 000D  
@@ -8824,17 +8826,15 @@ Symbol Table                                                                    
                                                       __end_of_R_D 16B8  
                                                       __end_of_R_I 169C  
                                               __end_of__tdiv_to_l_ 215C  
-                                               _turn_of_everything 1660  
                                                     ?_start_engine 0001  
-                                              ?_turn_of_everything 0001  
                                                   ___llmod@divisor 0005  
+                                      __end_of_turn_off_everything 166A  
                                                   ___llmod@counter 0009  
                                                          ??___flge 0009  
                                                          ??___fleq 0009  
                                                          ??___wmul 0005  
                                                          ??_fround 002C  
                                            __end_of_light_the_bulb 164C  
-                                             ??_turn_of_everything 0001  
                                                     sprintf@tmpval 0063  
                                                          ??_strlen 0003  
                                                         ___fladd@a 0039  
@@ -8957,8 +8957,8 @@ Symbol Table                                                                    
                                                  ___lldiv@dividend 0001  
                                              ?_print_message_onLCD 0005  
                                                  ??_light_the_bulb 0001  
+                                     __size_of_turn_off_everything 000A  
                                                      ?__tdiv_to_l_ 0001  
-                                      __size_of_turn_of_everything 000A  
                                                          sprintf@c 0073  
                                                          sprintf@f 004F  
                                                  get_voltage@ac_in 0041  

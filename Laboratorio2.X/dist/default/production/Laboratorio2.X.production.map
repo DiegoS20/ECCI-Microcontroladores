@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Laboratorio2.X.production.sym \
   --cmf=dist/default/production\Laboratorio2.X.production.cmf -z -Q18F452 \
-  -oC:\Users\user\AppData\Local\Temp\sffo.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\user\AppData\Local\Temp\sitg.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Laboratorio2.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0B5h-05FFh -pstack=STACK -ACODE=00h-03FFFhx2 \
   -ACONST=00h-07FFFh -ASMALLCONST=0600h-06FFhx122 \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\user\AppData\Local\Temp\sffo.o \
+  C:\Users\user\AppData\Local\Temp\sitg.o \
   dist/default/production\Laboratorio2.X.production.o 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\user\AppData\Local\Temp\sffo.o
+C:\Users\user\AppData\Local\Temp\sitg.o
                 text                               1640     1640        2      B20       0
                 init                                  2        2        4        0       0
                 reset_vec                             0        0        2        0       0
@@ -569,7 +569,7 @@ ___xxtofl@sign                                                     cstackCOMRAM 
 ___xxtofl@val                                                      cstackCOMRAM 000001
 __accesstop                                                        (abs)        000080
 __activetblptr                                                     (abs)        000002
-__cntErrataNOP_C:\Users\user\AppData\Local\Temp\sffo.o             (abs)        000001
+__cntErrataNOP_C:\Users\user\AppData\Local\Temp\sitg.o             (abs)        000001
 __cntErrataNOP_dist/default/production\Laboratorio2.X.production.o (abs)        000181
 __div_to_l_                                                        text12       001F3A
 __div_to_l_@cntr                                                   cstackCOMRAM 00000D
@@ -615,7 +615,7 @@ __end_of_scale                                                     text4        
 __end_of_sprintf                                                   text3        004000
 __end_of_start_engine                                              text2        001660
 __end_of_strlen                                                    text22       00180E
-__end_of_turn_of_everything                                        text1        00166A
+__end_of_turn_off_everything                                       text1        00166A
 __initialization                                                   cinit        00166A
 __mediumconst                                                      mediumconst  007EC8
 __npowers_                                                         mediumconst  007EFD
@@ -695,7 +695,7 @@ __size_of_scale                                                    (abs)        
 __size_of_sprintf                                                  (abs)        000000
 __size_of_start_engine                                             (abs)        000000
 __size_of_strlen                                                   (abs)        000000
-__size_of_turn_of_everything                                       (abs)        000000
+__size_of_turn_off_everything                                      (abs)        000000
 __smallconst                                                       smallconst   000000
 __tdiv_to_l_                                                       text11       002046
 __tdiv_to_l_@cntr                                                  cstackCOMRAM 000010
@@ -724,7 +724,7 @@ _sprintf                                                           text3        
 _sprintf$835                                                       cstackCOMRAM 000059
 _start_engine                                                      text2        001656
 _strlen                                                            text22       0017C2
-_turn_of_everything                                                text1        001660
+_turn_off_everything                                               text1        001660
 end_of_initialization                                              cinit        001676
 fround@prec                                                        cstackCOMRAM 000034
 get_temp@ac_in                                                     cstackCOMRAM 000045
@@ -802,13 +802,13 @@ Total ram usage:       35 bytes
 		_print_message_onLCD
 		_sprintf
 		_start_engine
-		_turn_of_everything
+		_turn_off_everything
  This function is called by:
 		Startup code after reset
  This function uses a non-reentrant model
 
 
- *************** function _turn_of_everything *****************
+ *************** function _turn_off_everything *****************
  Defined at:
 		line 169 in file "main.c"
  Parameters:    Size  Location     Type
@@ -2016,13 +2016,13 @@ main.c
 		_get_temp      		CODE           	1E54	0000	231
 		_main          		CODE           	255C	0000	683
 		_get_voltage   		CODE           	197A	0000	113
-		_turn_of_everything		CODE           	1660	0000	11
 		_light_the_bulb		CODE           	1642	0000	11
 		_init_LCD      		CODE           	185E	0000	89
 		_print_message_onLCD		CODE           	1916	0000	101
 		_R_D           		CODE           	169C	0000	29
 		_start_engine  		CODE           	1656	0000	11
 		_light_the_bulb_and_start_engine		CODE           	164C	0000	11
+		_turn_off_everything		CODE           	1660	0000	11
 
 main.c estimated size: 1382
 

@@ -80,7 +80,7 @@
 "161
 [v _get_temp get_temp `(f  1 e 4 0 ]
 "169
-[v _turn_of_everything turn_of_everything `(v  1 e 1 0 ]
+[v _turn_off_everything turn_off_everything `(v  1 e 1 0 ]
 "173
 [v _light_the_bulb light_the_bulb `(v  1 e 1 0 ]
 "177
@@ -147,7 +147,7 @@
 "97
 } 0
 "169
-[v _turn_of_everything turn_of_everything `(v  1 e 1 0 ]
+[v _turn_off_everything turn_off_everything `(v  1 e 1 0 ]
 {
 "171
 } 0
