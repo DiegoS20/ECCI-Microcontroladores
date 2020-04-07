@@ -3822,7 +3822,7 @@ void initial_config(void);
 void init_LCD(void);
 void R_I(char dato);
 void R_D(char dato);
-void print_message_onLCD(char message[20]);
+void print_message_onLCD(char LCD_line, char message[20]);
 void turn_off_everything(void);
 void light_the_bulb(void);
 void start_engine(void);
@@ -3833,11 +3833,8 @@ float get_temp(unsigned int ac_in);
 void main(void) {
 initial_config();
 init_LCD();
-R_I(128);
-print_message_onLCD("CONVERSOR ADC");
-
-R_I(192);
-print_message_onLCD("Diego - 84010");
+print_message_onLCD(128, "CONVERSOR ADC");
+print_message_onLCD(192, "Diego - 84010");
 _delay((unsigned long)((3000)*(4000000/4000.0)));
 
 R_I(0X01);
@@ -3857,34 +3854,27 @@ _delay((unsigned long)((50)*(4000000/4000.0)));
 char message[20] = "";
 if (!canal) {
 volt = get_voltage(in);
-R_I(128);
 sprintf(message, "Voltaje: %0.2fV   ", volt);
 } else {
 temp = get_temp(in);
-R_I(192);
 sprintf(message, "Temp: %.0fC       ", temp);
 }
 
 if (volt > 3.8) {
-R_I(128);
-print_message_onLCD("    PELIGRO   ");
-R_I(192);
-print_message_onLCD("  ALTO VOLTAJE  ");
+print_message_onLCD(128, "    PELIGRO   ");
+print_message_onLCD(192, "  ALTO VOLTAJE  ");
 light_the_bulb();
 } else if (volt <= 0.29 && temp >= 61) {
-R_I(128);
-print_message_onLCD("     RIESGO     ");
-R_I(192);
-print_message_onLCD(" DE DESTRUCCION ");
+print_message_onLCD(128, "     RIESGO     ");
+print_message_onLCD(192, " DE DESTRUCCION ");
 start_engine();
 } else if (temp < 5) {
-R_I(128);
-print_message_onLCD("     LLEGO     ");
-R_I(192);
-print_message_onLCD("     EL FIN     ");
+print_message_onLCD(128, "     LLEGO     ");
+print_message_onLCD(192, "     EL FIN     ");
 light_the_bulb_and_start_engine();
 } else {
-print_message_onLCD(message);
+char line = !canal ? 128 : 192;
+print_message_onLCD(line, message);
 turn_off_everything();
 }
 
@@ -3947,7 +3937,8 @@ _delay((unsigned long)((100)*(4000000/4000000.0)));
 LC3 = 0;
 }
 
-void print_message_onLCD(char message[20]) {
+void print_message_onLCD(char LCD_line, char message[20]) {
+R_I(LCD_line);
 for (char i = 0; i < strlen(message); i++) {
 R_D(message[i]);
 }
