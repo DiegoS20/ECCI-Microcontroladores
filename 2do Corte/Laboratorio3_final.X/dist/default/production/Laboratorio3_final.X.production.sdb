@@ -63,30 +63,36 @@
 [v ___omul __omul `(ul  1 e 4 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"35 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
+"46 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"89
+"151
 [v _initial_config initial_config `(v  1 e 1 0 ]
-"112
-[v _init_LCD init_LCD `(v  1 e 1 0 ]
-"124
-[v _R_I R_I `(v  1 e 1 0 ]
-"133
-[v _R_D R_D `(v  1 e 1 0 ]
-"142
-[v _print_message_onLCD print_message_onLCD `(v  1 e 1 0 ]
-"149
-[v _get_voltage get_voltage `(f  1 e 4 0 ]
-"152
-[v _get_temp get_temp `(f  1 e 4 0 ]
-"160
-[v _turn_off_everything turn_off_everything `(v  1 e 1 0 ]
-"164
-[v _light_the_bulb light_the_bulb `(v  1 e 1 0 ]
-"168
-[v _start_engine start_engine `(v  1 e 1 0 ]
 "172
+[v _serial_transmi_init_config serial_transmi_init_config `(v  1 e 1 0 ]
+"209
+[v _init_LCD init_LCD `(v  1 e 1 0 ]
+"221
+[v _R_I R_I `(v  1 e 1 0 ]
+"230
+[v _R_D R_D `(v  1 e 1 0 ]
+"239
+[v _print_message_onLCD print_message_onLCD `(v  1 e 1 0 ]
+"248
+[v _get_voltage get_voltage `(f  1 e 4 0 ]
+"251
+[v _get_temp get_temp `(f  1 e 4 0 ]
+"259
+[v _turn_off_everything turn_off_everything `(v  1 e 1 0 ]
+"263
+[v _light_the_bulb light_the_bulb `(v  1 e 1 0 ]
+"267
+[v _start_engine start_engine `(v  1 e 1 0 ]
+"271
 [v _light_the_bulb_and_start_engine light_the_bulb_and_start_engine `(v  1 e 1 0 ]
+"275
+[v _capture capture `II(v  1 e 1 0 ]
+"285
+[v _transmit transmit `(v  1 e 1 0 ]
 "52 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f452.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "197
@@ -111,6 +117,69 @@
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "1888
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"2262
+[v _PIE1 PIE1 `VEuc  1 e 1 @3997 ]
+"2339
+[v _PIR1 PIR1 `VEuc  1 e 1 @3998 ]
+[s S197 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"2361
+[s S206 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[u S210 . 1 `S197 1 . 1 0 `S206 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES210  1 e 1 @3998 ]
+"2416
+[v _IPR1 IPR1 `VEuc  1 e 1 @3999 ]
+"2712
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+"2936
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+[s S228 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2981
+[s S237 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S241 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_TX8 1 0 :1:6 
+]
+[s S244 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S247 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[u S256 . 1 `S228 1 . 1 0 `S237 1 . 1 0 `S241 1 . 1 0 `S244 1 . 1 0 `S247 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES256  1 e 1 @4012 ]
+"3204
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"3216
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"3228
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "3591
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "3659
@@ -119,6 +188,44 @@
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "3814
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S108 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"4588
+[s S110 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S113 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S116 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S119 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S122 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S130 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_IPEN 1 0 :1:7 
+]
+[s S133 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 nIPEN 1 0 :1:7 
+]
+[u S141 . 1 `S108 1 . 1 0 `S110 1 . 1 0 `S113 1 . 1 0 `S116 1 . 1 0 `S119 1 . 1 0 `S122 1 . 1 0 `S130 1 . 1 0 `S133 1 . 1 0 ]
+[v _RCONbits RCONbits `VES141  1 e 1 @4048 ]
+"5307
+[v _INTCON INTCON `VEuc  1 e 1 @4082 ]
 "6050
 [v _GO_DONE GO_DONE `VEb  1 e 0 @32274 ]
 "6308
@@ -131,41 +238,66 @@
 [v __powers_ _powers_ `C[13]d  1 e 52 0 ]
 "39
 [v __npowers_ _npowers_ `C[13]d  1 e 52 0 ]
-"35 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
+"23 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
+[v _first_execution first_execution `uc  1 e 1 0 ]
+"39
+[v _data_received data_received `uc  1 e 1 0 ]
+"40
+[v _send_alert send_alert `uc  1 e 1 0 ]
+"41
+[v _alert_sent alert_sent `uc  1 e 1 0 ]
+"42
+[v _w_alert_sent w_alert_sent `uc  1 e 1 0 ]
+"43
+[v _volt volt `f  1 e 4 0 ]
+"44
+[v _temp temp `f  1 e 4 0 ]
+"45
+[v _message_alert message_alert `[50]uc  1 e 50 0 ]
+"46
 [v _main main `(v  1 e 1 0 ]
 {
-"78
-[v main@line line `uc  1 a 1 24 ]
+"111
+[v main@_temp _temp `[25]uc  1 a 25 25 ]
+"110
+[v main@_volt _volt `[25]uc  1 a 25 0 ]
+"100
+[v main@line line `uc  1 a 1 74 ]
+"66
+[v main@message message `[20]uc  1 a 20 50 ]
+"64
+[v main@in in `ui  1 a 2 78 ]
 "56
-[v main@message message `[20]uc  1 a 20 0 ]
-"54
-[v main@in in `ui  1 a 2 25 ]
-"46
-[v main@temp temp `f  1 a 4 31 ]
-"45
-[v main@volt volt `f  1 a 4 27 ]
-"44
-[v main@canal canal `uc  1 a 1 35 ]
-"87
+[v main@canal canal `uc  1 a 1 80 ]
+"149
 } 0
-"160
+"259
 [v _turn_off_everything turn_off_everything `(v  1 e 1 0 ]
 {
-"162
+"261
 } 0
-"168
+"285
+[v _transmit transmit `(v  1 e 1 0 ]
+{
+"286
+[v transmit@i i `uc  1 a 1 8 ]
+"285
+[v transmit@response response `*.35uc  1 p 2 4 ]
+"293
+} 0
+"267
 [v _start_engine start_engine `(v  1 e 1 0 ]
 {
-"170
+"269
 } 0
 "500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 "528
 [v sprintf@fval fval `d  1 a 4 108 ]
-[u S193 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[u S435 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
 "538
-[v sprintf@tmpval tmpval `S193  1 a 4 98 ]
+[v sprintf@tmpval tmpval `S435  1 a 4 98 ]
 "540
 [v sprintf@val val `ul  1 a 4 94 ]
 "512
@@ -353,17 +485,20 @@
 [v ___fleq@ff2 ff2 `d  1 p 4 4 ]
 "12
 } 0
-"142 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
+"172 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
+[v _serial_transmi_init_config serial_transmi_init_config `(v  1 e 1 0 ]
+{
+"207
+} 0
+"239
 [v _print_message_onLCD print_message_onLCD `(v  1 e 1 0 ]
 {
-[v print_message_onLCD@LCD_line LCD_line `uc  1 a 1 wreg ]
-"144
+"243
 [v print_message_onLCD@i i `uc  1 a 1 9 ]
-"142
-[v print_message_onLCD@LCD_line LCD_line `uc  1 a 1 wreg ]
+"239
 [v print_message_onLCD@message message `*.35uc  1 p 2 4 ]
-[v print_message_onLCD@LCD_line LCD_line `uc  1 a 1 8 ]
-"147
+[v print_message_onLCD@place place `uc  1 p 1 6 ]
+"246
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -374,56 +509,56 @@
 [v strlen@s s `*.35Cuc  1 p 2 0 ]
 "13
 } 0
-"133 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
+"230 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
 [v _R_D R_D `(v  1 e 1 0 ]
 {
 [v R_D@dato dato `uc  1 a 1 wreg ]
 [v R_D@dato dato `uc  1 a 1 wreg ]
 [v R_D@dato dato `uc  1 a 1 0 ]
-"140
+"237
 } 0
-"172
+"271
 [v _light_the_bulb_and_start_engine light_the_bulb_and_start_engine `(v  1 e 1 0 ]
 {
-"174
+"273
 } 0
-"164
+"263
 [v _light_the_bulb light_the_bulb `(v  1 e 1 0 ]
 {
-"166
+"265
 } 0
-"89
+"151
 [v _initial_config initial_config `(v  1 e 1 0 ]
 {
-"110
+"170
 } 0
-"112
+"209
 [v _init_LCD init_LCD `(v  1 e 1 0 ]
 {
-"122
+"219
 } 0
-"124
+"221
 [v _R_I R_I `(v  1 e 1 0 ]
 {
 [v R_I@dato dato `uc  1 a 1 wreg ]
 [v R_I@dato dato `uc  1 a 1 wreg ]
 [v R_I@dato dato `uc  1 a 1 0 ]
-"131
+"228
 } 0
-"149
+"248
 [v _get_voltage get_voltage `(f  1 e 4 0 ]
 {
 [v get_voltage@ac_in ac_in `ui  1 p 2 64 ]
-"151
+"250
 } 0
-"152
+"251
 [v _get_temp get_temp `(f  1 e 4 0 ]
 {
-"153
+"252
 [v get_temp@r r `f  1 a 4 72 ]
-"152
+"251
 [v get_temp@ac_in ac_in `ui  1 p 2 68 ]
-"158
+"257
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -443,17 +578,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S518 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S760 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S523 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S526 . 4 `l 1 i 4 0 `d 1 f 4 0 `S518 1 fAsBytes 4 0 `S523 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S526  1 a 4 33 ]
+[s S765 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S768 . 4 `l 1 i 4 0 `d 1 f 4 0 `S760 1 fAsBytes 4 0 `S765 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S768  1 a 4 33 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 27 ]
-[s S594 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S836 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S597 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S594 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S597  1 a 2 37 ]
+[u S839 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S836 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S839  1 a 2 37 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
@@ -500,4 +635,9 @@
 [v ___fladd@b b `d  1 p 4 52 ]
 [v ___fladd@a a `d  1 p 4 56 ]
 "237
+} 0
+"275 C:\MPLAB_X\Laboratorios\2do Corte\Laboratorio3_final.X\main.c
+[v _capture capture `II(v  1 e 1 0 ]
+{
+"283
 } 0
