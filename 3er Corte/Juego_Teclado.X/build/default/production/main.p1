@@ -1,5 +1,94 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
+"21 main.c
+[v _initial_config `(v ~T0 @X0 0 ef ]
+"22
+[v _init_lcd `(v ~T0 @X0 0 ef ]
+"23
+[v _init_serial_com `(v ~T0 @X0 0 ef ]
+"1210 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f452.h
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"1408
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"1648
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"1888
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"3659
+[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
+"3591
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"722
+[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
+"822
+[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"934
+[v _LATC `Vuc ~T0 @X0 0 e@3979 ]
+"1046
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"52
+[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
+"197
+[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
+"322
+[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
+"489
+[v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
+[v F1969 `(v ~T0 @X0 1 tf1`ul ]
+"183 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18.h
+[v __delay `JF1969 ~T0 @X0 0 e ]
+[p i __delay ]
+"24 main.c
+[v _R_I `(v ~T0 @X0 0 ef1`uc ]
+"5307 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f452.h
+[v _INTCON `Vuc ~T0 @X0 0 e@4082 ]
+"5230
+[v _INTCON2 `Vuc ~T0 @X0 0 e@4081 ]
+"4546
+[s S192 :1 `uc 1 ]
+[n S192 . NOT_BOR ]
+"4549
+[s S193 :1 `uc 1 :1 `uc 1 ]
+[n S193 . . NOT_POR ]
+"4553
+[s S194 :2 `uc 1 :1 `uc 1 ]
+[n S194 . . NOT_PD ]
+"4557
+[s S195 :3 `uc 1 :1 `uc 1 ]
+[n S195 . . NOT_TO ]
+"4561
+[s S196 :4 `uc 1 :1 `uc 1 ]
+[n S196 . . NOT_RI ]
+"4565
+[s S197 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S197 . nBOR nPOR nPD nTO nRI . IPEN ]
+"4574
+[s S198 :7 `uc 1 :1 `uc 1 ]
+[n S198 . . NOT_IPEN ]
+"4578
+[s S199 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S199 . BOR POR PD TO RI . nIPEN ]
+"4545
+[u S191 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 `S197 1 `S198 1 `S199 1 ]
+[n S191 . . . . . . . . . ]
+"4588
+[v _RCONbits `VS191 ~T0 @X0 0 e@4048 ]
+"3228
+[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
+"2262
+[v _PIE1 `Vuc ~T0 @X0 0 e@3997 ]
+"2339
+[v _PIR1 `Vuc ~T0 @X0 0 e@3998 ]
+"2416
+[v _IPR1 `Vuc ~T0 @X0 0 e@3999 ]
+"2936
+[v _TXSTA `Vuc ~T0 @X0 0 e@4012 ]
+"2712
+[v _RCSTA `Vuc ~T0 @X0 0 e@4011 ]
+"6308
+[v _LC3 `Vb ~T0 @X0 0 e@31835 ]
+"6311
+[v _LC4 `Vb ~T0 @X0 0 e@31836 ]
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -2346,17 +2435,223 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x WDT=OFF ]
 "15
 [p x LVP=OFF ]
+[; ;main.c: 21: void initial_config(void);
+[; ;main.c: 22: void init_lcd(void);
+[; ;main.c: 23: void init_serial_com(void);
+[; ;main.c: 24: void R_I(char dato);
+[; ;main.c: 25: void R_D(char dato);
 [v $root$_main `(v ~T0 @X0 0 e ]
-"18
+"27
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 18: void main(void) {
+[; ;main.c: 27: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 19: return;
-"19
+[; ;main.c: 28: initial_config();
+"28
+[e ( _initial_config ..  ]
+[; ;main.c: 29: init_lcd();
+"29
+[e ( _init_lcd ..  ]
+[; ;main.c: 30: init_serial_com();
+"30
+[e ( _init_serial_com ..  ]
+[; ;main.c: 32: while(1) {
+"32
+[e :U 235 ]
+{
+"34
+}
+[e :U 234 ]
+"32
+[e $U 235  ]
+[e :U 236 ]
+[; ;main.c: 34: }
+[; ;main.c: 35: return;
+"35
 [e $UE 233  ]
-[; ;main.c: 20: }
-"20
+[; ;main.c: 36: }
+"36
 [e :UE 233 ]
+}
+"38
+[v _initial_config `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 38: void initial_config(void) {
+[e :U _initial_config ]
+[f ]
+[; ;main.c: 39: TRISA = 0X03;
+"39
+[e = _TRISA -> -> 3 `i `uc ]
+[; ;main.c: 40: TRISB = 0B11110000;
+"40
+[e = _TRISB -> -> 240 `i `uc ]
+[; ;main.c: 41: TRISC = 0B10000000;
+"41
+[e = _TRISC -> -> 128 `i `uc ]
+[; ;main.c: 42: TRISD = 0X00;
+"42
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 45: ADCON0 = 0B01000001;
+"45
+[e = _ADCON0 -> -> 65 `i `uc ]
+[; ;main.c: 46: ADCON1 = 0B10000100;
+"46
+[e = _ADCON1 -> -> 132 `i `uc ]
+[; ;main.c: 49: LATA = 0;
+"49
+[e = _LATA -> -> 0 `i `uc ]
+[; ;main.c: 50: LATB = 0XFF;
+"50
+[e = _LATB -> -> 255 `i `uc ]
+[; ;main.c: 51: LATC = 0;
+"51
+[e = _LATC -> -> 0 `i `uc ]
+[; ;main.c: 52: LATD = 0;
+"52
+[e = _LATD -> -> 0 `i `uc ]
+[; ;main.c: 53: PORTA = 0;
+"53
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;main.c: 54: PORTB = 0XFF;
+"54
+[e = _PORTB -> -> 255 `i `uc ]
+[; ;main.c: 55: PORTC = 0;
+"55
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;main.c: 56: PORTD = 0;
+"56
+[e = _PORTD -> -> 0 `i `uc ]
+[; ;main.c: 57: }
+"57
+[e :UE 237 ]
+}
+"59
+[v _init_lcd `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 59: void init_lcd(void) {
+[e :U _init_lcd ]
+[f ]
+[; ;main.c: 60: _delay((unsigned long)((20)*(4000000/4000.0)));
+"60
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 62: R_I(0X30);
+"62
+[e ( _R_I (1 -> -> 48 `i `uc ]
+[; ;main.c: 63: _delay((unsigned long)((5)*(4000000/4000.0)));
+"63
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 64: R_I(0X30);
+"64
+[e ( _R_I (1 -> -> 48 `i `uc ]
+[; ;main.c: 65: R_I(0X3C);
+"65
+[e ( _R_I (1 -> -> 60 `i `uc ]
+[; ;main.c: 66: R_I(0X0C);
+"66
+[e ( _R_I (1 -> -> 12 `i `uc ]
+[; ;main.c: 67: R_I(0X01);
+"67
+[e ( _R_I (1 -> -> 1 `i `uc ]
+[; ;main.c: 68: _delay((unsigned long)((20)*(4000000/4000.0)));
+"68
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 69: }
+"69
+[e :UE 238 ]
+}
+"71
+[v _init_serial_com `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 71: void init_serial_com(void) {
+[e :U _init_serial_com ]
+[f ]
+[; ;main.c: 72: INTCON = 0B11001000;
+"72
+[e = _INTCON -> -> 200 `i `uc ]
+[; ;main.c: 73: INTCON2 = 0B00000001;
+"73
+[e = _INTCON2 -> -> 1 `i `uc ]
+[; ;main.c: 74: RCONbits.IPEN = 0;
+"74
+[e = . . _RCONbits 5 6 -> -> 0 `i `uc ]
+[; ;main.c: 75: SPBRG = 25;
+"75
+[e = _SPBRG -> -> 25 `i `uc ]
+[; ;main.c: 76: PIE1 = 0B00100000;
+"76
+[e = _PIE1 -> -> 32 `i `uc ]
+[; ;main.c: 77: PIR1 = 0B00010000;
+"77
+[e = _PIR1 -> -> 16 `i `uc ]
+[; ;main.c: 78: IPR1 = 0B00100000;
+"78
+[e = _IPR1 -> -> 32 `i `uc ]
+[; ;main.c: 79: TXSTA = 0B00100110;
+"79
+[e = _TXSTA -> -> 38 `i `uc ]
+[; ;main.c: 80: RCSTA = 0B10010000;
+"80
+[e = _RCSTA -> -> 144 `i `uc ]
+[; ;main.c: 81: }
+"81
+[e :UE 239 ]
+}
+"83
+[v _R_I `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;main.c: 83: void R_I(char dato) {
+[e :U _R_I ]
+[v _dato `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;main.c: 84: LC3 = 0;
+"84
+[e = _LC3 -> -> 0 `i `b ]
+[; ;main.c: 85: LC4 = 0;
+"85
+[e = _LC4 -> -> 0 `i `b ]
+[; ;main.c: 86: LATD = dato;
+"86
+[e = _LATD _dato ]
+[; ;main.c: 87: LC3 = 1;
+"87
+[e = _LC3 -> -> 1 `i `b ]
+[; ;main.c: 88: _delay((unsigned long)((100)*(4000000/4000000.0)));
+"88
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 89: LC3 = 0;
+"89
+[e = _LC3 -> -> 0 `i `b ]
+[; ;main.c: 90: }
+"90
+[e :UE 240 ]
+}
+"92
+[v _R_D `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;main.c: 92: void R_D(char dato) {
+[e :U _R_D ]
+[v _dato `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;main.c: 93: LC3 = 0;
+"93
+[e = _LC3 -> -> 0 `i `b ]
+[; ;main.c: 94: LC4 = 1;
+"94
+[e = _LC4 -> -> 1 `i `b ]
+[; ;main.c: 95: LATD = dato;
+"95
+[e = _LATD _dato ]
+[; ;main.c: 96: LC3 = 1;
+"96
+[e = _LC3 -> -> 1 `i `b ]
+[; ;main.c: 97: _delay((unsigned long)((100)*(4000000/4000000.0)));
+"97
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 98: LC3 = 0;
+"98
+[e = _LC3 -> -> 0 `i `b ]
+[; ;main.c: 99: }
+"99
+[e :UE 241 ]
 }

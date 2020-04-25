@@ -3722,7 +3722,83 @@ extern __nonreentrant void _delay3(unsigned char);
 #pragma config WDT = OFF
 #pragma config LVP = OFF
 
+# 21
+void initial_config(void);
+void init_lcd(void);
+void init_serial_com(void);
+void R_I(char dato);
+void R_D(char dato);
 
 void main(void) {
+initial_config();
+init_lcd();
+init_serial_com();
+
+while(1) {
+
+}
 return;
+}
+
+void initial_config(void) {
+TRISA = 0X03;
+TRISB = 0B11110000;
+TRISC = 0B10000000;
+TRISD = 0X00;
+
+
+ADCON0 = 0B01000001;
+ADCON1 = 0B10000100;
+
+
+LATA = 0;
+LATB = 0XFF;
+LATC = 0;
+LATD = 0;
+PORTA = 0;
+PORTB = 0XFF;
+PORTC = 0;
+PORTD = 0;
+}
+
+void init_lcd(void) {
+_delay((unsigned long)((20)*(4000000/4000.0)));
+
+R_I(0X30);
+_delay((unsigned long)((5)*(4000000/4000.0)));
+R_I(0X30);
+R_I(0X3C);
+R_I(0X0C);
+R_I(0X01);
+_delay((unsigned long)((20)*(4000000/4000.0)));
+}
+
+void init_serial_com(void) {
+INTCON = 0B11001000;
+INTCON2 = 0B00000001;
+RCONbits.IPEN = 0;
+SPBRG = 25;
+PIE1 = 0B00100000;
+PIR1 = 0B00010000;
+IPR1 = 0B00100000;
+TXSTA = 0B00100110;
+RCSTA = 0B10010000;
+}
+
+void R_I(char dato) {
+LC3 = 0;
+LC4 = 0;
+LATD = dato;
+LC3 = 1;
+_delay((unsigned long)((100)*(4000000/4000000.0)));
+LC3 = 0;
+}
+
+void R_D(char dato) {
+LC3 = 0;
+LC4 = 1;
+LATD = dato;
+LC3 = 1;
+_delay((unsigned long)((100)*(4000000/4000000.0)));
+LC3 = 0;
 }
