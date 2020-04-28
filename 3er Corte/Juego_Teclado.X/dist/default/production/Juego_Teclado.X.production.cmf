@@ -11,46 +11,84 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\user\AppData\Local\Temp\s27g.o
+$C:\Users\user\AppData\Local\Temp\s9bg.o
 idloc IDLOC 0 200000 200000 8 1
-init CODE 0 2 2 4 1
-text CODE 0 3F0E 3F0E 2 1
-reset_vec CODE 0 0 0 2 1
+init CODE 0 114 114 4 1
+text CODE 0 1570 1570 2 1
+reset_vec CODE 0 0 0 6 1
 config CONFIG 0 300000 300000 E 1
 $dist/default/production\Juego_Teclado.X.production.o
-cinit CODE 0 3F10 3F10 6 1
-text0 CODE 0 3F16 3F16 12 1
-text1 CODE 0 3F6E 3F6E 3A 1
-text2 CODE 0 3F46 3F46 28 1
-text3 CODE 0 3FA8 3FA8 58 1
-text4 CODE 0 3F28 3F28 1E 1
-cstackCOMRAM COMRAM 1 1 1 2 1
+cinit CODE 0 1158 1158 5E 1
+text0 CODE 0 692 692 1FA 1
+text1 CODE 0 C86 C86 B6 1
+text2 CODE 0 F68 F68 6A 1
+text3 CODE 0 154C 154C 12 1
+text4 CODE 0 BB4 BB4 D2 1
+text5 CODE 0 1448 1448 28 1
+text6 CODE 0 1364 1364 4C 1
+text7 CODE 0 DDC DDC 86 1
+text8 CODE 0 14DC 14DC 1C 1
+text9 CODE 0 14BE 14BE 1E 1
+text10 CODE 0 1498 1498 26 1
+text11 CODE 0 1470 1470 28 1
+text12 CODE 0 1214 1214 58 1
+text13 CODE 0 14F8 14F8 1C 1
+text14 CODE 0 FD2 FD2 64 1
+text15 CODE 0 88C 88C 196 1
+text16 CODE 0 12C2 12C2 52 1
+text17 CODE 0 1098 1098 60 1
+text18 CODE 0 126C 126C 56 1
+text19 CODE 0 1036 1036 62 1
+text20 CODE 0 E62 E62 86 1
+text21 CODE 0 11B6 11B6 5E 1
+text22 CODE 0 13B0 13B0 4C 1
+text24 CODE 0 A22 A22 192 1
+text25 CODE 0 1314 1314 50 1
+text26 CODE 0 10F8 10F8 60 1
+text27 CODE 0 EE8 EE8 80 1
+text28 CODE 0 13FC 13FC 4C 1
+text29 CODE 0 1514 1514 1C 1
+text30 CODE 0 1530 1530 1C 1
+text31 CODE 0 D3C D3C A0 1
+text32 CODE 0 156A 156A 6 1
+idataCOMRAM CODE 0 155E 155E 6 1
+cstackCOMRAM COMRAM 1 1 1 40 1
+cstackBANK0 BANK0 1 80 80 1F 1
+temp COMRAM 1 49 49 1 1
+bssBANK0 BANK0 1 9F 9F 17 1
+intcode CODE 0 8 8 10C 1
+smallconst SMALLCONST 0 600 600 92 1
+idataBANK0 CODE 0 1564 1564 6 1
+dataBANK0 BANK0 1 B6 B6 6 1
+dataCOMRAM COMRAM 1 41 41 6 1
+bssCOMRAM COMRAM 1 47 47 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 80-5FF 1
+RAM BC-5FF 1
 SFR F80-FFF 1
-BANK0 80-FF 1
+BANK0 BC-FF 1
 BANK1 100-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
 BANK4 400-4FF 1
 BANK5 500-5FF 1
-CONST 6-3F0D 1
-CONST 4000-7FFF 1
-STACK 80-5FF 1
-SMALLCONST 600-3F0D 1
-SMALLCONST 4000-7FFF 1
-CODE 6-3F0D 1
-CODE 4000-7FFF 1
-BIGRAM 3-5FF 1
-COMRAM 3-7F 1
+CONST 6-7 1
+CONST 118-5FF 1
+CONST 1572-7FFF 1
+STACK BC-5FF 1
+SMALLCONST 1572-7FFF 1
+CODE 6-7 1
+CODE 118-5FF 1
+CODE 1572-7FFF 1
+BIGRAM 4A-7F 1
+BIGRAM BC-5FF 1
+COMRAM 4A-7F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST 600-3F0D 1
-MEDIUMCONST 4000-7FFF 1
+MEDIUMCONST 1572-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -65,62 +103,449 @@ MEDIUMCONST 4000-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Juego_Teclado.X.production.o
-3F28 text4 CODE >83:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F2C text4 CODE >84:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F2E text4 CODE >85:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F30 text4 CODE >86:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F34 text4 CODE >87:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F36 text4 CODE >88:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F3E text4 CODE >89:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F40 text4 CODE >90:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FA8 text3 CODE >59:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FAA text3 CODE >60:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FBC text3 CODE >62:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FC2 text3 CODE >63:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FD2 text3 CODE >64:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FD8 text3 CODE >65:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FDE text3 CODE >66:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FE4 text3 CODE >67:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FEA text3 CODE >68:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FFC text3 CODE >69:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F46 text2 CODE >71:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F48 text2 CODE >72:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F4C text2 CODE >73:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F50 text2 CODE >74:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F52 text2 CODE >75:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F56 text2 CODE >76:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F5A text2 CODE >77:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F5E text2 CODE >78:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F62 text2 CODE >79:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F66 text2 CODE >80:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F6A text2 CODE >81:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F6E text1 CODE >38:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F70 text1 CODE >39:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F74 text1 CODE >40:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F78 text1 CODE >41:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F7C text1 CODE >42:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F80 text1 CODE >45:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F84 text1 CODE >46:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F88 text1 CODE >49:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F8C text1 CODE >50:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F8E text1 CODE >51:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F92 text1 CODE >52:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F96 text1 CODE >53:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F9A text1 CODE >54:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F9C text1 CODE >55:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FA0 text1 CODE >56:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3FA4 text1 CODE >57:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F16 text0 CODE >27:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F18 text0 CODE >28:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F1C text0 CODE >29:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F20 text0 CODE >30:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F24 text0 CODE >32:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
-3F10 cinit CODE >432:C:\Users\user\AppData\Local\Temp\s27g.
-3F10 cinit CODE >434:C:\Users\user\AppData\Local\Temp\s27g.
-3F10 cinit CODE >437:C:\Users\user\AppData\Local\Temp\s27g.
-3F10 cinit CODE >443:C:\Users\user\AppData\Local\Temp\s27g.
-3F10 cinit CODE >445:C:\Users\user\AppData\Local\Temp\s27g.
-3F12 cinit CODE >446:C:\Users\user\AppData\Local\Temp\s27g.
+8 intcode CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+8 intcode CODE >174:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+34 intcode CODE >175:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+38 intcode CODE >176:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+3C intcode CODE >177:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+48 intcode CODE >178:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+52 intcode CODE >180:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+5E intcode CODE >182:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+80 intcode CODE >183:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+90 intcode CODE >184:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+AC intcode CODE >185:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C0 intcode CODE >186:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CC intcode CODE >187:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D2 intcode CODE >188:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+DC intcode CODE >189:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E0 intcode CODE >191:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E2 intcode CODE >193:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E4 intcode CODE >195:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+156A text32 CODE >306:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+156C text32 CODE >308:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D3C text31 CODE >197:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D40 text31 CODE >198:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D42 text31 CODE >200:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D48 text31 CODE >202:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D4E text31 CODE >204:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D54 text31 CODE >206:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D5A text31 CODE >208:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D60 text31 CODE >210:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D66 text31 CODE >212:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D6C text31 CODE >214:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D72 text31 CODE >216:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D78 text31 CODE >218:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D7E text31 CODE >220:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D84 text31 CODE >222:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D8A text31 CODE >198:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+DD6 text31 CODE >226:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1530 text30 CODE >153:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1534 text30 CODE >154:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1536 text30 CODE >155:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1538 text30 CODE >156:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+153C text30 CODE >157:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+153E text30 CODE >158:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1546 text30 CODE >159:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1548 text30 CODE >160:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1514 text29 CODE >144:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1518 text29 CODE >145:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+151A text29 CODE >146:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+151C text29 CODE >147:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1520 text29 CODE >148:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1522 text29 CODE >149:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+152A text29 CODE >150:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+152C text29 CODE >151:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+13FC text28 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+13FE text28 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+1406 text28 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+1408 text28 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+140E text28 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+1438 text28 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+1444 text28 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+EE8 text27 CODE >162:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+EEA text27 CODE >163:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+EF0 text27 CODE >164:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+EF6 text27 CODE >166:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+EFE text27 CODE >167:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F32 text27 CODE >168:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F38 text27 CODE >169:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F3E text27 CODE >166:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F60 text27 CODE >172:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F64 text27 CODE >166:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F66 text27 CODE >172:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+10F8 text26 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10FA text26 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1102 text26 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+110A text26 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+110E text26 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1110 text26 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1118 text26 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+111A text26 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1122 text26 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1128 text26 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1134 text26 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+113C text26 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+113E text26 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1146 text26 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+114A text26 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+114C text26 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1154 text26 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+1314 text25 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1316 text25 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+131E text25 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1322 text25 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1324 text25 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+132C text25 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+132E text25 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1336 text25 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1342 text25 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+134A text25 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1352 text25 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1356 text25 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1358 text25 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1360 text25 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+A22 text24 CODE >500:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A24 text24 CODE >545:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A2C text24 CODE >548:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A2E text24 CODE >550:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A3A text24 CODE >553:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A4A text24 CODE >554:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A4C text24 CODE >560:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A52 text24 CODE >654:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A54 text24 CODE >818:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A6C text24 CODE >654:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A9C text24 CODE >1278:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+AB6 text24 CODE >1280:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+ABA text24 CODE >1281:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+ABE text24 CODE >1282:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+AC6 text24 CODE >1324:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+AD6 text24 CODE >1325:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+AFA text24 CODE >1324:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+AFE text24 CODE >1457:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+B0C text24 CODE >1458:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+B1C text24 CODE >1491:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+B22 text24 CODE >1493:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+B24 text24 CODE >1508:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+B6C text24 CODE >1543:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+B7C text24 CODE >1493:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+B88 text24 CODE >548:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+BA4 text24 CODE >1557:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+BB0 text24 CODE >1560:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+13B0 text22 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+13B2 text22 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+13BA text22 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+13BC text22 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+13C2 text22 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+13EC text22 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+13F8 text22 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
+11B6 text21 CODE >249:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+11B8 text21 CODE >250:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+11C0 text21 CODE >251:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+11E2 text21 CODE >252:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+11E6 text21 CODE >250:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+120C text21 CODE >255:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+120E text21 CODE >256:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E62 text20 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E64 text20 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E6A text20 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E6E text20 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E76 text20 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E7A text20 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E80 text20 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E88 text20 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E92 text20 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E96 text20 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+E98 text20 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+EA0 text20 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+EA2 text20 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+EAA text20 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+EB6 text20 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+EBE text20 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+EC6 text20 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+ECA text20 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+ED2 text20 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+EDA text20 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+EE4 text20 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+1036 text19 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+1038 text19 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+104A text19 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+1050 text19 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+1062 text19 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+106E text19 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+1078 text19 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+1084 text19 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+1094 text19 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+126C text18 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+126E text18 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+12A2 text18 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+12B2 text18 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+12BE text18 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+1098 text17 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+109A text17 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10A2 text17 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10AA text17 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10AE text17 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10B0 text17 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10B8 text17 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10BA text17 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10C2 text17 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10C8 text17 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10D4 text17 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10DC text17 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10DE text17 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10E6 text17 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10EA text17 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10EC text17 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+10F4 text17 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+12C2 text16 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12C4 text16 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12CE text16 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12D2 text16 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12D4 text16 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12DC text16 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12DE text16 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12E6 text16 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12F2 text16 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+12FA text16 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1302 text16 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1306 text16 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1308 text16 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+1310 text16 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+88C text15 CODE >500:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+88E text15 CODE >545:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+898 text15 CODE >548:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+89A text15 CODE >550:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+8A6 text15 CODE >553:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+8B6 text15 CODE >554:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+8B8 text15 CODE >560:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+8BE text15 CODE >654:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+8C0 text15 CODE >818:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+8D8 text15 CODE >654:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+908 text15 CODE >1278:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+922 text15 CODE >1280:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+926 text15 CODE >1281:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+92A text15 CODE >1282:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+932 text15 CODE >1324:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+938 text15 CODE >1325:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+95E text15 CODE >1324:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+96A text15 CODE >1457:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+976 text15 CODE >1458:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+986 text15 CODE >1491:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+98C text15 CODE >1493:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+98E text15 CODE >1508:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+9DA text15 CODE >1543:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+9EA text15 CODE >1493:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+9F6 text15 CODE >548:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A12 text15 CODE >1557:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+A1E text15 CODE >1560:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+FD2 text14 CODE >228:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+FD8 text14 CODE >229:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1012 text14 CODE >231:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+102E text14 CODE >232:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1032 text14 CODE >233:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14F8 text13 CODE >144:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14FC text13 CODE >145:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14FE text13 CODE >146:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1500 text13 CODE >147:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1504 text13 CODE >148:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1506 text13 CODE >149:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+150E text13 CODE >150:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1510 text13 CODE >151:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1214 text12 CODE >121:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1216 text12 CODE >122:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1228 text12 CODE >123:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+122E text12 CODE >124:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+123E text12 CODE >125:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1244 text12 CODE >126:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+124A text12 CODE >127:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1250 text12 CODE >128:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1256 text12 CODE >129:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1268 text12 CODE >130:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1470 text11 CODE >132:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1472 text11 CODE >133:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1476 text11 CODE >134:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+147A text11 CODE >135:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+147C text11 CODE >136:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1480 text11 CODE >137:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1484 text11 CODE >138:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1488 text11 CODE >139:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+148C text11 CODE >140:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1490 text11 CODE >141:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1494 text11 CODE >142:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1498 text10 CODE >107:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+149A text10 CODE >108:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+149E text10 CODE >109:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14A2 text10 CODE >110:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14A6 text10 CODE >113:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14A8 text10 CODE >114:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14AC text10 CODE >115:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14B0 text10 CODE >116:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14B2 text10 CODE >117:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14B6 text10 CODE >118:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14BA text10 CODE >119:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14BE text9 CODE >310:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14C0 text9 CODE >311:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14C6 text9 CODE >312:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14D8 text9 CODE >313:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14DC text8 CODE >153:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14E0 text8 CODE >154:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14E2 text8 CODE >155:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14E4 text8 CODE >156:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14E8 text8 CODE >157:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14EA text8 CODE >158:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14F2 text8 CODE >159:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+14F4 text8 CODE >160:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+DDC text7 CODE >162:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+DDE text7 CODE >163:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+DE4 text7 CODE >164:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+DEA text7 CODE >166:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+DF4 text7 CODE >167:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E28 text7 CODE >168:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E2E text7 CODE >169:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E34 text7 CODE >166:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E5A text7 CODE >172:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E5E text7 CODE >166:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+E60 text7 CODE >172:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1364 text6 CODE >242:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1366 text6 CODE >243:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1376 text6 CODE >244:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+137C text6 CODE >245:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+139E text6 CODE >244:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+13A8 text6 CODE >247:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+13AC text6 CODE >244:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+13AE text6 CODE >247:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1448 text5 CODE >235:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+144A text5 CODE >236:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+144E text5 CODE >237:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1454 text5 CODE >238:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1460 text5 CODE >239:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+146C text5 CODE >240:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+BB4 text4 CODE >288:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+BB6 text4 CODE >289:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+BCA text4 CODE >290:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+BE6 text4 CODE >291:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+BEA text4 CODE >293:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+BFE text4 CODE >294:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C12 text4 CODE >295:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C30 text4 CODE >296:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C34 text4 CODE >298:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C48 text4 CODE >299:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C5C text4 CODE >300:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C7A text4 CODE >302:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C7E text4 CODE >303:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C82 text4 CODE >304:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+154C text3 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+154E text3 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+155A text3 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+F68 text2 CODE >279:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F6A text2 CODE >280:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F7E text2 CODE >281:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F92 text2 CODE >282:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+F96 text2 CODE >283:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+FB4 text2 CODE >284:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+FBA text2 CODE >285:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+FCE text2 CODE >286:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C86 text1 CODE >258:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C88 text1 CODE >259:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+C9C text1 CODE >260:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CBA text1 CODE >261:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CC0 text1 CODE >262:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CD4 text1 CODE >263:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CD6 text1 CODE >264:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CD8 text1 CODE >265:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CDE text1 CODE >266:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CE2 text1 CODE >267:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CEA text1 CODE >268:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+CF0 text1 CODE >271:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D06 text1 CODE >274:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D14 text1 CODE >275:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D32 text1 CODE >276:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+D36 text1 CODE >277:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+692 text0 CODE >53:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+694 text0 CODE >54:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+698 text0 CODE >55:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+69C text0 CODE >56:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+6A0 text0 CODE >58:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+6B4 text0 CODE >59:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+6C8 text0 CODE >60:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+6E6 text0 CODE >61:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+6EA text0 CODE >63:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+6FE text0 CODE >64:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+712 text0 CODE >65:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+730 text0 CODE >66:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+734 text0 CODE >68:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+740 text0 CODE >69:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+746 text0 CODE >72:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+758 text0 CODE >73:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+77A text0 CODE >74:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+784 text0 CODE >72:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+78A text0 CODE >77:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+792 text0 CODE >78:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+798 text0 CODE >79:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+7B8 text0 CODE >78:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+7E6 text0 CODE >81:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+7FA text0 CODE >82:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+818 text0 CODE >83:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+81C text0 CODE >84:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+830 text0 CODE >85:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+836 text0 CODE >88:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+83C text0 CODE >89:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+842 text0 CODE >90:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+848 text0 CODE >91:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+84C text0 CODE >92:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+852 text0 CODE >93:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+856 text0 CODE >94:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+870 text0 CODE >95:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+874 text0 CODE >96:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+876 text0 CODE >97:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+87C text0 CODE >99:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+884 text0 CODE >102:C:\MPLAB_X\Laboratorios\3er Corte\Juego_Teclado.X\main.c
+1158 cinit CODE >685:C:\Users\user\AppData\Local\Temp\s9bg.
+1158 cinit CODE >687:C:\Users\user\AppData\Local\Temp\s9bg.
+1158 cinit CODE >690:C:\Users\user\AppData\Local\Temp\s9bg.
+1158 cinit CODE >752:C:\Users\user\AppData\Local\Temp\s9bg.
+115A cinit CODE >753:C:\Users\user\AppData\Local\Temp\s9bg.
+115C cinit CODE >754:C:\Users\user\AppData\Local\Temp\s9bg.
+115E cinit CODE >755:C:\Users\user\AppData\Local\Temp\s9bg.
+1160 cinit CODE >756:C:\Users\user\AppData\Local\Temp\s9bg.
+1162 cinit CODE >757:C:\Users\user\AppData\Local\Temp\s9bg.
+1164 cinit CODE >758:C:\Users\user\AppData\Local\Temp\s9bg.
+1168 cinit CODE >759:C:\Users\user\AppData\Local\Temp\s9bg.
+116C cinit CODE >760:C:\Users\user\AppData\Local\Temp\s9bg.
+116C cinit CODE >761:C:\Users\user\AppData\Local\Temp\s9bg.
+116E cinit CODE >762:C:\Users\user\AppData\Local\Temp\s9bg.
+1172 cinit CODE >763:C:\Users\user\AppData\Local\Temp\s9bg.
+1174 cinit CODE >764:C:\Users\user\AppData\Local\Temp\s9bg.
+1176 cinit CODE >765:C:\Users\user\AppData\Local\Temp\s9bg.
+1178 cinit CODE >769:C:\Users\user\AppData\Local\Temp\s9bg.
+117A cinit CODE >770:C:\Users\user\AppData\Local\Temp\s9bg.
+117C cinit CODE >771:C:\Users\user\AppData\Local\Temp\s9bg.
+117E cinit CODE >772:C:\Users\user\AppData\Local\Temp\s9bg.
+1180 cinit CODE >773:C:\Users\user\AppData\Local\Temp\s9bg.
+1182 cinit CODE >774:C:\Users\user\AppData\Local\Temp\s9bg.
+1184 cinit CODE >775:C:\Users\user\AppData\Local\Temp\s9bg.
+1188 cinit CODE >776:C:\Users\user\AppData\Local\Temp\s9bg.
+118C cinit CODE >777:C:\Users\user\AppData\Local\Temp\s9bg.
+118C cinit CODE >778:C:\Users\user\AppData\Local\Temp\s9bg.
+118E cinit CODE >779:C:\Users\user\AppData\Local\Temp\s9bg.
+1192 cinit CODE >780:C:\Users\user\AppData\Local\Temp\s9bg.
+1194 cinit CODE >781:C:\Users\user\AppData\Local\Temp\s9bg.
+1196 cinit CODE >782:C:\Users\user\AppData\Local\Temp\s9bg.
+1198 cinit CODE >786:C:\Users\user\AppData\Local\Temp\s9bg.
+119C cinit CODE >787:C:\Users\user\AppData\Local\Temp\s9bg.
+119E cinit CODE >788:C:\Users\user\AppData\Local\Temp\s9bg.
+119E cinit CODE >789:C:\Users\user\AppData\Local\Temp\s9bg.
+11A0 cinit CODE >790:C:\Users\user\AppData\Local\Temp\s9bg.
+11A2 cinit CODE >791:C:\Users\user\AppData\Local\Temp\s9bg.
+11A4 cinit CODE >794:C:\Users\user\AppData\Local\Temp\s9bg.
+11A6 cinit CODE >795:C:\Users\user\AppData\Local\Temp\s9bg.
+11A8 cinit CODE >801:C:\Users\user\AppData\Local\Temp\s9bg.
+11A8 cinit CODE >803:C:\Users\user\AppData\Local\Temp\s9bg.
+11AA cinit CODE >804:C:\Users\user\AppData\Local\Temp\s9bg.
+11AC cinit CODE >806:C:\Users\user\AppData\Local\Temp\s9bg.
+11AE cinit CODE >807:C:\Users\user\AppData\Local\Temp\s9bg.
+11B0 cinit CODE >808:C:\Users\user\AppData\Local\Temp\s9bg.
+11B2 cinit CODE >809:C:\Users\user\AppData\Local\Temp\s9bg.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -133,55 +558,134 @@ $dist/default/production\Juego_Teclado.X.production.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
+i2_R_D 1530 0 CODE 0 text30 dist/default/production\Juego_Teclado.X.production.o
+i2_R_I 1514 0 CODE 0 text29 dist/default/production\Juego_Teclado.X.production.o
+___lwmod@counter 3E 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\Juego_Teclado.X.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Juego_Teclado.X.production.o
 __Hspace_0 30000E 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-__Hspace_1 3 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__Hspace_1 BC 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Juego_Teclado.X.production.o
 __size_of_init_lcd 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__end_ofi2_print_message_onLCD F68 0 CODE 0 text27 dist/default/production\Juego_Teclado.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Juego_Teclado.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\user\AppData\Local\Temp\s27g.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\user\AppData\Local\Temp\s9bg.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Juego_Teclado.X.production.o
-__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Juego_Teclado.X.production.o
+main@i 9E 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+get_rand_num@from 96 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__Lsmallconst 600 0 SMALLCONST 0 smallconst dist/default/production\Juego_Teclado.X.production.o
 _IPR1 F9F 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-_LATA F89 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _LATB F8A 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _LATC F8B 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _LATD F8C 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _PIE1 F9D 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _PIR1 F9E 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\s27g.o
-_main 3F16 0 CODE 0 text0 dist/default/production\Juego_Teclado.X.production.o
-start 2 0 CODE 0 init C:\Users\user\AppData\Local\Temp\s27g.o
+___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\s9bg.o
+_main 692 0 CODE 0 text0 dist/default/production\Juego_Teclado.X.production.o
+_next 47 0 COMRAM 1 bssCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_nums AC 0 BANK0 1 bssBANK0 dist/default/production\Juego_Teclado.X.production.o
+_rand 126C 0 CODE 0 text18 dist/default/production\Juego_Teclado.X.production.o
+btemp 49 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
+__size_of_clean_screen 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+start 114 0 CODE 0 init C:\Users\user\AppData\Local\Temp\s9bg.o
+_compare_nums 11B6 0 CODE 0 text21 dist/default/production\Juego_Teclado.X.production.o
+i2___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2sprintf@ap 16 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2sprintf@sp D 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__size_of___awmod 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-_initial_config 3F6E 0 CODE 0 text1 dist/default/production\Juego_Teclado.X.production.o
-__cntErrataNOP_dist/default/production\Juego_Teclado.X.production.o E 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-__Hpowerup 2 0 CODE 0 powerup dist/default/production\Juego_Teclado.X.production.o
-__accesstop 80 0 ABS 0 - C:\Users\user\AppData\Local\Temp\s27g.o
-intlevel0 3F0E 0 CODE 0 text C:\Users\user\AppData\Local\Temp\s27g.o
-intlevel1 3F0E 0 CODE 0 text C:\Users\user\AppData\Local\Temp\s27g.o
-intlevel2 3F0E 0 CODE 0 text C:\Users\user\AppData\Local\Temp\s27g.o
-intlevel3 3F0E 0 CODE 0 text C:\Users\user\AppData\Local\Temp\s27g.o
-_init_lcd 3FA8 0 CODE 0 text3 dist/default/production\Juego_Teclado.X.production.o
+_initial_config 1498 0 CODE 0 text10 dist/default/production\Juego_Teclado.X.production.o
+__size_of_rand 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__size_of_get_letter 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+i2_print_message_onLCD EE8 0 CODE 0 text27 dist/default/production\Juego_Teclado.X.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__size_of_win_protocol 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__cntErrataNOP_dist/default/production\Juego_Teclado.X.production.o AB 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+i2strlen@cp 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2___lwmod@dividend 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+?___lmul 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_e_pressed 9F 0 BANK0 1 bssBANK0 dist/default/production\Juego_Teclado.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\Juego_Teclado.X.production.o
+__Hpowerup 114 0 CODE 0 powerup dist/default/production\Juego_Teclado.X.production.o
+i2sprintf@flag 14 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2sprintf@prec 15 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+___awmod@sign 89 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+ttemp5 4A 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
+ttemp6 4D 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
+ttemp7 51 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
+__end_of_clean_screen 14DC 0 CODE 0 text9 dist/default/production\Juego_Teclado.X.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__accesstop 80 0 ABS 0 - C:\Users\user\AppData\Local\Temp\s9bg.o
+intlevel0 1570 0 CODE 0 text C:\Users\user\AppData\Local\Temp\s9bg.o
+intlevel1 1570 0 CODE 0 text C:\Users\user\AppData\Local\Temp\s9bg.o
+intlevel2 1570 0 CODE 0 text C:\Users\user\AppData\Local\Temp\s9bg.o
+intlevel3 1570 0 CODE 0 text C:\Users\user\AppData\Local\Temp\s9bg.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_init_lcd 1214 0 CODE 0 text12 dist/default/production\Juego_Teclado.X.production.o
+__end_of_win_protocol D3C 0 CODE 0 text1 dist/default/production\Juego_Teclado.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Juego_Teclado.X.production.o
+wtemp8 4A 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
+i2sprintf@val 18 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\Juego_Teclado.X.production.o
+__size_of_compare_nums 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\Juego_Teclado.X.production.o
-__end_of_init_lcd 4000 0 CODE 0 text3 dist/default/production\Juego_Teclado.X.production.o
-__end_of_initial_config 3FA8 0 CODE 0 text1 dist/default/production\Juego_Teclado.X.production.o
-_ADCON0 FC2 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-_ADCON1 FC1 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\s27g.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\s27g.o
+__end_of_init_lcd 126C 0 CODE 0 text12 dist/default/production\Juego_Teclado.X.production.o
+__pidataCOMRAM 155E 0 CODE 0 idataCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__end_of_initial_config 14BE 0 CODE 0 text10 dist/default/production\Juego_Teclado.X.production.o
+__size_of_reset_game 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\s9bg.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\s9bg.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2___lwmod@divisor A 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Juego_Teclado.X.production.o
+__end_of___lmul 1098 0 CODE 0 text19 dist/default/production\Juego_Teclado.X.production.o
+__end_of_compare_nums 1214 0 CODE 0 text21 dist/default/production\Juego_Teclado.X.production.o
+_erase_letter 156A 0 CODE 0 text32 dist/default/production\Juego_Teclado.X.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Juego_Teclado.X.production.o
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Juego_Teclado.X.production.o
-__Hintcodelo 2 0 CODE 0 intcodelo dist/default/production\Juego_Teclado.X.production.o
+__Hintcodelo 114 0 CODE 0 intcodelo dist/default/production\Juego_Teclado.X.production.o
+___lwmod@divisor 82 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__end_of___awmod EE8 0 CODE 0 text20 dist/default/production\Juego_Teclado.X.production.o
+__end_of___lwdiv 10F8 0 CODE 0 text17 dist/default/production\Juego_Teclado.X.production.o
+__end_of___lwmod 1314 0 CODE 0 text16 dist/default/production\Juego_Teclado.X.production.o
 _INTCON FF2 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-__end_of_init_serial_com 3F6E 0 CODE 0 text2 dist/default/production\Juego_Teclado.X.production.o
-__Lintcodelo 2 0 CODE 0 intcodelo dist/default/production\Juego_Teclado.X.production.o
-start_initialization 3F10 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
+?_strlen 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_dpowers 601 0 SMALLCONST 0 smallconst dist/default/production\Juego_Teclado.X.production.o
+__end_of_init_serial_com 1498 0 CODE 0 text11 dist/default/production\Juego_Teclado.X.production.o
+capture@m 26 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+capture@p 36 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+?i2___lwdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+?i2___lwmod 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+___lwdiv@quotient 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__size_of_capture 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+get_rand_num@r 97 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__size_of_srand 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__size_of_game_won 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+___lwmod@dividend 80 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__Lintcodelo 114 0 CODE 0 intcodelo dist/default/production\Juego_Teclado.X.production.o
+start_initialization 1158 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
+__size_of_erase_letter 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Juego_Teclado.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-_init_serial_com 3F46 0 CODE 0 text2 dist/default/production\Juego_Teclado.X.production.o
+__pcstackBANK0 80 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+R_D@dato 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2sprintf@c 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2sprintf@f F 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__size_ofi2_R_D 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__size_ofi2_R_I 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+_counting_down 48 0 COMRAM 1 bssCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_loss_protocol BB4 0 CODE 0 text4 dist/default/production\Juego_Teclado.X.production.o
+print_message_onLCD@i 80 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__end_of_erase_letter 1570 0 CODE 0 text32 dist/default/production\Juego_Teclado.X.production.o
+__size_ofi2_strlen 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+clear_vec@vec_len 3F 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_init_serial_com 1470 0 CODE 0 text11 dist/default/production\Juego_Teclado.X.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\Juego_Teclado.X.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\Juego_Teclado.X.production.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\Juego_Teclado.X.production.o
@@ -190,9 +694,10 @@ __Hbank4 0 0 ABS 0 bank4 dist/default/production\Juego_Teclado.X.production.o
 __Hbank5 0 0 ABS 0 bank5 dist/default/production\Juego_Teclado.X.production.o
 __Hcinit 0 0 ABS 0 cinit dist/default/production\Juego_Teclado.X.production.o
 __Hconst 0 0 CONST 0 const dist/default/production\Juego_Teclado.X.production.o
+__end_of_strlen 13FC 0 CODE 0 text22 dist/default/production\Juego_Teclado.X.production.o
 __Hidata 0 0 CODE 0 idata dist/default/production\Juego_Teclado.X.production.o
 __Hidloc 200008 0 IDLOC 0 idloc dist/default/production\Juego_Teclado.X.production.o
-R_I@dato 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+R_I@dato 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Juego_Teclado.X.production.o
 __Hparam 0 0 COMRAM 1 rparam dist/default/production\Juego_Teclado.X.production.o
 __Hrdata 0 0 COMRAM 1 rdata dist/default/production\Juego_Teclado.X.production.o
@@ -202,11 +707,23 @@ __Htext1 0 0 ABS 0 text1 dist/default/production\Juego_Teclado.X.production.o
 __Htext2 0 0 ABS 0 text2 dist/default/production\Juego_Teclado.X.production.o
 __Htext3 0 0 ABS 0 text3 dist/default/production\Juego_Teclado.X.production.o
 __Htext4 0 0 ABS 0 text4 dist/default/production\Juego_Teclado.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\Juego_Teclado.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\Juego_Teclado.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\Juego_Teclado.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\Juego_Teclado.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\Juego_Teclado.X.production.o
+___lwdiv@counter 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_attempt 45 0 COMRAM 1 dataCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_game_won F68 0 CODE 0 text2 dist/default/production\Juego_Teclado.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Juego_Teclado.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\Juego_Teclado.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\user\AppData\Local\Temp\s27g.o
+__smallconst 600 0 SMALLCONST 0 smallconst C:\Users\user\AppData\Local\Temp\s9bg.o
+__end_of_sprintf A22 0 CODE 0 text15 dist/default/production\Juego_Teclado.X.production.o
+print_message_onLCD@space_bt 3E 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\Juego_Teclado.X.production.o
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\Juego_Teclado.X.production.o
+i2print_message_onLCD@message 5 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__size_of_print_message_onLCD 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\Juego_Teclado.X.production.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\Juego_Teclado.X.production.o
 __Lbank2 0 0 ABS 0 bank2 dist/default/production\Juego_Teclado.X.production.o
@@ -219,6 +736,7 @@ __Lidata 0 0 CODE 0 idata dist/default/production\Juego_Teclado.X.production.o
 __Lidloc 200000 0 IDLOC 0 idloc dist/default/production\Juego_Teclado.X.production.o
 __Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Juego_Teclado.X.production.o
 __Lparam 0 0 COMRAM 1 rparam dist/default/production\Juego_Teclado.X.production.o
+__end_of_game_won FD2 0 CODE 0 text2 dist/default/production\Juego_Teclado.X.production.o
 __Lrdata 0 0 COMRAM 1 rdata dist/default/production\Juego_Teclado.X.production.o
 __Lstack 0 0 STACK 2 stack dist/default/production\Juego_Teclado.X.production.o
 __Ltext0 0 0 ABS 0 text0 dist/default/production\Juego_Teclado.X.production.o
@@ -226,98 +744,271 @@ __Ltext1 0 0 ABS 0 text1 dist/default/production\Juego_Teclado.X.production.o
 __Ltext2 0 0 ABS 0 text2 dist/default/production\Juego_Teclado.X.production.o
 __Ltext3 0 0 ABS 0 text3 dist/default/production\Juego_Teclado.X.production.o
 __Ltext4 0 0 ABS 0 text4 dist/default/production\Juego_Teclado.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Juego_Teclado.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Juego_Teclado.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Juego_Teclado.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Juego_Teclado.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Juego_Teclado.X.production.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Juego_Teclado.X.production.o
+?i2_sprintf D 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\Juego_Teclado.X.production.o
+_INTCONbits FF2 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Habs1 0 0 ABS 0 abs1 dist/default/production\Juego_Teclado.X.production.o
 __Hdata 0 0 ABS 0 data dist/default/production\Juego_Teclado.X.production.o
-__Hinit 6 0 CODE 0 init dist/default/production\Juego_Teclado.X.production.o
+__Hinit 118 0 CODE 0 init dist/default/production\Juego_Teclado.X.production.o
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production\Juego_Teclado.X.production.o
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production\Juego_Teclado.X.production.o
-__Htemp 0 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
+__Htemp 4A 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
 __Htext 0 0 ABS 0 text dist/default/production\Juego_Teclado.X.production.o
 __Labs1 0 0 ABS 0 abs1 dist/default/production\Juego_Teclado.X.production.o
 __Ldata 0 0 ABS 0 data dist/default/production\Juego_Teclado.X.production.o
-__Linit 2 0 CODE 0 init dist/default/production\Juego_Teclado.X.production.o
+__Linit 114 0 CODE 0 init dist/default/production\Juego_Teclado.X.production.o
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production\Juego_Teclado.X.production.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\Juego_Teclado.X.production.o
-__Ltemp 0 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
+__Ltemp 49 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\Juego_Teclado.X.production.o
+___lmul 1036 0 CODE 0 text19 dist/default/production\Juego_Teclado.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+int$flags 49 0 COMRAM 1 temp dist/default/production\Juego_Teclado.X.production.o
+__end_of_capture 114 0 CODE 0 intcode dist/default/production\Juego_Teclado.X.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\Juego_Teclado.X.production.o
+__size_ofi2_print_message_onLCD 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\Juego_Teclado.X.production.o
 _LC3 7C5B 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _LC4 7C5C 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-_R_I 3F28 0 CODE 0 text4 dist/default/production\Juego_Teclado.X.production.o
+_R_D 14DC 0 CODE 0 text8 dist/default/production\Juego_Teclado.X.production.o
+_R_I 14F8 0 CODE 0 text13 dist/default/production\Juego_Teclado.X.production.o
 __S0 30000E 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-__S1 3 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__S1 BC 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __S2 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+_ans A2 0 BANK0 1 bssBANK0 dist/default/production\Juego_Teclado.X.production.o
+_lvl A1 0 BANK0 1 bssBANK0 dist/default/production\Juego_Teclado.X.production.o
+i2R_D@dato 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+i2_strlen 13FC 0 CODE 0 text28 dist/default/production\Juego_Teclado.X.production.o
+i2___lwdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Juego_Teclado.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Juego_Teclado.X.production.o
-__end_of_R_I 3F44 0 CODE 0 text4 dist/default/production\Juego_Teclado.X.production.o
+sprintf@val 8E 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__end_ofi2_strlen 1448 0 CODE 0 text28 dist/default/production\Juego_Teclado.X.production.o
+__end_of_R_D 14F8 0 CODE 0 text8 dist/default/production\Juego_Teclado.X.production.o
+__end_of_R_I 1514 0 CODE 0 text13 dist/default/production\Juego_Teclado.X.production.o
+i2R_I@dato 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_print_message_onLCD DDC 0 CODE 0 text7 dist/default/production\Juego_Teclado.X.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\Juego_Teclado.X.production.o
 __Hramtop 600 0 RAM 0 ramtop dist/default/production\Juego_Teclado.X.production.o
+strlen@s 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\Juego_Teclado.X.production.o
-__activetblptr 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__pdataBANK0 B6 0 BANK0 1 dataBANK0 dist/default/production\Juego_Teclado.X.production.o
+__activetblptr 2 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\Juego_Teclado.X.production.o
+__size_of___lmul 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\Juego_Teclado.X.production.o
+__size_of_loss_protocol 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __size_of_init_serial_com 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\Juego_Teclado.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\Juego_Teclado.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\Juego_Teclado.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\Juego_Teclado.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\Juego_Teclado.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production\Juego_Teclado.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\Juego_Teclado.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\Juego_Teclado.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\Juego_Teclado.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\Juego_Teclado.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\Juego_Teclado.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production\Juego_Teclado.X.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production\Juego_Teclado.X.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production\Juego_Teclado.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production\Juego_Teclado.X.production.o
+__Htext26 0 0 ABS 0 text26 dist/default/production\Juego_Teclado.X.production.o
+__Htext27 0 0 ABS 0 text27 dist/default/production\Juego_Teclado.X.production.o
+__Htext28 0 0 ABS 0 text28 dist/default/production\Juego_Teclado.X.production.o
+__Htext29 0 0 ABS 0 text29 dist/default/production\Juego_Teclado.X.production.o
+__Htext30 0 0 ABS 0 text30 dist/default/production\Juego_Teclado.X.production.o
+__Htext31 0 0 ABS 0 text31 dist/default/production\Juego_Teclado.X.production.o
+__Htext32 0 0 ABS 0 text32 dist/default/production\Juego_Teclado.X.production.o
+___awmod@counter 88 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+sprintf@flag 8A 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+sprintf@prec 8B 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__ptext10 1498 0 CODE 0 text10 dist/default/production\Juego_Teclado.X.production.o
+__ptext11 1470 0 CODE 0 text11 dist/default/production\Juego_Teclado.X.production.o
+__ptext12 1214 0 CODE 0 text12 dist/default/production\Juego_Teclado.X.production.o
+__ptext13 14F8 0 CODE 0 text13 dist/default/production\Juego_Teclado.X.production.o
+__ptext14 FD2 0 CODE 0 text14 dist/default/production\Juego_Teclado.X.production.o
+__ptext15 88C 0 CODE 0 text15 dist/default/production\Juego_Teclado.X.production.o
+__ptext16 12C2 0 CODE 0 text16 dist/default/production\Juego_Teclado.X.production.o
+__ptext17 1098 0 CODE 0 text17 dist/default/production\Juego_Teclado.X.production.o
+__ptext18 126C 0 CODE 0 text18 dist/default/production\Juego_Teclado.X.production.o
+__ptext19 1036 0 CODE 0 text19 dist/default/production\Juego_Teclado.X.production.o
+__ptext20 E62 0 CODE 0 text20 dist/default/production\Juego_Teclado.X.production.o
+__ptext21 11B6 0 CODE 0 text21 dist/default/production\Juego_Teclado.X.production.o
+__ptext22 13B0 0 CODE 0 text22 dist/default/production\Juego_Teclado.X.production.o
+__ptext24 A22 0 CODE 0 text24 dist/default/production\Juego_Teclado.X.production.o
+__ptext25 1314 0 CODE 0 text25 dist/default/production\Juego_Teclado.X.production.o
+__ptext26 10F8 0 CODE 0 text26 dist/default/production\Juego_Teclado.X.production.o
+__ptext27 EE8 0 CODE 0 text27 dist/default/production\Juego_Teclado.X.production.o
+__ptext28 13FC 0 CODE 0 text28 dist/default/production\Juego_Teclado.X.production.o
+__ptext29 1514 0 CODE 0 text29 dist/default/production\Juego_Teclado.X.production.o
+__ptext30 1530 0 CODE 0 text30 dist/default/production\Juego_Teclado.X.production.o
+__ptext31 D3C 0 CODE 0 text31 dist/default/production\Juego_Teclado.X.production.o
+__ptext32 156A 0 CODE 0 text32 dist/default/production\Juego_Teclado.X.production.o
+___awmod E62 0 CODE 0 text20 dist/default/production\Juego_Teclado.X.production.o
+___lwdiv 1098 0 CODE 0 text17 dist/default/production\Juego_Teclado.X.production.o
+___lwmod 12C2 0 CODE 0 text16 dist/default/production\Juego_Teclado.X.production.o
+strlen@cp 39 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __size_of_initial_config 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+i2___lwdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Juego_Teclado.X.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\Juego_Teclado.X.production.o
 __CFG_BOR$OFF 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+___lmul@multiplier 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_get_letter D3C 0 CODE 0 text31 dist/default/production\Juego_Teclado.X.production.o
+?_rand 3F 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\Juego_Teclado.X.production.o
 __Lconfig 300000 0 CONFIG 0 config dist/default/production\Juego_Teclado.X.production.o
+_get_rand_num FD2 0 CODE 0 text14 dist/default/production\Juego_Teclado.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Juego_Teclado.X.production.o
+__end_of_clear_vec 13B0 0 CODE 0 text6 dist/default/production\Juego_Teclado.X.production.o
+___lwdiv@divisor 39 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__end_of_loss_protocol C86 0 CODE 0 text4 dist/default/production\Juego_Teclado.X.production.o
+main@i_280 9D 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+get_rand_num@to 91 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+srand@x 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_strlen 13B0 0 CODE 0 text22 dist/default/production\Juego_Teclado.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Juego_Teclado.X.production.o
-stackhi 5FF 0 ABS 0 - C:\Users\user\AppData\Local\Temp\s27g.o
-stacklo 80 0 ABS 0 - C:\Users\user\AppData\Local\Temp\s27g.o
-__Lintcode 2 0 CODE 0 intcode dist/default/production\Juego_Teclado.X.production.o
+__size_of_clear_vec 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+_first_exec 46 0 COMRAM 1 dataCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_typing A0 0 BANK0 1 bssBANK0 dist/default/production\Juego_Teclado.X.production.o
+stackhi 5FF 0 ABS 0 - C:\Users\user\AppData\Local\Temp\s9bg.o
+stacklo BC 0 ABS 0 - C:\Users\user\AppData\Local\Temp\s9bg.o
+__Lintcode 8 0 CODE 0 intcode dist/default/production\Juego_Teclado.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\Juego_Teclado.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\Juego_Teclado.X.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__end_ofi2___lwdiv 1158 0 CODE 0 text26 dist/default/production\Juego_Teclado.X.production.o
+__end_ofi2___lwmod 1364 0 CODE 0 text25 dist/default/production\Juego_Teclado.X.production.o
+i2strlen@s 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Lspace_2 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__pbssCOMRAM 47 0 COMRAM 1 bssCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__size_ofi2___lwdiv 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__size_ofi2___lwmod 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+_clear_vec 1364 0 CODE 0 text6 dist/default/production\Juego_Teclado.X.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
-end_of_initialization 3F10 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
+i2print_message_onLCD@i B 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+end_of_initialization 11A8 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Juego_Teclado.X.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\Juego_Teclado.X.production.o
 _RCONbits FD0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __CFG_OSC$XT 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-__Hreset_vec 2 0 CODE 0 reset_vec dist/default/production\Juego_Teclado.X.production.o
+?___awmod 84 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+___lwdiv@dividend 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__end_of_print_message_onLCD E62 0 CODE 0 text7 dist/default/production\Juego_Teclado.X.production.o
+?___lwdiv 37 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+?___lwmod 80 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+_reset_game 1448 0 CODE 0 text5 dist/default/production\Juego_Teclado.X.production.o
+__size_of_get_rand_num 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+i2___lwdiv 10F8 0 CODE 0 text26 dist/default/production\Juego_Teclado.X.production.o
+i2___lwmod 1314 0 CODE 0 text25 dist/default/production\Juego_Teclado.X.production.o
+__Hreset_vec 6 0 CODE 0 reset_vec dist/default/production\Juego_Teclado.X.production.o
+__end_of_get_letter DDC 0 CODE 0 text31 dist/default/production\Juego_Teclado.X.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\Juego_Teclado.X.production.o
+i2print_message_onLCD@place 7 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+___awmod@dividend 84 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
 __Lramtop 600 0 RAM 0 ramtop dist/default/production\Juego_Teclado.X.production.o
+__size_of_strlen 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\Juego_Teclado.X.production.o
-__pcinit 3F10 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
-__ptext0 3F16 0 CODE 0 text0 dist/default/production\Juego_Teclado.X.production.o
-__ptext1 3F6E 0 CODE 0 text1 dist/default/production\Juego_Teclado.X.production.o
-__ptext2 3F46 0 CODE 0 text2 dist/default/production\Juego_Teclado.X.production.o
-__ptext3 3FA8 0 CODE 0 text3 dist/default/production\Juego_Teclado.X.production.o
-__ptext4 3F28 0 CODE 0 text4 dist/default/production\Juego_Teclado.X.production.o
+__pcinit 1158 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
+?i2_strlen 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__ptext0 692 0 CODE 0 text0 dist/default/production\Juego_Teclado.X.production.o
+__ptext1 C86 0 CODE 0 text1 dist/default/production\Juego_Teclado.X.production.o
+__ptext2 F68 0 CODE 0 text2 dist/default/production\Juego_Teclado.X.production.o
+__ptext3 154C 0 CODE 0 text3 dist/default/production\Juego_Teclado.X.production.o
+__ptext4 BB4 0 CODE 0 text4 dist/default/production\Juego_Teclado.X.production.o
+__ptext5 1448 0 CODE 0 text5 dist/default/production\Juego_Teclado.X.production.o
+__ptext6 1364 0 CODE 0 text6 dist/default/production\Juego_Teclado.X.production.o
+__ptext7 DDC 0 CODE 0 text7 dist/default/production\Juego_Teclado.X.production.o
+__ptext8 14DC 0 CODE 0 text8 dist/default/production\Juego_Teclado.X.production.o
+__ptext9 14BE 0 CODE 0 text9 dist/default/production\Juego_Teclado.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\Juego_Teclado.X.production.o
-__ramtop 600 0 RAM 0 ramtop C:\Users\user\AppData\Local\Temp\s27g.o
-__Lpowerup 2 0 CODE 0 powerup dist/default/production\Juego_Teclado.X.production.o
+compare_nums@i 80 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+compare_nums@r 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Juego_Teclado.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Juego_Teclado.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Juego_Teclado.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Juego_Teclado.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Juego_Teclado.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production\Juego_Teclado.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\Juego_Teclado.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\Juego_Teclado.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\Juego_Teclado.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\Juego_Teclado.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\Juego_Teclado.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production\Juego_Teclado.X.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production\Juego_Teclado.X.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production\Juego_Teclado.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production\Juego_Teclado.X.production.o
+__Ltext26 0 0 ABS 0 text26 dist/default/production\Juego_Teclado.X.production.o
+__Ltext27 0 0 ABS 0 text27 dist/default/production\Juego_Teclado.X.production.o
+__Ltext28 0 0 ABS 0 text28 dist/default/production\Juego_Teclado.X.production.o
+__Ltext29 0 0 ABS 0 text29 dist/default/production\Juego_Teclado.X.production.o
+__Ltext30 0 0 ABS 0 text30 dist/default/production\Juego_Teclado.X.production.o
+__Ltext31 0 0 ABS 0 text31 dist/default/production\Juego_Teclado.X.production.o
+__Ltext32 0 0 ABS 0 text32 dist/default/production\Juego_Teclado.X.production.o
+__ramtop 600 0 RAM 0 ramtop C:\Users\user\AppData\Local\Temp\s9bg.o
+_sprintf 88C 0 CODE 0 text15 dist/default/production\Juego_Teclado.X.production.o
+get_rand_num@num 94 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__Lpowerup 114 0 CODE 0 powerup dist/default/production\Juego_Teclado.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Juego_Teclado.X.production.o
+sprintf@ap 8C 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+sprintf@sp 84 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__psmallconst 600 0 SMALLCONST 0 smallconst dist/default/production\Juego_Teclado.X.production.o
+__end_of_get_rand_num 1036 0 CODE 0 text14 dist/default/production\Juego_Teclado.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Juego_Teclado.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Juego_Teclado.X.production.o
-__end_of__initialization 3F10 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
+__end_of__initialization 11A8 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
+_capture 8 0 CODE 0 intcode dist/default/production\Juego_Teclado.X.production.o
+___awmod@divisor 86 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
 _INTCON2 FF1 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\Juego_Teclado.X.production.o
+compare_nums@nums 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+clear_vec@i 40 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__pidataBANK0 1564 0 CODE 0 idataBANK0 dist/default/production\Juego_Teclado.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\Juego_Teclado.X.production.o
+___lmul@product 80 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+__end_ofi2_sprintf BB4 0 CODE 0 text24 dist/default/production\Juego_Teclado.X.production.o
+print_message_onLCD@message 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+___lmul@multiplicand 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__size_ofi2_sprintf 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+__end_of_reset_game 1470 0 CODE 0 text5 dist/default/production\Juego_Teclado.X.production.o
+clear_vec@vec 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
+sprintf@c 90 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+sprintf@f 86 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
 __CFG_PWRT$ON 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-__end_of_main 3F28 0 CODE 0 text0 dist/default/production\Juego_Teclado.X.production.o
-_PORTA F80 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__end_of_main 88C 0 CODE 0 text0 dist/default/production\Juego_Teclado.X.production.o
+__end_of_rand 12C2 0 CODE 0 text18 dist/default/production\Juego_Teclado.X.production.o
+__pintcode 8 0 CODE 0 intcode dist/default/production\Juego_Teclado.X.production.o
+__end_of_dpowers 60B 0 SMALLCONST 0 smallconst dist/default/production\Juego_Teclado.X.production.o
+?_sprintf 84 0 BANK0 1 cstackBANK0 dist/default/production\Juego_Teclado.X.production.o
+i2print_message_onLCD@space_bt 8 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 _PORTB F81 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _PORTC F82 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _PORTD F83 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _RCSTA FAB 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+get_letter@code 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 _SPBRG FAF 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-_TRISA F92 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _TRISB F93 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _TRISC F94 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _TRISD F95 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 _TXSTA FAC 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
+__end_of_srand 155E 0 CODE 0 text3 dist/default/production\Juego_Teclado.X.production.o
 __HRAM 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Hbss 0 0 RAM 1 bss dist/default/production\Juego_Teclado.X.production.o
 __Hram 0 0 ABS 0 ram dist/default/production\Juego_Teclado.X.production.o
@@ -326,14 +1017,28 @@ __LRAM 1 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __Lbss 0 0 RAM 1 bss dist/default/production\Juego_Teclado.X.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\Juego_Teclado.X.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\Juego_Teclado.X.production.o
-__cntErrataNOP_C:\Users\user\AppData\Local\Temp\s27g.o 1 0 ABS 0 - C:\Users\user\AppData\Local\Temp\s27g.o
+i2_sprintf A22 0 CODE 0 text24 dist/default/production\Juego_Teclado.X.production.o
+_lvl_n B6 0 BANK0 1 dataBANK0 dist/default/production\Juego_Teclado.X.production.o
+_randx 41 0 COMRAM 1 dataCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_srand 154C 0 CODE 0 text3 dist/default/production\Juego_Teclado.X.production.o
+__cntErrataNOP_C:\Users\user\AppData\Local\Temp\s9bg.o 1 0 ABS 0 - C:\Users\user\AppData\Local\Temp\s9bg.o
+__size_of_R_D 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
 __size_of_R_I 0 0 ABS 0 - dist/default/production\Juego_Teclado.X.production.o
-__initialization 3F10 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\Juego_Teclado.X.production.o
+__initialization 1158 0 CODE 0 cinit dist/default/production\Juego_Teclado.X.production.o
+__pbssBANK0 9F 0 BANK0 1 bssBANK0 dist/default/production\Juego_Teclado.X.production.o
+__pdataCOMRAM 41 0 COMRAM 1 dataCOMRAM dist/default/production\Juego_Teclado.X.production.o
+_clean_screen 14BE 0 CODE 0 text9 dist/default/production\Juego_Teclado.X.production.o
+i2___lwmod@counter C 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\Juego_Teclado.X.production.o
-__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Juego_Teclado.X.production.o
+__Hsmallconst 692 0 SMALLCONST 0 smallconst dist/default/production\Juego_Teclado.X.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\Juego_Teclado.X.production.o
+_win_protocol C86 0 CODE 0 text1 dist/default/production\Juego_Teclado.X.production.o
+print_message_onLCD@place 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\Juego_Teclado.X.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Juego_Teclado.X.production.o
-__Hintcode 2 0 CODE 0 intcode dist/default/production\Juego_Teclado.X.production.o
+__Hintcode 114 0 CODE 0 intcode dist/default/production\Juego_Teclado.X.production.o
+__end_ofi2_R_D 154C 0 CODE 0 text30 dist/default/production\Juego_Teclado.X.production.o
+__end_ofi2_R_I 1530 0 CODE 0 text29 dist/default/production\Juego_Teclado.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -358,14 +1063,11 @@ __Hintcode 2 0 CODE 0 intcode dist/default/production\Juego_Teclado.X.production
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 3F10 3F10 6 1
 idloc 0 200000 200000 8 1
-text0 0 3F16 3F16 12 1
-text1 0 3F6E 3F6E 3A 1
-text2 0 3F46 3F46 28 1
-text3 0 3FA8 3FA8 58 1
-text4 0 3F28 3F28 1E 1
-cstackCOMRAM 1 1 1 2 1
-text 0 3F0E 3F0E 2 1
+text0 0 692 692 EE0 1
+cstackCOMRAM 1 1 1 49 1
+cstackBANK0 1 80 80 3C 1
 reset_vec 0 0 0 6 1
+intcode 0 8 8 110 1
+smallconst 0 600 600 92 1
 config 0 300000 300000 E 1

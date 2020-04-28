@@ -3714,48 +3714,275 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+# 4 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\__size_t.h"
+typedef unsigned size_t;
 
-# 11 "main.c"
+# 14 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 36
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h"
+typedef unsigned short wchar_t;
+
+# 15
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 65
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+
+# 73
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+
+# 85
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+# 104
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 29 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\errno.h"
+extern int errno;
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\conio.h"
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 88 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+
+# 14 "main.c"
 #pragma config OSC = XT
 #pragma config PWRT = ON
 #pragma config BOR = OFF
 #pragma config WDT = OFF
 #pragma config LVP = OFF
 
-# 21
+# 24
 void initial_config(void);
 void init_lcd(void);
 void init_serial_com(void);
 void R_I(char dato);
 void R_D(char dato);
+void print_message_onLCD(char message[20], char place, char space_bt);
+char get_letter(char code);
+char get_rand_num(char from, char to);
+char reset_game(void);
+char compare_nums(char nums[10], char r[10]);
+void clear_vec(int *vec[]);
+void win_protocol(void);
+void game_won(void);
+void loss_protocol(void);
+void erase_letter(void);
+void clean_screen(void);
+
+
+char first_exec = 1;
+char counting_down = 0;
+char nums[10];
+char ans[10];
+char lvl;
+int lvl_n[3] = {4, 6, 10};
+char attempt = 1;
+char next;
+char typing;
+char e_pressed;
 
 void main(void) {
 initial_config();
 init_lcd();
 init_serial_com();
 
-while(1) {
+print_message_onLCD("DIEGO SARAVIA", 128, 0);
+print_message_onLCD("84010", 192, 0);
+_delay((unsigned long)((2000)*(4000000/4000.0)));
+clean_screen();
 
+print_message_onLCD("CONCENTRESE", 128, 0);
+print_message_onLCD("Iniciando...", 192, 0);
+_delay((unsigned long)((2000)*(4000000/4000.0)));
+clean_screen();
+
+srand(13);
+R_I(128);
+
+while(1) {
+for (char i = 0; i < 4; i++) {
+LATB = ~(1<<i);
+_delay((unsigned long)((10)*(4000000/4000000.0)));
+}
+
+if (!typing) {
+for (char i = 0; i < lvl_n[lvl]; i++) {
+nums[i] = get_rand_num(0, 10);
+}
+print_message_onLCD(nums, 128, 1);
+_delay((unsigned long)((2000)*(4000000/4000.0)));
+clean_screen();
+print_message_onLCD("Escribe: ", 128, 0);
+R_I(192);
+}
+
+counting_down = 0;
+typing = 1;
+if (e_pressed) {
+clean_screen();
+typing = 0;
+counting_down = 1;
+if (compare_nums(nums, ans)) {
+win_protocol();
+} else {
+loss_protocol();
+}
+e_pressed = 0;
+}
+
+first_exec = 0;
 }
 return;
 }
 
 void initial_config(void) {
-TRISA = 0X03;
 TRISB = 0B11110000;
 TRISC = 0B10000000;
 TRISD = 0X00;
 
 
-ADCON0 = 0B01000001;
-ADCON1 = 0B10000100;
-
-
-LATA = 0;
 LATB = 0XFF;
 LATC = 0;
 LATD = 0;
-PORTA = 0;
 PORTB = 0XFF;
 PORTC = 0;
 PORTD = 0;
@@ -3763,7 +3990,6 @@ PORTD = 0;
 
 void init_lcd(void) {
 _delay((unsigned long)((20)*(4000000/4000.0)));
-
 R_I(0X30);
 _delay((unsigned long)((5)*(4000000/4000.0)));
 R_I(0X30);
@@ -3801,4 +4027,157 @@ LATD = dato;
 LC3 = 1;
 _delay((unsigned long)((100)*(4000000/4000000.0)));
 LC3 = 0;
+}
+
+void print_message_onLCD(char message[20], char place, char space_bt) {
+if (place > 0) {
+R_I(place);
+}
+for (char i = 0; i < strlen(message); i++) {
+R_D(message[i]);
+if (space_bt) {
+R_D(' ');
+}
+}
+}
+
+void interrupt capture(void) {
+if (INTCONbits.RBIF) {
+char p = PORTB;
+while((PORTB & 0XF0) != 0XF0);
+_delay((unsigned long)((50)*(4000000/4000000.0)));
+
+if (!counting_down && !first_exec) {
+char m[16];
+sprintf(m, "%c", get_letter(p));
+if (m[0] != 'b' && m[0] != 'e') {
+ans[strlen(ans)] = m[0];
+print_message_onLCD(m, 0, 0);
+} else if(m[0] == 'e') {
+e_pressed = 1;
+} else if(m[0] == 'b') {
+erase_letter();
+}
+}
+
+INTCONbits.RBIF = 0;
+}
+}
+
+char get_letter(char code) {
+switch(code) {
+case 0XEE:
+return '1';
+case 0XDE:
+return '2';
+case 0XBE:
+return '3';
+case 0XED:
+return '4';
+case 0XDD:
+return '5';
+case 0XBD:
+return '6';
+case 0XEB:
+return '7';
+case 0XDB:
+return '8';
+case 0XBB:
+return '9';
+case 0XD7:
+return '0';
+case 0X77:
+return 'e';
+case '~':
+return 'b';
+default:
+break;
+}
+}
+
+char get_rand_num(char from, char to) {
+int num = rand() % (to-from+1) + from;
+char r[1];
+sprintf(r, "%i", num);
+return r[0];
+}
+
+char reset_game() {
+attempt = 1;
+lvl = 0;
+clear_vec(&ans);
+clear_vec(&nums);
+}
+
+void clear_vec(int *vec[]) {
+char vec_len = strlen(vec);
+for (char i = 0; i < vec_len; i++) {
+vec[i] = '\0';
+}
+}
+
+char compare_nums(char nums[10], char r[10]) {
+for(char i = 0; i < strlen(r); i++) {
+if (r[i] != nums[i]) {
+return 0;
+}
+}
+return 1;
+}
+
+void win_protocol(void) {
+print_message_onLCD("Ganaste", 128, 0);
+_delay((unsigned long)((2000)*(4000000/4000.0)));
+if (attempt < 3) {
+print_message_onLCD("Otra vez...", 128, 0);
+attempt++;
+} else {
+attempt = 1;
+lvl++;
+if (lvl == 3) {
+game_won();
+return;
+} else {
+print_message_onLCD("Sig. nivel", 128, 0);
+}
+}
+clear_vec(&ans);
+_delay((unsigned long)((2000)*(4000000/4000.0)));
+clean_screen();
+}
+
+void game_won(){
+print_message_onLCD("¡¡Has", 128, 0);
+print_message_onLCD("Ganado!!", 192, 0);
+reset_game();
+_delay((unsigned long)((2000)*(4000000/4000.0)));
+R_I(0X01);
+_delay((unsigned long)((100)*(4000000/4000.0)));
+}
+
+void loss_protocol(void) {
+print_message_onLCD("Perdiste", 128, 0);
+_delay((unsigned long)((1000)*(4000000/4000.0)));
+clean_screen();
+
+print_message_onLCD(nums, 128, 0);
+print_message_onLCD(ans, 192, 0);
+_delay((unsigned long)((3000)*(4000000/4000.0)));
+clean_screen();
+
+print_message_onLCD("Reiniciando", 128, 0);
+print_message_onLCD("Juego", 192, 0);
+_delay((unsigned long)((3000)*(4000000/4000.0)));
+
+reset_game();
+clean_screen();
+}
+
+void erase_letter(void) {
+
+}
+
+void clean_screen(void) {
+R_I(0X01);
+_delay((unsigned long)((100)*(4000000/4000.0)));
 }
