@@ -2609,7 +2609,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 45: char ans[10];
 "46
 [v _lvl `uc ~T0 @X0 1 e ]
-[; ;main.c: 46: char lvl;
+[i _lvl
+-> -> 0 `i `uc
+]
+[; ;main.c: 46: char lvl = 0;
 "47
 [v _lvl_n `i ~T0 @X0 -> 3 `i e ]
 [i _lvl_n
@@ -2627,66 +2630,63 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;main.c: 48: char attempt = 1;
 "49
-[v _next `uc ~T0 @X0 1 e ]
-[; ;main.c: 49: char next;
-"50
 [v _typing `uc ~T0 @X0 1 e ]
-[; ;main.c: 50: char typing;
-"51
-[v _e_pressed `uc ~T0 @X0 1 e ]
-[; ;main.c: 51: char e_pressed;
+[; ;main.c: 49: char typing;
+"50
+[v _d_pressed `uc ~T0 @X0 1 e ]
+[; ;main.c: 50: char d_pressed;
 [v $root$_main `(v ~T0 @X0 0 e ]
-"53
+"52
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 53: void main(void) {
+[; ;main.c: 52: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 54: initial_config();
-"54
+[; ;main.c: 53: initial_config();
+"53
 [e ( _initial_config ..  ]
-[; ;main.c: 55: init_lcd();
-"55
+[; ;main.c: 54: init_lcd();
+"54
 [e ( _init_lcd ..  ]
-[; ;main.c: 56: init_serial_com();
-"56
+[; ;main.c: 55: init_serial_com();
+"55
 [e ( _init_serial_com ..  ]
-[; ;main.c: 58: print_message_onLCD("DIEGO SARAVIA", 128, 0);
-"58
+[; ;main.c: 57: print_message_onLCD("DIEGO SARAVIA", 128, 0);
+"57
 [e ( _print_message_onLCD (3 , , -> :s 1C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 59: print_message_onLCD("84010", 192, 0);
-"59
+[; ;main.c: 58: print_message_onLCD("84010", 192, 0);
+"58
 [e ( _print_message_onLCD (3 , , -> :s 2C `*uc -> -> 192 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 60: _delay((unsigned long)((2000)*(4000000/4000.0)));
+[; ;main.c: 59: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"59
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 60: clean_screen();
 "60
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 61: clean_screen();
-"61
 [e ( _clean_screen ..  ]
-[; ;main.c: 63: print_message_onLCD("CONCENTRESE", 128, 0);
-"63
+[; ;main.c: 62: print_message_onLCD("CONCENTRESE", 128, 0);
+"62
 [e ( _print_message_onLCD (3 , , -> :s 3C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 64: print_message_onLCD("Iniciando...", 192, 0);
-"64
+[; ;main.c: 63: print_message_onLCD("Iniciando...", 192, 0);
+"63
 [e ( _print_message_onLCD (3 , , -> :s 4C `*uc -> -> 192 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 65: _delay((unsigned long)((2000)*(4000000/4000.0)));
-"65
+[; ;main.c: 64: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"64
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 66: clean_screen();
-"66
+[; ;main.c: 65: clean_screen();
+"65
 [e ( _clean_screen ..  ]
-[; ;main.c: 68: srand(13);
-"68
+[; ;main.c: 67: srand(13);
+"67
 [e ( _srand (1 -> -> 13 `i `ui ]
-[; ;main.c: 69: R_I(128);
-"69
+[; ;main.c: 68: R_I(128);
+"68
 [e ( _R_I (1 -> -> 128 `i `uc ]
-[; ;main.c: 71: while(1) {
-"71
+[; ;main.c: 70: while(1) {
+"70
 [e :U 240 ]
 {
-[; ;main.c: 72: for (char i = 0; i < 4; i++) {
-"72
+[; ;main.c: 71: for (char i = 0; i < 4; i++) {
+"71
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
@@ -2694,52 +2694,56 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 243  ]
 [e :U 242 ]
 {
-[; ;main.c: 73: LATB = ~(1<<i);
-"73
-[e = _LATB -> ~ << -> 1 `i _i `uc ]
-[; ;main.c: 74: _delay((unsigned long)((10)*(4000000/4000000.0)));
-"74
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"75
-}
+[; ;main.c: 72: LATB = ~(1<<i);
 "72
+[e = _LATB -> ~ << -> 1 `i _i `uc ]
+[; ;main.c: 73: _delay((unsigned long)((10)*(4000000/4000000.0)));
+"73
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"74
+}
+"71
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 4 `i 242  ]
 [e :U 243 ]
-"75
+"74
 }
-[; ;main.c: 75: }
-[; ;main.c: 77: if (!typing) {
-"77
+[; ;main.c: 74: }
+[; ;main.c: 76: if (!typing) {
+"76
 [e $ ! ! != -> _typing `i -> -> -> 0 `i `uc `i 245  ]
 {
-[; ;main.c: 78: for (char i = 0; i < lvl_n[lvl]; i++) {
-"78
+[; ;main.c: 77: for (char i = 0; i < lvl_n[lvl]; i++) {
+"77
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 249  ]
 [e :U 246 ]
 {
-[; ;main.c: 79: nums[i] = get_rand_num(0, 10);
-"79
-[e = *U + &U _nums * -> _i `ux -> -> # *U &U _nums `ui `ux ( _get_rand_num (2 , -> -> 0 `i `uc -> -> 10 `i `uc ]
-"80
-}
+[; ;main.c: 78: nums[i] = get_rand_num(0, 10);
 "78
+[e = *U + &U _nums * -> _i `ux -> -> # *U &U _nums `ui `ux ( _get_rand_num (2 , -> -> 0 `i `uc -> -> 10 `i `uc ]
+"79
+}
+"77
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 249 ]
 [e $ < -> _i `i *U + &U _lvl_n * -> _lvl `ux -> -> # *U &U _lvl_n `ui `ux 246  ]
 [e :U 247 ]
-"80
+"79
 }
-[; ;main.c: 80: }
-[; ;main.c: 81: print_message_onLCD(nums, 128, 1);
+"80
+[v _spc `uc ~T0 @X0 1 a ]
+[; ;main.c: 79: }
+[; ;main.c: 80: char spc = lvl == 2 ? 0 : 1;
+[e = _spc -> ? == -> _lvl `i -> 2 `i : -> 0 `i -> 1 `i `uc ]
+[; ;main.c: 81: print_message_onLCD(nums, 128, spc);
 "81
-[e ( _print_message_onLCD (3 , , &U _nums -> -> 128 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 82: _delay((unsigned long)((2000)*(4000000/4000.0)));
+[e ( _print_message_onLCD (3 , , &U _nums -> -> 128 `i `uc _spc ]
+[; ;main.c: 82: _delay((unsigned long)((3000)*(4000000/4000.0)));
 "82
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;main.c: 83: clean_screen();
 "83
 [e ( _clean_screen ..  ]
@@ -2749,19 +2753,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 85: R_I(192);
 "85
 [e ( _R_I (1 -> -> 192 `i `uc ]
+[; ;main.c: 86: counting_down = 0;
 "86
+[e = _counting_down -> -> 0 `i `uc ]
+[; ;main.c: 87: typing = 1;
+"87
+[e = _typing -> -> 1 `i `uc ]
+"88
 }
 [e :U 245 ]
-[; ;main.c: 86: }
-[; ;main.c: 88: counting_down = 0;
-"88
-[e = _counting_down -> -> 0 `i `uc ]
-[; ;main.c: 89: typing = 1;
-"89
-[e = _typing -> -> 1 `i `uc ]
-[; ;main.c: 90: if (e_pressed) {
+[; ;main.c: 88: }
+[; ;main.c: 90: if (d_pressed) {
 "90
-[e $ ! != -> _e_pressed `i -> -> -> 0 `i `uc `i 250  ]
+[e $ ! != -> _d_pressed `i -> -> -> 0 `i `uc `i 250  ]
 {
 [; ;main.c: 91: clean_screen();
 "91
@@ -2792,9 +2796,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 252 ]
 [; ;main.c: 98: }
-[; ;main.c: 99: e_pressed = 0;
+[; ;main.c: 99: d_pressed = 0;
 "99
-[e = _e_pressed -> -> 0 `i `uc ]
+[e = _d_pressed -> -> 0 `i `uc ]
 "100
 }
 [e :U 250 ]
@@ -2805,7 +2809,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "103
 }
 [e :U 239 ]
-"71
+"70
 [e $U 240  ]
 [e :U 241 ]
 [; ;main.c: 103: }
@@ -3074,163 +3078,172 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 182: sprintf(m, "%c", get_letter(p));
 "182
 [e ( _sprintf (1 , (. , &U _m :s 6C -> ( _get_letter (1 _p `i ]
-[; ;main.c: 183: if (m[0] != 'b' && m[0] != 'e') {
+[; ;main.c: 183: if (m[0] != 'd' && m[0] != 'e' && m[0] != 'x') {
 "183
-[e $ ! && != -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 98 `ui != -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 101 `ui 271  ]
+[e $ ! && && != -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 100 `ui != -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 101 `ui != -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 120 `ui 271  ]
 {
-[; ;main.c: 184: ans[strlen(ans)] = m[0];
 "184
-[e = *U + &U _ans * -> ( _strlen (1 -> &U _ans `*Cuc `ux -> -> # *U &U _ans `ui `ux *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux ]
-[; ;main.c: 185: print_message_onLCD(m, 0, 0);
+[v _ans_len `uc ~T0 @X0 1 a ]
+[; ;main.c: 184: char ans_len = strlen(ans);
+[e = _ans_len -> ( _strlen (1 -> &U _ans `*Cuc `uc ]
+[; ;main.c: 185: ans[ans_len] = m[0];
 "185
-[e ( _print_message_onLCD (3 , , &U _m -> -> 0 `i `uc -> -> 0 `i `uc ]
+[e = *U + &U _ans * -> _ans_len `ux -> -> # *U &U _ans `ui `ux *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux ]
 "186
-}
-[; ;main.c: 186: } else if(m[0] == 'e') {
-[e $U 272  ]
-[e :U 271 ]
-[e $ ! == -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 101 `ui 273  ]
-{
-[; ;main.c: 187: e_pressed = 1;
+[v _pos `uc ~T0 @X0 1 a ]
+[; ;main.c: 186: char pos = 192 + ans_len;
+[e = _pos -> + -> 192 `i -> _ans_len `i `uc ]
+[; ;main.c: 187: print_message_onLCD(m, pos, 0);
 "187
-[e = _e_pressed -> -> 1 `i `uc ]
+[e ( _print_message_onLCD (3 , , &U _m _pos -> -> 0 `i `uc ]
 "188
 }
-[; ;main.c: 188: } else if(m[0] == 'b') {
-[e $U 274  ]
-[e :U 273 ]
-[e $ ! == -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 98 `ui 275  ]
+[; ;main.c: 188: } else if(m[0] == 'd') {
+[e $U 272  ]
+[e :U 271 ]
+[e $ ! == -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 100 `ui 273  ]
 {
-[; ;main.c: 189: erase_letter();
+[; ;main.c: 189: d_pressed = 1;
 "189
-[e ( _erase_letter ..  ]
+[e = _d_pressed -> -> 1 `i `uc ]
 "190
 }
-[e :U 275 ]
+[; ;main.c: 190: } else if(m[0] == 'e') {
+[e $U 274  ]
+[e :U 273 ]
+[e $ ! == -> *U + &U _m * -> -> -> 0 `i `ui `ux -> -> # *U &U _m `ui `ux `ui -> 101 `ui 275  ]
+{
+[; ;main.c: 191: erase_letter();
 "191
+[e ( _erase_letter ..  ]
+"192
+}
+[e :U 275 ]
+"193
 [e :U 274 ]
 [e :U 272 ]
 }
 [e :U 270 ]
-[; ;main.c: 190: }
-[; ;main.c: 191: }
-[; ;main.c: 193: INTCONbits.RBIF = 0;
-"193
+[; ;main.c: 192: }
+[; ;main.c: 193: }
+[; ;main.c: 195: INTCONbits.RBIF = 0;
+"195
 [e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"194
+"196
 }
 [e :U 266 ]
-[; ;main.c: 194: }
-[; ;main.c: 195: }
-"195
+[; ;main.c: 196: }
+[; ;main.c: 197: }
+"197
 [e :UE 265 ]
 }
-"197
+"199
 [v _get_letter `(uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 197: char get_letter(char code) {
+[; ;main.c: 199: char get_letter(char code) {
 [e :U _get_letter ]
 [v _code `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 198: switch(code) {
-"198
+[; ;main.c: 200: switch(code) {
+"200
 [e $U 278  ]
 {
-[; ;main.c: 199: case 0XEE:
-"199
+[; ;main.c: 201: case 0XEE:
+"201
 [e :U 279 ]
-[; ;main.c: 200: return '1';
-"200
+[; ;main.c: 202: return '1';
+"202
 [e ) -> -> 49 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 201: case 0XDE:
-"201
+[; ;main.c: 203: case 0XDE:
+"203
 [e :U 280 ]
-[; ;main.c: 202: return '2';
-"202
+[; ;main.c: 204: return '2';
+"204
 [e ) -> -> 50 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 203: case 0XBE:
-"203
+[; ;main.c: 205: case 0XBE:
+"205
 [e :U 281 ]
-[; ;main.c: 204: return '3';
-"204
+[; ;main.c: 206: return '3';
+"206
 [e ) -> -> 51 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 205: case 0XED:
-"205
+[; ;main.c: 207: case 0XED:
+"207
 [e :U 282 ]
-[; ;main.c: 206: return '4';
-"206
+[; ;main.c: 208: return '4';
+"208
 [e ) -> -> 52 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 207: case 0XDD:
-"207
+[; ;main.c: 209: case 0XDD:
+"209
 [e :U 283 ]
-[; ;main.c: 208: return '5';
-"208
+[; ;main.c: 210: return '5';
+"210
 [e ) -> -> 53 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 209: case 0XBD:
-"209
+[; ;main.c: 211: case 0XBD:
+"211
 [e :U 284 ]
-[; ;main.c: 210: return '6';
-"210
+[; ;main.c: 212: return '6';
+"212
 [e ) -> -> 54 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 211: case 0XEB:
-"211
+[; ;main.c: 213: case 0XEB:
+"213
 [e :U 285 ]
-[; ;main.c: 212: return '7';
-"212
+[; ;main.c: 214: return '7';
+"214
 [e ) -> -> 55 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 213: case 0XDB:
-"213
+[; ;main.c: 215: case 0XDB:
+"215
 [e :U 286 ]
-[; ;main.c: 214: return '8';
-"214
+[; ;main.c: 216: return '8';
+"216
 [e ) -> -> 56 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 215: case 0XBB:
-"215
+[; ;main.c: 217: case 0XBB:
+"217
 [e :U 287 ]
-[; ;main.c: 216: return '9';
-"216
+[; ;main.c: 218: return '9';
+"218
 [e ) -> -> 57 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 217: case 0XD7:
-"217
+[; ;main.c: 219: case 0XD7:
+"219
 [e :U 288 ]
-[; ;main.c: 218: return '0';
-"218
+[; ;main.c: 220: return '0';
+"220
 [e ) -> -> 48 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 219: case 0X77:
-"219
+[; ;main.c: 221: case 0X77:
+"221
 [e :U 289 ]
-[; ;main.c: 220: return 'e';
-"220
+[; ;main.c: 222: return 'd';
+"222
+[e ) -> -> 100 `ui `uc ]
+[e $UE 276  ]
+[; ;main.c: 223: case '~':
+"223
+[e :U 290 ]
+[; ;main.c: 224: return 'e';
+"224
 [e ) -> -> 101 `ui `uc ]
 [e $UE 276  ]
-[; ;main.c: 221: case '~':
-"221
-[e :U 290 ]
-[; ;main.c: 222: return 'b';
-"222
-[e ) -> -> 98 `ui `uc ]
-[e $UE 276  ]
-[; ;main.c: 223: default:
-"223
-[e :U 291 ]
-[; ;main.c: 224: break;
-"224
-[e $U 277  ]
+[; ;main.c: 225: default:
 "225
+[e :U 291 ]
+[; ;main.c: 226: return 'x';
+"226
+[e ) -> -> 120 `ui `uc ]
+[e $UE 276  ]
+"227
 }
-[; ;main.c: 225: }
+[; ;main.c: 227: }
 [e $U 277  ]
-"198
+"200
 [e :U 278 ]
 [e [\ _code , $ -> -> 238 `i `uc 279
  , $ -> -> 222 `i `uc 280
@@ -3245,323 +3258,364 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 119 `i `uc 289
  , $ -> -> 126 `ui `uc 290
  291 ]
-"225
+"227
 [e :U 277 ]
-[; ;main.c: 226: }
-"226
+[; ;main.c: 228: }
+"228
 [e :UE 276 ]
 }
-"228
+"230
 [v _get_rand_num `(uc ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;main.c: 228: char get_rand_num(char from, char to) {
+[; ;main.c: 230: char get_rand_num(char from, char to) {
 [e :U _get_rand_num ]
 [v _from `uc ~T0 @X0 1 r1 ]
 [v _to `uc ~T0 @X0 1 r2 ]
 [f ]
-"229
-[v _num `i ~T0 @X0 1 a ]
-[; ;main.c: 229: int num = rand() % (to-from+1) + from;
-[e = _num + % ( _rand ..  + - -> _to `i -> _from `i -> 1 `i -> _from `i ]
-"230
-[v _r `uc ~T0 @X0 -> -> 1 `i `ux a ]
-[; ;main.c: 230: char r[1];
-[; ;main.c: 231: sprintf(r, "%i", num);
 "231
-[e ( _sprintf (1 , (. , &U _r :s 7C _num ]
-[; ;main.c: 232: return r[0];
+[v _num `i ~T0 @X0 1 a ]
+[; ;main.c: 231: int num = rand() % (to-from+1) + from;
+[e = _num + % ( _rand ..  + - -> _to `i -> _from `i -> 1 `i -> _from `i ]
 "232
+[v _r `uc ~T0 @X0 -> -> 1 `i `ux a ]
+[; ;main.c: 232: char r[1];
+[; ;main.c: 233: sprintf(r, "%i", num);
+"233
+[e ( _sprintf (1 , (. , &U _r :s 7C _num ]
+[; ;main.c: 234: return r[0];
+"234
 [e ) *U + &U _r * -> -> -> 0 `i `ui `ux -> -> # *U &U _r `ui `ux ]
 [e $UE 292  ]
-[; ;main.c: 233: }
-"233
+[; ;main.c: 235: }
+"235
 [e :UE 292 ]
 }
-"235
+"237
 [v _reset_game `(uc ~T0 @X0 1 ef ]
 {
-[; ;main.c: 235: char reset_game() {
+[; ;main.c: 237: char reset_game() {
 [e :U _reset_game ]
 [f ]
-[; ;main.c: 236: attempt = 1;
-"236
-[e = _attempt -> -> 1 `i `uc ]
-[; ;main.c: 237: lvl = 0;
-"237
-[e = _lvl -> -> 0 `i `uc ]
-[; ;main.c: 238: clear_vec(&ans);
+[; ;main.c: 238: attempt = 1;
 "238
-[e ( _clear_vec (1 -> &U _ans `**i ]
-[; ;main.c: 239: clear_vec(&nums);
+[e = _attempt -> -> 1 `i `uc ]
+[; ;main.c: 239: lvl = 0;
 "239
-[e ( _clear_vec (1 -> &U _nums `**i ]
-[; ;main.c: 240: }
+[e = _lvl -> -> 0 `i `uc ]
+[; ;main.c: 240: clear_vec(&ans);
 "240
+[e ( _clear_vec (1 -> &U _ans `**i ]
+[; ;main.c: 241: clear_vec(&nums);
+"241
+[e ( _clear_vec (1 -> &U _nums `**i ]
+[; ;main.c: 242: }
+"242
 [e :UE 293 ]
 }
-"242
+"244
 [v _clear_vec `(v ~T0 @X0 1 ef1`**i ]
 {
-[; ;main.c: 242: void clear_vec(int *vec[]) {
+[; ;main.c: 244: void clear_vec(int *vec[]) {
 [e :U _clear_vec ]
 [v _vec `**i ~T0 @X0 1 r1 ]
 [f ]
-"243
-[v _vec_len `uc ~T0 @X0 1 a ]
-[; ;main.c: 243: char vec_len = strlen(vec);
-[e = _vec_len -> ( _strlen (1 -> _vec `*Cuc `uc ]
-[; ;main.c: 244: for (char i = 0; i < vec_len; i++) {
-"244
+"245
+[v _lim `uc ~T0 @X0 1 a ]
+[; ;main.c: 245: char lim = lvl_n[lvl];
+[e = _lim -> *U + &U _lvl_n * -> _lvl `ux -> -> # *U &U _lvl_n `ui `ux `uc ]
+[; ;main.c: 246: for (char i = 0; i < lim; i++) {
+"246
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 298  ]
 [e :U 295 ]
 {
-[; ;main.c: 245: vec[i] = '\0';
-"245
+[; ;main.c: 247: vec[i] = '\0';
+"247
 [e = *U + _vec * -> _i `ux -> -> # *U _vec `ui `ux -> -> 0 `ui `*i ]
-"246
+"248
 }
-"244
+"246
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 298 ]
-[e $ < -> _i `i -> _vec_len `i 295  ]
+[e $ < -> _i `i -> _lim `i 295  ]
 [e :U 296 ]
-"246
+"248
 }
-[; ;main.c: 246: }
-[; ;main.c: 247: }
-"247
+[; ;main.c: 248: }
+[; ;main.c: 249: }
+"249
 [e :UE 294 ]
 }
-"249
+"251
 [v _compare_nums `(uc ~T0 @X0 1 ef2`*uc`*uc ]
 {
-[; ;main.c: 249: char compare_nums(char nums[10], char r[10]) {
+[; ;main.c: 251: char compare_nums(char nums[10], char r[10]) {
 [e :U _compare_nums ]
 [v _nums `*uc ~T0 @X0 1 r1 ]
 [v _r `*uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;main.c: 250: for(char i = 0; i < strlen(r); i++) {
-"250
+"252
+[v _lim `uc ~T0 @X0 1 a ]
+[; ;main.c: 252: char lim = lvl_n[lvl];
+[e = _lim -> *U + &U _lvl_n * -> _lvl `ux -> -> # *U &U _lvl_n `ui `ux `uc ]
+[; ;main.c: 253: for(char i = 0; i < lim; i++) {
+"253
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 303  ]
 [e :U 300 ]
 {
-[; ;main.c: 251: if (r[i] != nums[i]) {
-"251
+[; ;main.c: 254: if (r[i] != nums[i]) {
+"254
 [e $ ! != -> *U + _r * -> _i `ux -> -> # *U _r `ui `ux `i -> *U + _nums * -> _i `ux -> -> # *U _nums `ui `ux `i 304  ]
 {
-[; ;main.c: 252: return 0;
-"252
+[; ;main.c: 255: return 0;
+"255
 [e ) -> -> 0 `i `uc ]
 [e $UE 299  ]
-"253
+"256
 }
 [e :U 304 ]
-"254
+"257
 }
-"250
+"253
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 303 ]
-[e $ < -> _i `ui ( _strlen (1 -> _r `*Cuc 300  ]
+[e $ < -> _i `i -> _lim `i 300  ]
 [e :U 301 ]
-"254
+"257
 }
-[; ;main.c: 253: }
-[; ;main.c: 254: }
-[; ;main.c: 255: return 1;
-"255
+[; ;main.c: 256: }
+[; ;main.c: 257: }
+[; ;main.c: 258: return 1;
+"258
 [e ) -> -> 1 `i `uc ]
 [e $UE 299  ]
-[; ;main.c: 256: }
-"256
+[; ;main.c: 259: }
+"259
 [e :UE 299 ]
 }
-"258
+"261
 [v _win_protocol `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 258: void win_protocol(void) {
+[; ;main.c: 261: void win_protocol(void) {
 [e :U _win_protocol ]
 [f ]
-[; ;main.c: 259: print_message_onLCD("Ganaste", 128, 0);
-"259
+[; ;main.c: 262: print_message_onLCD("Ganaste", 128, 0);
+"262
 [e ( _print_message_onLCD (3 , , -> :s 8C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 260: _delay((unsigned long)((2000)*(4000000/4000.0)));
-"260
+[; ;main.c: 263: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"263
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 261: if (attempt < 3) {
-"261
+[; ;main.c: 264: if (attempt < 3) {
+"264
 [e $ ! < -> _attempt `i -> 3 `i 306  ]
 {
-[; ;main.c: 262: print_message_onLCD("Otra vez...", 128, 0);
-"262
+[; ;main.c: 265: print_message_onLCD("Otra vez...", 128, 0);
+"265
 [e ( _print_message_onLCD (3 , , -> :s 9C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 263: attempt++;
-"263
+[; ;main.c: 266: attempt++;
+"266
 [e ++ _attempt -> -> 1 `i `uc ]
-"264
+"267
 }
-[; ;main.c: 264: } else {
+[; ;main.c: 267: } else {
 [e $U 307  ]
 [e :U 306 ]
 {
-[; ;main.c: 265: attempt = 1;
-"265
+[; ;main.c: 268: attempt = 1;
+"268
 [e = _attempt -> -> 1 `i `uc ]
-[; ;main.c: 266: lvl++;
-"266
+[; ;main.c: 269: lvl++;
+"269
 [e ++ _lvl -> -> 1 `i `uc ]
-[; ;main.c: 267: if (lvl == 3) {
-"267
+[; ;main.c: 270: if (lvl == 3) {
+"270
 [e $ ! == -> _lvl `i -> 3 `i 308  ]
 {
-[; ;main.c: 268: game_won();
-"268
+[; ;main.c: 271: game_won();
+"271
 [e ( _game_won ..  ]
-[; ;main.c: 269: return;
-"269
+[; ;main.c: 272: return;
+"272
 [e $UE 305  ]
-"270
+"273
 }
-[; ;main.c: 270: } else {
+[; ;main.c: 273: } else {
 [e $U 309  ]
 [e :U 308 ]
 {
-[; ;main.c: 271: print_message_onLCD("Sig. nivel", 128, 0);
-"271
+[; ;main.c: 274: print_message_onLCD("Sig. nivel", 128, 0);
+"274
 [e ( _print_message_onLCD (3 , , -> :s 10C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
-"272
+"275
 }
 [e :U 309 ]
-"273
+"276
 }
 [e :U 307 ]
-[; ;main.c: 272: }
-[; ;main.c: 273: }
-[; ;main.c: 274: clear_vec(&ans);
-"274
-[e ( _clear_vec (1 -> &U _ans `**i ]
-[; ;main.c: 275: _delay((unsigned long)((2000)*(4000000/4000.0)));
-"275
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 276: clean_screen();
-"276
-[e ( _clean_screen ..  ]
-[; ;main.c: 277: }
+[; ;main.c: 275: }
+[; ;main.c: 276: }
+[; ;main.c: 277: clear_vec(&ans);
 "277
+[e ( _clear_vec (1 -> &U _ans `**i ]
+[; ;main.c: 278: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"278
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 279: clean_screen();
+"279
+[e ( _clean_screen ..  ]
+[; ;main.c: 280: }
+"280
 [e :UE 305 ]
 }
-"279
+"282
 [v _game_won `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 279: void game_won(){
+[; ;main.c: 282: void game_won(){
 [e :U _game_won ]
 [f ]
-[; ;main.c: 280: print_message_onLCD("¡¡Has", 128, 0);
-"280
-[e ( _print_message_onLCD (3 , , -> :s 11C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 281: print_message_onLCD("Ganado!!", 192, 0);
-"281
-[e ( _print_message_onLCD (3 , , -> :s 12C `*uc -> -> 192 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 282: reset_game();
-"282
-[e ( _reset_game ..  ]
-[; ;main.c: 283: _delay((unsigned long)((2000)*(4000000/4000.0)));
+[; ;main.c: 283: clean_screen();
 "283
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 284: R_I(0X01);
+[e ( _clean_screen ..  ]
+[; ;main.c: 284: print_message_onLCD("¡¡Has", 128, 0);
 "284
-[e ( _R_I (1 -> -> 1 `i `uc ]
-[; ;main.c: 285: _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( _print_message_onLCD (3 , , -> :s 11C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 285: print_message_onLCD("Ganado!!", 192, 0);
 "285
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 286: }
+[e ( _print_message_onLCD (3 , , -> :s 12C `*uc -> -> 192 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 286: reset_game();
 "286
-[e :UE 310 ]
-}
+[e ( _reset_game ..  ]
+[; ;main.c: 287: _delay((unsigned long)((2000)*(4000000/4000.0)));
+"287
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 288: clean_screen();
 "288
-[v _loss_protocol `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 288: void loss_protocol(void) {
-[e :U _loss_protocol ]
-[f ]
-[; ;main.c: 289: print_message_onLCD("Perdiste", 128, 0);
+[e ( _clean_screen ..  ]
+[; ;main.c: 289: print_message_onLCD("Juego", 128, 0);
 "289
 [e ( _print_message_onLCD (3 , , -> :s 13C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 290: _delay((unsigned long)((1000)*(4000000/4000.0)));
+[; ;main.c: 290: print_message_onLCD("Terminado", 192, 0);
 "290
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 291: clean_screen();
+[e ( _print_message_onLCD (3 , , -> :s 14C `*uc -> -> 192 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 291: _delay((unsigned long)((2000)*(4000000/4000.0)));
 "291
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 292: clean_screen();
+"292
 [e ( _clean_screen ..  ]
-[; ;main.c: 293: print_message_onLCD(nums, 128, 0);
+[; ;main.c: 293: print_message_onLCD("Iniciando", 128, 0);
 "293
-[e ( _print_message_onLCD (3 , , &U _nums -> -> 128 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 294: print_message_onLCD(ans, 192, 0);
+[e ( _print_message_onLCD (3 , , -> :s 15C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 294: print_message_onLCD("de nuevo", 192, 0);
 "294
-[e ( _print_message_onLCD (3 , , &U _ans -> -> 192 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 295: _delay((unsigned long)((3000)*(4000000/4000.0)));
+[e ( _print_message_onLCD (3 , , -> :s 16C `*uc -> -> 192 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 295: _delay((unsigned long)((5000)*(4000000/4000.0)));
 "295
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [; ;main.c: 296: clean_screen();
 "296
 [e ( _clean_screen ..  ]
-[; ;main.c: 298: print_message_onLCD("Reiniciando", 128, 0);
-"298
-[e ( _print_message_onLCD (3 , , -> :s 14C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 299: print_message_onLCD("Juego", 192, 0);
+[; ;main.c: 297: }
+"297
+[e :UE 310 ]
+}
 "299
-[e ( _print_message_onLCD (3 , , -> :s 15C `*uc -> -> 192 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 300: _delay((unsigned long)((3000)*(4000000/4000.0)));
+[v _loss_protocol `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 299: void loss_protocol(void) {
+[e :U _loss_protocol ]
+[f ]
+[; ;main.c: 300: print_message_onLCD("Perdiste", 128, 0);
 "300
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 302: reset_game();
+[e ( _print_message_onLCD (3 , , -> :s 17C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 301: _delay((unsigned long)((1000)*(4000000/4000.0)));
+"301
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 302: clean_screen();
 "302
-[e ( _reset_game ..  ]
-[; ;main.c: 303: clean_screen();
-"303
 [e ( _clean_screen ..  ]
-[; ;main.c: 304: }
+[; ;main.c: 304: print_message_onLCD(nums, 128, 0);
 "304
+[e ( _print_message_onLCD (3 , , &U _nums -> -> 128 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 305: print_message_onLCD(ans, 192, 0);
+"305
+[e ( _print_message_onLCD (3 , , &U _ans -> -> 192 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 306: _delay((unsigned long)((3000)*(4000000/4000.0)));
+"306
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 307: clean_screen();
+"307
+[e ( _clean_screen ..  ]
+[; ;main.c: 309: print_message_onLCD("Reiniciando", 128, 0);
+"309
+[e ( _print_message_onLCD (3 , , -> :s 18C `*uc -> -> 128 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 310: print_message_onLCD("Juego", 192, 0);
+"310
+[e ( _print_message_onLCD (3 , , -> :s 19C `*uc -> -> 192 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 311: _delay((unsigned long)((3000)*(4000000/4000.0)));
+"311
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 313: reset_game();
+"313
+[e ( _reset_game ..  ]
+[; ;main.c: 314: clean_screen();
+"314
+[e ( _clean_screen ..  ]
+[; ;main.c: 315: }
+"315
 [e :UE 311 ]
 }
-"306
+"317
 [v _erase_letter `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 306: void erase_letter(void) {
+[; ;main.c: 317: void erase_letter(void) {
 [e :U _erase_letter ]
 [f ]
-[; ;main.c: 308: }
-"308
+[; ;main.c: 318: ans[strlen(ans) - 1] = '\0';
+"318
+[e = *U + &U _ans * -> - ( _strlen (1 -> &U _ans `*Cuc -> -> 1 `i `ui `ux -> -> # *U &U _ans `ui `ux -> -> 0 `ui `uc ]
+[; ;main.c: 319: print_message_onLCD(ans, 192, 0);
+"319
+[e ( _print_message_onLCD (3 , , &U _ans -> -> 192 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 320: print_message_onLCD(" ", 0, 0);
+"320
+[e ( _print_message_onLCD (3 , , -> :s 20C `*uc -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 321: }
+"321
 [e :UE 312 ]
 }
-"310
+"323
 [v _clean_screen `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 310: void clean_screen(void) {
+[; ;main.c: 323: void clean_screen(void) {
 [e :U _clean_screen ]
 [f ]
-[; ;main.c: 311: R_I(0X01);
-"311
+[; ;main.c: 324: R_I(0X01);
+"324
 [e ( _R_I (1 -> -> 1 `i `uc ]
-[; ;main.c: 312: _delay((unsigned long)((100)*(4000000/4000.0)));
-"312
+[; ;main.c: 325: _delay((unsigned long)((100)*(4000000/4000.0)));
+"325
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 313: }
-"313
+[; ;main.c: 326: }
+"326
 [e :UE 313 ]
 }
 [p f _sprintf 8913024 ]
 [a 11C 161 161 72 97 115 0 ]
-[a 15C 74 117 101 103 111 0 ]
-[a 14C 82 101 105 110 105 99 105 97 110 100 111 0 ]
+[a 16C 100 101 32 110 117 101 118 111 0 ]
+[a 13C 74 117 101 103 111 0 ]
+[a 19C 74 117 101 103 111 0 ]
+[a 18C 82 101 105 110 105 99 105 97 110 100 111 0 ]
+[a 15C 73 110 105 99 105 97 110 100 111 0 ]
+[a 14C 84 101 114 109 105 110 97 100 111 0 ]
 [a 10C 83 105 103 46 32 110 105 118 101 108 0 ]
 [a 7C 37 105 0 ]
-[a 13C 80 101 114 100 105 115 116 101 0 ]
+[a 17C 80 101 114 100 105 115 116 101 0 ]
 [a 8C 71 97 110 97 115 116 101 0 ]
 [a 6C 37 99 0 ]
 [a 3C 67 79 78 67 69 78 84 82 69 83 69 0 ]
@@ -3571,3 +3625,4 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 4C 73 110 105 99 105 97 110 100 111 46 46 46 0 ]
 [a 12C 71 97 110 97 100 111 33 33 0 ]
 [a 5C 69 115 99 114 105 98 101 58 32 0 ]
+[a 20C 32 0 ]

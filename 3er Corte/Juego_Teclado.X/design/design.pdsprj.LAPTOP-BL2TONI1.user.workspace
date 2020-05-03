@@ -8,7 +8,7 @@
   <PWI>
    <POPUP w="800" x="68" flags="00000002" y="129" h="200" pid="0" iid="-1">
     <PROPERTIES>
-     <ITEM name="Message Column Width">542</ITEM>
+     <ITEM name="Message Column Width">663</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
      <ITEM name="Source Column Width">100</ITEM>
      <ITEM name="Time Column Width">120</ITEM>
@@ -32,17 +32,19 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="640" x="128" flags="0000802b" y="214" h="469" pid="1" iid="1">
+   <POPUP w="648" x="132" flags="0000802b" y="233" h="469" pid="1" iid="1">
     <PROPERTIES>
-     <ITEM name="Breakpoint 0">"",08FE,0000,28EF,65A3,1
+     <ITEM name="Breakpoint 0">"",1290,0000,6E77,65A3,1
 </ITEM>
-     <ITEM name="Breakpoint 1">"",0904,0000,28EF,65A3,1
+     <ITEM name="Breakpoint 1">"",079A,0000,0C2F,65A3,1
 </ITEM>
-     <ITEM name="Breakpoint 2">"",0C2C,0000,1B54,65A3,1
+     <ITEM name="Breakpoint 2">"",088A,0000,70CE,65A3,1
 </ITEM>
-     <ITEM name="Breakpoint 3">"",007C,0000,40E7,65A3,1
+     <ITEM name="Breakpoint 3">"",12A2,0000,1B54,65A3,1
 </ITEM>
-     <ITEM name="Breakpoint 4">"",0C94,0000,DD77,65A3,1
+     <ITEM name="Breakpoint 4">"",0C3C,0000,27E7,65A3,1
+</ITEM>
+     <ITEM name="Breakpoint 5">"",14BA,0000,1B54,65A3,1
 </ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
@@ -50,10 +52,10 @@
      <ITEM name="DISPOPCODES">No</ITEM>
      <ITEM name="FIXUPBPTS">Yes</ITEM>
      <ITEM name="WordsOnly">No</ITEM>
-     <ITEM name="nBreakpoints">3</ITEM>
+     <ITEM name="nBreakpoints">1</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="466" x="643" flags="0000000b" y="229" h="438" pid="2" iid="1">
+   <POPUP w="466" x="857" flags="0000000b" y="188" h="438" pid="2" iid="1">
     <PROPERTIES>
      <ITEM name="Address Column Width">94</ITEM>
      <ITEM name="AutoResize">No</ITEM>

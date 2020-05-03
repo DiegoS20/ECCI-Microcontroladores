@@ -3913,12 +3913,11 @@ char first_exec = 1;
 char counting_down = 0;
 char nums[10];
 char ans[10];
-char lvl;
+char lvl = 0;
 int lvl_n[3] = {4, 6, 10};
 char attempt = 1;
-char next;
 char typing;
-char e_pressed;
+char d_pressed;
 
 void main(void) {
 initial_config();
@@ -3948,16 +3947,17 @@ if (!typing) {
 for (char i = 0; i < lvl_n[lvl]; i++) {
 nums[i] = get_rand_num(0, 10);
 }
-print_message_onLCD(nums, 128, 1);
-_delay((unsigned long)((2000)*(4000000/4000.0)));
+char spc = lvl == 2 ? 0 : 1;
+print_message_onLCD(nums, 128, spc);
+_delay((unsigned long)((3000)*(4000000/4000.0)));
 clean_screen();
 print_message_onLCD("Escribe: ", 128, 0);
 R_I(192);
-}
-
 counting_down = 0;
 typing = 1;
-if (e_pressed) {
+}
+
+if (d_pressed) {
 clean_screen();
 typing = 0;
 counting_down = 1;
@@ -3966,7 +3966,7 @@ win_protocol();
 } else {
 loss_protocol();
 }
-e_pressed = 0;
+d_pressed = 0;
 }
 
 first_exec = 0;
@@ -4050,12 +4050,14 @@ _delay((unsigned long)((50)*(4000000/4000000.0)));
 if (!counting_down && !first_exec) {
 char m[16];
 sprintf(m, "%c", get_letter(p));
-if (m[0] != 'b' && m[0] != 'e') {
-ans[strlen(ans)] = m[0];
-print_message_onLCD(m, 0, 0);
+if (m[0] != 'd' && m[0] != 'e' && m[0] != 'x') {
+char ans_len = strlen(ans);
+ans[ans_len] = m[0];
+char pos = 192 + ans_len;
+print_message_onLCD(m, pos, 0);
+} else if(m[0] == 'd') {
+d_pressed = 1;
 } else if(m[0] == 'e') {
-e_pressed = 1;
-} else if(m[0] == 'b') {
 erase_letter();
 }
 }
@@ -4087,11 +4089,11 @@ return '9';
 case 0XD7:
 return '0';
 case 0X77:
-return 'e';
+return 'd';
 case '~':
-return 'b';
+return 'e';
 default:
-break;
+return 'x';
 }
 }
 
@@ -4110,14 +4112,15 @@ clear_vec(&nums);
 }
 
 void clear_vec(int *vec[]) {
-char vec_len = strlen(vec);
-for (char i = 0; i < vec_len; i++) {
+char lim = lvl_n[lvl];
+for (char i = 0; i < lim; i++) {
 vec[i] = '\0';
 }
 }
 
 char compare_nums(char nums[10], char r[10]) {
-for(char i = 0; i < strlen(r); i++) {
+char lim = lvl_n[lvl];
+for(char i = 0; i < lim; i++) {
 if (r[i] != nums[i]) {
 return 0;
 }
@@ -4147,12 +4150,20 @@ clean_screen();
 }
 
 void game_won(){
+clean_screen();
 print_message_onLCD("¡¡Has", 128, 0);
 print_message_onLCD("Ganado!!", 192, 0);
 reset_game();
 _delay((unsigned long)((2000)*(4000000/4000.0)));
-R_I(0X01);
-_delay((unsigned long)((100)*(4000000/4000.0)));
+clean_screen();
+print_message_onLCD("Juego", 128, 0);
+print_message_onLCD("Terminado", 192, 0);
+_delay((unsigned long)((2000)*(4000000/4000.0)));
+clean_screen();
+print_message_onLCD("Iniciando", 128, 0);
+print_message_onLCD("de nuevo", 192, 0);
+_delay((unsigned long)((5000)*(4000000/4000.0)));
+clean_screen();
 }
 
 void loss_protocol(void) {
@@ -4174,7 +4185,9 @@ clean_screen();
 }
 
 void erase_letter(void) {
-
+ans[strlen(ans) - 1] = '\0';
+print_message_onLCD(ans, 192, 0);
+print_message_onLCD(" ", 0, 0);
 }
 
 void clean_screen(void) {
