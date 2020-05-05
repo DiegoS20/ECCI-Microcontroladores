@@ -32,7 +32,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="641" x="62" flags="0000802b" y="226" h="469" pid="1" iid="1">
+   <POPUP w="689" x="26" flags="0000002b" y="104" h="495" pid="1" iid="1">
     <PROPERTIES>
      <ITEM name="Breakpoint 0">"",06C0,0000,CEF9,73DB,1
 </ITEM>
@@ -144,7 +144,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="695" x="222" flags="00000001" y="259" h="453" pid="0" iid="3">
+   <POPUP w="695" x="158" flags="00008001" y="257" h="453" pid="0" iid="3">
     <PROPERTIES/>
    </POPUP>
   </PWI>

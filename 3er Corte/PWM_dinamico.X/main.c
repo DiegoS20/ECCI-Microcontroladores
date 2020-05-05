@@ -51,6 +51,12 @@ void main(void) {
     PWM1(cu1);
     PWM2(cu2);
     print_message_onLCD("Freq:29.4kHz", 128);
+    char f1_m[50];
+    sprintf(f1_m, "CU1:%i%% ", cu1);
+    print_message_onLCD(f1_m, 192);
+    char f2_m[50];
+    sprintf(f2_m, "CU2:%i%%  ", cu2);
+    print_message_onLCD(f2_m, 0);
     
     while(1) {
         if (cu_changed) {
@@ -74,18 +80,18 @@ void main(void) {
                 }
                 PWM1(cu1);
                 PWM2(cu2);
+                char f1_m[50];
+                sprintf(f1_m, "CU1:%i%% ", cu1);
+                print_message_onLCD(f1_m, 192);
+                char f2_m[50];
+                sprintf(f2_m, "CU2:%i%%  ", cu2);
+                print_message_onLCD(f2_m, 0);
             }
             for (char i = 0; i < 3; i++) {
                 cu[i] = '\0';
             }
             cu_changed = 0;
         }
-        char f1_m[50];
-        sprintf(f1_m, "CU1:%i%% ", cu1);
-        print_message_onLCD(f1_m, 192);
-        char f2_m[50];
-        sprintf(f2_m, "CU2:%i%%  ", cu2);
-        print_message_onLCD(f2_m, 0);
     }
     return;
 }
@@ -118,26 +124,21 @@ void serial_transmi_init_config(void) {
 }
 
 void PWM_config(void) {
-    /**
-     * Módulo CCP1 y CCP2 como PWM
-     */
     CCP1CON = 0B00011100;
     CCP2CON = 0B00011100;
-    
-    /**
+
+    /*
      * Estableciendo PWM a 29.4KHz
      */
     PR2 = 0X21;
-    
-    /**
+
+    /*
      * Estableciendo un ciclo útil inicial de un 50%
      */
     CCPR1L = 0B01010011;
     CCPR2L = 0B01010011;
-    
-    /**
-     * TIMER 2 CONTROL REGISTER
-     * 
+
+    /*
      * Timer 2 encendido con prescaler de 1 (1:1)
      */
     T2CON = 0B00000100;
@@ -198,7 +199,7 @@ void interrupt capture(void) {
             cu_changed = 1;
             cu_flag = data_received;
         }
-        
+
         PIR1bits.RCIF = 0;
     }
 }

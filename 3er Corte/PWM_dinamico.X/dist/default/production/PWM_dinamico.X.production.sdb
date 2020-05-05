@@ -45,28 +45,28 @@
 [v ___omul __omul `(ul  1 e 4 0 ]
 "40 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"93
+"99
 [v _initial_config initial_config `(v  1 e 1 0 ]
-"109
+"115
 [v _serial_transmi_init_config serial_transmi_init_config `(v  1 e 1 0 ]
-"120
+"126
 [v _PWM_config PWM_config `(v  1 e 1 0 ]
-"146
+"147
 [v _init_LCD init_LCD `(v  1 e 1 0 ]
-"158
+"159
 [v _R_I R_I `(v  1 e 1 0 ]
-"167
+"168
 [v _R_D R_D `(v  1 e 1 0 ]
-"176
+"177
 [v _print_message_onLCD print_message_onLCD `(v  1 e 1 0 ]
-"185
+"186
 [v _capture capture `II(v  1 e 1 0 ]
-"206
+"207
 [v _transmit transmit `(v  1 e 1 0 ]
 [v i2_transmit transmit `(v  1 e 1 0 ]
-"216
+"217
 [v _PWM1 PWM1 `(v  1 e 1 0 ]
-"248
+"249
 [v _PWM2 PWM2 `(v  1 e 1 0 ]
 "322 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f452.h
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
@@ -211,22 +211,26 @@
 "40
 [v _main main `(v  1 e 1 0 ]
 {
-"78
-[v main@i i `uc  1 a 1 100 ]
-"86
+"90
+[v main@i i `uc  1 a 1 200 ]
+"85
+[v main@f2_m_308 f2_m `[50]uc  1 a 50 150 ]
+"82
+[v main@f1_m_306 f1_m `[50]uc  1 a 50 100 ]
+"57
 [v main@f2_m f2_m `[50]uc  1 a 50 50 ]
-"83
+"54
 [v main@f1_m f1_m `[50]uc  1 a 50 0 ]
-"91
+"97
 } 0
-"206
+"207
 [v _transmit transmit `(v  1 e 1 0 ]
 {
-"207
+"208
 [v transmit@i i `uc  1 a 1 26 ]
-"206
+"207
 [v transmit@response response `*.25uc  1 p 2 22 ]
-"214
+"215
 } 0
 "500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -256,20 +260,20 @@
 [v ___lwmod@divisor divisor `ui  1 p 2 33 ]
 "25
 } 0
-"109 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
+"115 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
 [v _serial_transmi_init_config serial_transmi_init_config `(v  1 e 1 0 ]
 {
-"118
+"124
 } 0
-"176
+"177
 [v _print_message_onLCD print_message_onLCD `(v  1 e 1 0 ]
 {
-"180
+"181
 [v print_message_onLCD@i i `uc  1 a 1 27 ]
-"176
+"177
 [v print_message_onLCD@message message `*.35uc  1 p 2 22 ]
 [v print_message_onLCD@place place `uc  1 p 1 24 ]
-"183
+"184
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -280,31 +284,31 @@
 [v strlen@s s `*.35Cuc  1 p 2 18 ]
 "13
 } 0
-"167 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
+"168 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
 [v _R_D R_D `(v  1 e 1 0 ]
 {
 [v R_D@dato dato `uc  1 a 1 wreg ]
 [v R_D@dato dato `uc  1 a 1 wreg ]
 [v R_D@dato dato `uc  1 a 1 18 ]
-"174
+"175
 } 0
-"93
+"99
 [v _initial_config initial_config `(v  1 e 1 0 ]
 {
-"107
+"113
 } 0
-"146
+"147
 [v _init_LCD init_LCD `(v  1 e 1 0 ]
 {
-"156
+"157
 } 0
-"158
+"159
 [v _R_I R_I `(v  1 e 1 0 ]
 {
 [v R_I@dato dato `uc  1 a 1 wreg ]
 [v R_I@dato dato `uc  1 a 1 wreg ]
 [v R_I@dato dato `uc  1 a 1 18 ]
-"165
+"166
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\atoi.c
 [v _atoi atoi `(i  1 e 2 0 ]
@@ -326,28 +330,28 @@
 [v isdigit@c c `uc  1 a 1 20 ]
 "15
 } 0
-"120 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
+"126 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
 [v _PWM_config PWM_config `(v  1 e 1 0 ]
 {
-"144
+"145
 } 0
-"248
+"249
 [v _PWM2 PWM2 `(v  1 e 1 0 ]
 {
-"249
+"250
 [v PWM2@t_alto t_alto `ui  1 a 2 35 ]
-"248
+"249
 [v PWM2@ciclo_util ciclo_util `ui  1 p 2 31 ]
-"254
+"255
 } 0
-"216
+"217
 [v _PWM1 PWM1 `(v  1 e 1 0 ]
 {
-"222
+"223
 [v PWM1@t_alto t_alto `ui  1 a 2 35 ]
-"216
+"217
 [v PWM1@ciclo_util ciclo_util `ui  1 p 2 31 ]
-"246
+"247
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -371,19 +375,19 @@
 [v ___lwdiv@divisor divisor `ui  1 p 2 26 ]
 "30
 } 0
-"185 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
+"186 C:\MPLAB_X\Laboratorios\3er Corte\PWM_dinamico.X\main.c
 [v _capture capture `II(v  1 e 1 0 ]
 {
-"190
+"191
 [v capture@data_received data_received `uc  1 a 1 17 ]
-"204
+"205
 } 0
-"206
+"207
 [v i2_transmit transmit `(v  1 e 1 0 ]
 {
 [v i2transmit@i transmit `uc  1 a 1 8 ]
 [v i2transmit@response response `*.25uc  1 p 2 4 ]
-"214
+"215
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
 [v i2_strlen strlen `(ui  1 e 2 0 ]

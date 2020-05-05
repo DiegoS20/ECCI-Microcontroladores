@@ -3938,6 +3938,12 @@ transmit("\n\r");
 PWM1(cu1);
 PWM2(cu2);
 print_message_onLCD("Freq:29.4kHz", 128);
+char f1_m[50];
+sprintf(f1_m, "CU1:%i%% ", cu1);
+print_message_onLCD(f1_m, 192);
+char f2_m[50];
+sprintf(f2_m, "CU2:%i%%  ", cu2);
+print_message_onLCD(f2_m, 0);
 
 while(1) {
 if (cu_changed) {
@@ -3961,12 +3967,6 @@ break;
 }
 PWM1(cu1);
 PWM2(cu2);
-}
-for (char i = 0; i < 3; i++) {
-cu[i] = '\0';
-}
-cu_changed = 0;
-}
 char f1_m[50];
 sprintf(f1_m, "CU1:%i%% ", cu1);
 print_message_onLCD(f1_m, 192);
@@ -3974,12 +3974,18 @@ char f2_m[50];
 sprintf(f2_m, "CU2:%i%%  ", cu2);
 print_message_onLCD(f2_m, 0);
 }
+for (char i = 0; i < 3; i++) {
+cu[i] = '\0';
+}
+cu_changed = 0;
+}
+}
 return;
 }
 
 void initial_config(void) {
 
-# 99
+# 105
 TRISC = 0B10000000;
 TRISD = 0X00;
 
@@ -4002,19 +4008,17 @@ RCSTA = 0B10010000;
 }
 
 void PWM_config(void) {
-
-# 124
 CCP1CON = 0B00011100;
 CCP2CON = 0B00011100;
 
-# 130
+# 133
 PR2 = 0X21;
 
-# 135
+# 138
 CCPR1L = 0B01010011;
 CCPR2L = 0B01010011;
 
-# 143
+# 144
 T2CON = 0B00000100;
 }
 
@@ -4059,7 +4063,7 @@ R_D(message[i]);
 
 void interrupt capture(void) {
 
-# 189
+# 190
 if (PIR1bits.RCIF) {
 char data_received = RCREG;
 if (data_received != 'o' && data_received != 't' && data_received != 'b') {
@@ -4080,7 +4084,7 @@ PIR1bits.RCIF = 0;
 void transmit(char response[50]) {
 for (char i = 0; i < strlen(response); i++) {
 
-# 211
+# 212
 while(!TXSTAbits.TRMT);
 TXREG = response[i];
 }
@@ -4088,19 +4092,19 @@ TXREG = response[i];
 
 void PWM1(unsigned int ciclo_util) {
 
-# 222
+# 223
 unsigned int t_alto = (136 * ciclo_util) / 100;
 
-# 228
+# 229
 CCPR1L = t_alto>>2;
 
-# 234
+# 235
 t_alto = (t_alto<<4)&0x0030;
 
-# 240
+# 241
 CCP1CON &= 0XCF;
 
-# 245
+# 246
 CCP1CON |= t_alto;
 }
 
